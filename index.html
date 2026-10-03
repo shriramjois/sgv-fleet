@@ -4,57 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shree Rajarajeshwari Tours & Travels | Bangalore & Mangalore Cabs & Luxury Van Rentals</title>
+  <title>Shree Rajarajeshwari Tours & Travels | Bangalore & Mangalore Luxury Car & Van Rentals</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
           colors: {
-            brand: {
-              gold: '#f59e0b',
-              amber: '#d97706',
-              dark: '#0f172a',
-              navy: '#1e293b'
+            amber: {
+              450: '#f59e0b',
             }
           }
         }
       }
     }
   </script>
+
+  <style>
+    /* Custom subtle glass and glow effects */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .badge-glow {
+      box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-400 selection:text-slate-950">
 
-  <!-- Top Hotline Bar -->
-  <div class="bg-slate-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
-      <div class="flex flex-wrap items-center gap-x-5 gap-y-1">
-        <span class="inline-flex items-center">
-          <i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i>
-          <span class="font-medium text-slate-200">Bangalore (HO)</span> &amp; <span class="font-medium text-slate-200">Mangalore (BO)</span>
+  <aside class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 sticky top-0 md:static z-40">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+        <span class="inline-flex items-center text-slate-300 font-medium">
+          <i class="fa-solid fa-location-dot text-amber-400 mr-1.5 text-xs"></i>
+          <span>Bangalore (HO)</span>
+          <span class="mx-1 text-slate-600">•</span>
+          <span>Mangalore (BO)</span>
         </span>
-        <span class="hidden sm:inline-flex items-center">
-          <i class="fa-solid fa-shield-heart text-amber-400 mr-1.5"></i>
-          24/7 Verified Chauffeurs &amp; Sanitized Vehicles
+        <span class="hidden md:inline-flex items-center text-slate-400">
+          <i class="fa-solid fa-clock text-amber-400 mr-1.5 text-xs"></i> 24/7 Outstation &amp; Airport Dispatch
         </span>
       </div>
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-4 ml-auto sm:ml-0">
         <a href="tel:+919008681881" class="text-amber-400 hover:text-amber-300 font-bold tracking-wide flex items-center transition">
-          <i class="fa-solid fa-phone mr-1.5"></i> +91 90086 81881
+          <i class="fa-solid fa-phone mr-1.5 text-xs"></i> +91 90086 81881
         </a>
-        <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20I%20would%20like%20to%20enquire%20about%20vehicle%20booking." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-0.5 rounded text-[11px] font-semibold flex items-center transition">
-          <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+        <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20I%20want%20to%20enquire%20about%20a%20vehicle%20booking." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-0.5 rounded-full text-[11px] font-semibold flex items-center transition shadow-sm">
+          <i class="fa-brands fa-whatsapp mr-1 text-xs"></i> Quick Chat
         </a>
       </div>
     </div>
-  </div>
+  </aside>
 
-  <!-- Main Navigation Bar -->
-  <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-200">
+  <header class="bg-white/95 backdrop-blur-md sticky top-0 md:top-auto z-30 shadow-sm border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
-      <a href="#" class="flex flex-col">
-        <span class="text-lg sm:text-2xl font-black tracking-tight text-slate-900 leading-tight">
+      <a href="#" class="flex flex-col group">
+        <span class="text-lg sm:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:text-amber-600 transition">
           SHREE RAJARAJESHWARI <span class="text-amber-500">TOURS &amp; TRAVELS</span>
         </span>
         <span class="text-[10px] sm:text-xs tracking-wider uppercase font-semibold text-slate-500">
@@ -62,76 +84,79 @@
         </span>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex space-x-6 text-sm font-semibold text-slate-700">
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-700">
         <a href="#fleet" class="hover:text-amber-600 transition">Our Fleet</a>
         <a href="#services" class="hover:text-amber-600 transition">Services</a>
         <a href="#offices" class="hover:text-amber-600 transition">Offices</a>
-        <a href="#booking" class="hover:text-amber-600 transition">Book Online</a>
+        <a href="#booking" class="hover:text-amber-600 transition">Online Booking</a>
       </nav>
 
-      <!-- Instant Call Trigger -->
-      <a href="tel:+919008681881" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm shadow transition flex items-center">
-        <i class="fa-solid fa-phone-volume mr-1.5"></i>
-        <span>Call Now</span>
-      </a>
+      <!-- Instant Action -->
+      <div class="flex items-center space-x-2.5">
+        <a href="tel:+919008681881" class="hidden sm:inline-flex bg-slate-900 hover:bg-slate-800 text-white font-bold px-3.5 py-2 rounded-xl text-xs shadow transition items-center">
+          <i class="fa-solid fa-phone-volume mr-1.5 text-amber-400"></i>
+          <span>90086 81881</span>
+        </a>
+        <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs sm:text-sm shadow-md transition flex items-center">
+          <i class="fa-solid fa-calendar-check mr-1.5"></i> Book Now
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 px-4 overflow-hidden">
+  <section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 px-4 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-        <i class="fa-solid fa-gem text-amber-400"></i> Bangalore &amp; Mangalore Commercial Cab &amp; Van Service
+      <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+        <i class="fa-solid fa-star text-amber-400"></i> Bangalore &amp; Mangalore Commercial Cab &amp; Van Network
       </div>
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-5">
-        Experience Superior Group &amp; Family Travel with
-        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">
+        Premium Travel Comfort with
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 mt-1">
           Shree Rajarajeshwari Tours &amp; Travels
         </span>
       </h1>
       <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8 font-normal leading-relaxed">
-        Punctual, fully sanitized, chauffeur-driven rentals for outstation trips, coastal temple pilgrimages, BLR &amp; IXE airport transfers, wedding delegations, and corporate corporate outings.
+        Punctual, fully sanitized, chauffeur-driven commercial vehicles for family pilgrimages, outstation tours, BLR &amp; IXE airport transfers, corporate delegations, and destination weddings.
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-md mx-auto">
         <a href="#fleet" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/20 transition flex items-center justify-center text-sm">
-          <i class="fa-solid fa-car-rear mr-2"></i> View Available Fleet
+          <i class="fa-solid fa-car mr-2"></i> Explore Our Fleet
         </a>
         <a href="https://wa.me/919008681881?text=Hi%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20I%20would%20like%20to%20get%20a%20rate%20quote%20for%20a%20trip." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center text-sm">
-          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Booking
+          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Quote
         </a>
       </div>
     </div>
   </section>
 
-  <section class="py-3 bg-amber-500 text-slate-950 font-bold text-xs sm:text-sm">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 text-center">
-      <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-plane-arrival"></i> Kempegowda &amp; Mangalore Airports</div>
+  <section class="py-3.5 bg-amber-500 text-slate-950 font-bold text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-2 text-center">
+      <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-plane-circle-check"></i> BLR &amp; Mangalore Airports</div>
       <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-van-shuttle"></i> Force Urbania &amp; Tempo Travellers</div>
-      <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-coins"></i> Transparent Per-Km &amp; Package Rates</div>
-      <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-headset"></i> 24x7 Customer Dispatch Support</div>
+      <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-money-bill-wave"></i> Transparent Tariff &amp; Packages</div>
+      <div class="flex items-center justify-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Verified Highway Chauffeurs</div>
     </div>
   </section>
 
-  <!-- Fleet Section: Urbania, Crysta, Rumion, Tempo Traveller, Etios -->
   <section id="fleet" class="py-16 sm:py-20 bg-slate-100 px-4">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
         <span class="text-amber-600 text-xs uppercase font-extrabold tracking-widest">Our Commercial Fleet</span>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Select the Perfect Vehicle for Your Journey</h2>
         <p class="text-slate-600 text-sm max-w-2xl mx-auto mt-2">
-          From executive family multi-utility vehicles to spacious luxury vans, all backed with professional highway chauffeurs and pristine air-conditioned interiors.
+          From luxury executive vans to family sedans and multi-utility MPVs. All vehicles equipped with chilled AC and polite, experienced drivers.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- 1. Force Urbania -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition duration-300 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
-            <div class="relative h-56 bg-slate-200 overflow-hidden group">
-              <!-- Dual source: Tries local urbania.jpg first, falls back to direct photo CDN -->
+            <div class="relative h-60 bg-slate-200 overflow-hidden">
               <img 
                 src="urbania.jpg" 
                 alt="Force Urbania Luxury Van" 
@@ -139,16 +164,16 @@
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Force_Traveller_Luxury.jpg/640px-Force_Traveller_Luxury.jpg';"
               />
               <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded shadow">#1 Luxury Flagship</span>
-              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow">10 to 17 Seater</span>
+              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow backdrop-blur-sm">10 to 17 Seater</span>
             </div>
             <div class="p-5">
               <h3 class="text-xl font-bold text-slate-900">Force Urbania</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-2.5">Super Luxury Touring Van</p>
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+              <p class="text-xs font-semibold text-amber-600 mb-3">Super Luxury Touring &amp; Executive Van</p>
+              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
                 <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Plush individual reclining bucket seats</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> High roof with panoramic sealed glass windows</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Individual aircraft-style AC vents &amp; USB ports</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Ideal for corporate VIPs, NRI tours, and weddings</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Aircraft-style sealed panoramic windows</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Personal USB charging &amp; individual AC vents</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Ideal for corporate delegations, NRI trips &amp; weddings</li>
               </ul>
             </div>
           </div>
@@ -160,10 +185,9 @@
         </div>
 
         <!-- 2. Toyota Innova Crysta -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition duration-300 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
-            <div class="relative h-56 bg-slate-200 overflow-hidden group">
-              <!-- Dual source: Tries local crysta.jpg first, falls back to direct photo CDN -->
+            <div class="relative h-60 bg-slate-200 overflow-hidden">
               <img 
                 src="crysta.jpg" 
                 alt="Toyota Innova Crysta" 
@@ -171,16 +195,16 @@
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Toyota_Innova_Crysta_2.4_Z_front_right.jpg/640px-Toyota_Innova_Crysta_2.4_Z_front_right.jpg';"
               />
               <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded shadow">#2 Prime Executive</span>
-              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow">7+1 &amp; 6+1 Seater</span>
+              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow backdrop-blur-sm">7+1 &amp; 6+1 Seater</span>
             </div>
             <div class="p-5">
               <h3 class="text-xl font-bold text-slate-900">Toyota Innova Crysta</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-2.5">Executive Comfort &amp; Long Drive King</p>
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+              <p class="text-xs font-semibold text-amber-600 mb-3">Long Drive King &amp; Family Tourer</p>
+              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
                 <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Unmatched highway ride quality and safety</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Spacious captain seats or bench seat options</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Captain seats or 3-row bench options</li>
                 <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Dual-zone climate control AC</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Best for family pilgrimage and outstation tours</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Most requested for pilgrimage and holiday tours</li>
               </ul>
             </div>
           </div>
@@ -192,10 +216,9 @@
         </div>
 
         <!-- 3. Toyota Rumion -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition duration-300 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
-            <div class="relative h-56 bg-slate-200 overflow-hidden group">
-              <!-- Dual source: Tries local rumion.jpg first, falls back to direct photo CDN -->
+            <div class="relative h-60 bg-slate-200 overflow-hidden">
               <img 
                 src="rumion.jpg" 
                 alt="Toyota Rumion MPV" 
@@ -203,16 +226,16 @@
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Toyota_Rumion_engine_shot.jpg/640px-Toyota_Rumion_engine_shot.jpg';"
               />
               <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded shadow">#3 Smart Modern MPV</span>
-              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow">6+1 Seater</span>
+              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow backdrop-blur-sm">6+1 Seater</span>
             </div>
             <div class="p-5">
               <h3 class="text-xl font-bold text-slate-900">Toyota Rumion</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-2.5">Compact Family Utility Vehicle</p>
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+              <p class="text-xs font-semibold text-amber-600 mb-3">Modern Compact Multi-Utility Vehicle</p>
+              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
                 <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Modern Toyota styling and smooth city drive</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Flexible 3-row seating with rear AC vents</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Fuel-efficient and economical fare structure</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Excellent for airport transfers &amp; weekend trips</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Flexible 3-row seating with dedicated rear AC</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Fuel-efficient and highly economical tariff</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Great for airport transfers and small family tours</li>
               </ul>
             </div>
           </div>
@@ -224,27 +247,26 @@
         </div>
 
         <!-- 4. Force Tempo Traveller -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition duration-300 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
-            <div class="relative h-56 bg-slate-200 overflow-hidden group">
-              <!-- Dual source: Tries local traveller.jpg first, falls back to direct photo CDN -->
+            <div class="relative h-60 bg-slate-200 overflow-hidden">
               <img 
                 src="traveller.jpg" 
                 alt="Force Tempo Traveller" 
                 class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Force_Traveller_Luxury.jpg/640px-Force_Traveller_Luxury.jpg';"
               />
-              <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded shadow">#4 Group Favorite</span>
-              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow">12 to 20 Seater</span>
+              <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded shadow">#4 Group Leader</span>
+              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow backdrop-blur-sm">12 to 26 Seater</span>
             </div>
             <div class="p-5">
               <h3 class="text-xl font-bold text-slate-900">Force Tempo Traveller</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-2.5">Reliable High-Capacity Group Van</p>
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> High ceiling with wide central aisle walking space</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Large rear trunk &amp; overhead luggage storage</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> AC / Non-AC variants for cost optimization</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Best for temple tours, school trips, and large families</li>
+              <p class="text-xs font-semibold text-amber-600 mb-3">High-Capacity Group Van</p>
+              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> High ceiling and wide central walkway aisle</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Heavy luggage carrier and boot space</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Powerful multi-zone AC systems</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Best for coastal temple Yatras &amp; college/team trips</li>
               </ul>
             </div>
           </div>
@@ -256,10 +278,9 @@
         </div>
 
         <!-- 5. Toyota Etios -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition duration-300 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
-            <div class="relative h-56 bg-slate-200 overflow-hidden group">
-              <!-- Dual source: Tries local etios.jpg first, falls back to direct photo CDN -->
+            <div class="relative h-60 bg-slate-200 overflow-hidden">
               <img 
                 src="etios.jpg" 
                 alt="Toyota Etios Sedan" 
@@ -267,316 +288,13 @@
                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/2014_Toyota_Etios_1.5_XLS_%28Argentina%29_front_view.jpg/640px-2014_Toyota_Etios_1.5_XLS_%28Argentina%29_front_view.jpg';"
               />
               <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded shadow">#5 Sedan Comfort</span>
-              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow">4+1 Seater Sedan</span>
+              <span class="absolute top-3 right-3 bg-slate-900/90 text-white text-xs font-bold px-2.5 py-1 rounded shadow backdrop-blur-sm">4+1 Seater Sedan</span>
             </div>
             <div class="p-5">
               <h3 class="text-xl font-bold text-slate-900">Toyota Etios</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-2.5">Economical Outstation Sedan</p>
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Generous rear legroom and wide flat seats</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Massive 592-liter boot for airport luggage</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Smooth AC and quiet highway comfort</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Economical tariff for couple, solo, &amp; small family trips</li>
-              </ul>
-            </div>
-          </div>
-          <div class="p-5 pt-0">
-            <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20I%20am%20interested%20in%20booking%20the%20Toyota%20Etios." target="_blank" class="block w-full text-center bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition duration-200 shadow">
-              <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> Enquire Toyota Etios
-            </a>
-          </div>
-        </div>
-
-        <!-- 6. Custom Multi-Vehicle Package Card -->
-        <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 rounded-2xl p-6 text-white flex flex-col justify-between border border-slate-700 shadow-md">
-          <div>
-            <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-              Custom Fleet Packages
-            </span>
-            <h3 class="text-xl font-extrabold mb-2">Need Multiple Cabs or Convoy?</h3>
-            <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              We arrange synchronized fleets combining Urbania luxury vans, Innova Crystas, and sedans for large family marriages, corporate conferences, and pilgrimage packages across Karnataka.
-            </p>
-            <div class="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 text-xs space-y-1.5 text-slate-300">
-              <p><i class="fa-solid fa-circle-check text-amber-400 mr-1.5"></i> Custom billing with GST invoice</p>
-              <p><i class="fa-solid fa-circle-check text-amber-400 mr-1.5"></i> Dedicated fleet coordinator</p>
-              <p><i class="fa-solid fa-circle-check text-amber-400 mr-1.5"></i> Bangalore to Mangalore route experts</p>
-            </div>
-          </div>
-          <div class="pt-6">
-            <a href="tel:+919008681881" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-bold py-3 rounded-xl transition">
-              <i class="fa-solid fa-phone mr-1.5"></i> Speak with Fleet Manager
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Grid -->
-  <section id="services" class="py-16 sm:py-20 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-amber-600 text-xs uppercase font-extrabold tracking-widest">Reliable Services</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Travel Services We Provide</h2>
-        <p class="text-slate-500 text-sm mt-2">Zero hidden charges, clean air-conditioned vehicles, and professional chauffeurs</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-map-location-dot"></i>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Outstation &amp; Pilgrimage Tours</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Specialized packages for Dharmasthala, Kukke Subramanya, Kateel, Udupi Krishna Mutt, Kollur Mookambika, Murudeshwar, Gokarna, Sringeri, Horanadu, Tirupati, Mysore, and Coorg.
-          </p>
-        </div>
-
-        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-plane-departure"></i>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Airport Pick &amp; Drop (BLR / IXE)</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Reliable airport transfers for Bengaluru Kempegowda Airport (BLR) and Mangaluru International Airport (IXE) with luggage assistance and flight delay tracking.
-          </p>
-        </div>
-
-        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-handshake"></i>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Corporate &amp; Wedding Logistics</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Executive commute infrastructure for corporate teams, tech conferences, wedding guests, and family reunions requiring multi-vehicle synchronization with Urbania &amp; Crysta fleets.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Offices Section: Bangalore HO & Mangalore BO -->
-  <section id="offices" class="py-16 sm:py-20 bg-slate-900 text-white px-4 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-amber-400 text-xs uppercase font-extrabold tracking-widest">Strategic Locations</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Our Registered Offices</h2>
-        <p class="text-slate-400 text-sm mt-2">Serving customers seamlessly from Bangalore and coastal Karnataka</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Bangalore Head Office Card -->
-        <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-1.5 bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-500/30">
-                <i class="fa-solid fa-landmark"></i> Registered Head Office
-              </span>
-              <span class="text-xs text-slate-400 font-semibold"><i class="fa-solid fa-city mr-1"></i> Bangalore</span>
-            </div>
-
-            <h3 class="text-xl font-bold text-white mb-2">Shree Rajarajeshwari Tours &amp; Travels</h3>
-            <p class="text-xs text-slate-400 mb-5">Primary Dispatch Hub &amp; Customer Care</p>
-
-            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-1.5 text-sm text-slate-300 font-sans mb-6">
-              <p class="font-bold text-white text-base">#215, A &amp; B, 1st Floor,</p>
-              <p>1st Main, 3rd Block,</p>
-              <p>Nagarabhavi 2nd stage,</p>
-              <p class="text-amber-400 font-bold">Bangalore - 560072, Karnataka</p>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <a href="tel:+919008681881" class="flex-1 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl text-center text-xs transition">
-              <i class="fa-solid fa-phone mr-1.5"></i> Call Bangalore Hub
-            </a>
-            <a href="https://maps.google.com/?q=Nagarabhavi+2nd+stage+Bangalore" target="_blank" class="flex-1 bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl text-center text-xs transition">
-              <i class="fa-solid fa-location-arrow mr-1.5"></i> Open in Maps
-            </a>
-          </div>
-        </div>
-
-        <!-- Mangalore Branch Office Card -->
-        <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-500/30">
-                <i class="fa-solid fa-building"></i> Coastal Branch Office
-              </span>
-              <span class="text-xs text-slate-400 font-semibold"><i class="fa-solid fa-water mr-1"></i> Mangalore</span>
-            </div>
-
-            <h3 class="text-xl font-bold text-white mb-2">Shree Rajarajeshwari Tours &amp; Travels</h3>
-            <p class="text-xs text-slate-400 mb-5">Coastal Tours &amp; Airport Dispatch Hub</p>
-
-            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-1.5 text-sm text-slate-300 font-sans mb-6">
-              <p class="font-bold text-white text-base">Abish Square,</p>
-              <p>Yeyyadi,</p>
-              <p>Airport Road,</p>
-              <p class="text-emerald-400 font-bold">Mangalore - 575008, Karnataka</p>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <a href="tel:+919008681881" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3 rounded-xl text-center text-xs transition">
-              <i class="fa-solid fa-phone mr-1.5"></i> Call Mangalore Hub
-            </a>
-            <a href="https://maps.google.com/?q=Abish+square+Yeyyadi+Airport+Road+Mangalore" target="_blank" class="flex-1 bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl text-center text-xs transition">
-              <i class="fa-solid fa-location-arrow mr-1.5"></i> Open in Maps
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking Form Section -->
-  <section id="booking" class="py-16 sm:py-20 bg-slate-100 px-4">
-    <div class="max-w-2xl mx-auto bg-white p-7 sm:p-10 rounded-3xl shadow-sm border border-slate-200">
-      <div class="text-center mb-8">
-        <span class="text-amber-600 text-xs uppercase font-extrabold tracking-widest">Fast Trip Confirmation</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Book Your Vehicle Online</h2>
-        <p class="text-slate-500 text-xs mt-1.5">Enter your trip requirements to send a pre-formatted message straight to our WhatsApp desk.</p>
-      </div>
-
-      <form id="srttBookingForm" onsubmit="handleDispatchWhatsApp(event)" class="space-y-4">
-        <div>
-          <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Customer Name</label>
-          <input type="text" id="custName" required class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" placeholder="Your Full Name" />
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Phone Number</label>
-            <input type="tel" id="custPhone" required class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" placeholder="10-Digit Mobile Number" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Select Vehicle</label>
-            <select id="custVehicle" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white">
-              <option value="Force Urbania (10-17 Seater)">Force Urbania (Luxury 10-17 Seater)</option>
-              <option value="Toyota Innova Crysta (7+1 Seater)">Toyota Innova Crysta (7+1 Seater)</option>
-              <option value="Toyota Rumion (6+1 Seater)">Toyota Rumion (6+1 Seater)</option>
-              <option value="Force Tempo Traveller (12-20 Seater)">Force Tempo Traveller (12-20 Seater)</option>
-              <option value="Toyota Etios (4+1 Seater)">Toyota Etios (4+1 Sedan)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Pickup Location</label>
-            <input type="text" id="custPickup" required class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" placeholder="e.g. Bangalore, Nagarabhavi, BLR Airport" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Drop / Tour Destination</label>
-            <input type="text" id="custDrop" required class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" placeholder="e.g. Dharmasthala, Mangalore, Coorg" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Travel Date</label>
-            <input type="date" id="custDate" required class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Operating Hub</label>
-            <select id="custHub" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white">
-              <option value="Bangalore Head Office Hub">Bangalore Head Office Hub</option>
-              <option value="Mangalore Branch Office Hub">Mangalore Branch Office Hub</option>
-              <option value="Bangalore to Mangalore Route">Bangalore &lt;-&gt; Mangalore Route</option>
-              <option value="Airport Pickup / Drop">Airport Pickup / Drop (BLR / IXE)</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 rounded-xl shadow-md transition flex items-center justify-center text-sm mt-3">
-          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Submit &amp; Send to WhatsApp (+91 90086 81881)
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-400 py-12 px-4 border-t border-slate-900 text-sm">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div>
-        <h4 class="text-white font-extrabold text-base mb-2">Shree Rajarajeshwari Tours &amp; Travels</h4>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-          Your trusted companion for premium passenger mobility, wedding convoys, outstation tours, and airport pick &amp; drops across Karnataka and neighboring states.
-        </p>
-        <div class="flex space-x-3 text-slate-300">
-          <a href="tel:+919008681881" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition"><i class="fa-solid fa-phone text-xs"></i></a>
-          <a href="https://wa.me/919008681881" target="_blank" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xs"></i></a>
-        </div>
-      </div>
-
-      <!-- Bangalore Address -->
-      <div>
-        <h4 class="text-white font-bold text-sm mb-3"><i class="fa-solid fa-landmark text-amber-500 mr-1.5"></i> Bangalore Head Office</h4>
-        <div class="text-xs space-y-1 text-slate-400 leading-relaxed">
-          <p class="text-slate-200 font-semibold">#215, A &amp; B, 1st Floor,</p>
-          <p>1st Main, 3rd Block,</p>
-          <p>Nagarabhavi 2nd stage,</p>
-          <p class="text-amber-400 font-semibold">Bangalore - 560072, Karnataka</p>
-        </div>
-      </div>
-
-      <!-- Mangalore Address -->
-      <div>
-        <h4 class="text-white font-bold text-sm mb-3"><i class="fa-solid fa-building text-emerald-400 mr-1.5"></i> Mangalore Branch Office</h4>
-        <div class="text-xs space-y-1 text-slate-400 leading-relaxed">
-          <p class="text-slate-200 font-semibold">Abish square,</p>
-          <p>Yeyyadi,</p>
-          <p>Airport Road,</p>
-          <p class="text-emerald-400 font-semibold">Mangalore - 575008, Karnataka</p>
-        </div>
-      </div>
-
-      <!-- Direct Contact Details -->
-      <div>
-        <h4 class="text-white font-bold text-sm mb-3"><i class="fa-solid fa-headset text-amber-500 mr-1.5"></i> 24/7 Booking Desk</h4>
-        <ul class="text-xs space-y-2 text-slate-400">
-          <li>Phone: <a href="tel:+919008681881" class="text-amber-400 font-bold hover:underline">+91 90086 81881</a></li>
-          <li>WhatsApp: <a href="https://wa.me/919008681881" class="text-emerald-400 font-bold hover:underline">+91 90086 81881</a></li>
-          <li>Serving: Bangalore, Mangalore, Udupi, Mysore, Coorg, Dharmasthala</li>
-          <li class="pt-2 text-slate-500 text-[11px]">Fleet: Urbania • Crysta • Rumion • TT • Etios</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
-      <p>© 2026 Shree Rajarajeshwari Tours &amp; Travels. All rights reserved.</p>
-      <p>Booking Helpline: <a href="tel:+919008681881" class="text-slate-300 font-semibold">+91 90086 81881</a></p>
-    </div>
-  </footer>
-
-  <script>
-    function handleDispatchWhatsApp(e) {
-      e.preventDefault();
-      const name = document.getElementById('custName').value.trim();
-      const phone = document.getElementById('custPhone').value.trim();
-      const vehicle = document.getElementById('custVehicle').value;
-      const pickup = document.getElementById('custPickup').value.trim();
-      const drop = document.getElementById('custDrop').value.trim();
-      const date = document.getElementById('custDate').value;
-      const hub = document.getElementById('custHub').value;
-
-      const messageText = 
-        `*Trip Enquiry - Shree Rajarajeshwari Tours & Travels*%0A%0A` +
-        `*Customer Name:* ${encodeURIComponent(name)}%0A` +
-        `*Contact Number:* ${encodeURIComponent(phone)}%0A` +
-        `*Vehicle Requested:* ${encodeURIComponent(vehicle)}%0A` +
-        `*Travel Date:* ${encodeURIComponent(date)}%0A` +
-        `*Operating Hub:* ${encodeURIComponent(hub)}%0A` +
-        `*Pickup Point:* ${encodeURIComponent(pickup)}%0A` +
-        `*Drop Destination:* ${encodeURIComponent(drop)}%0A%0A` +
-        `_Please send the quotation and vehicle availability._`;
-
-      window.open(`https://wa.me/919008681881?text=${messageText}`, '_blank');
-    }
-  </script>
-</body>
-</html>
-```
+              <p class="text-xs font-semibold text-amber-600 mb-3">Budget-Friendly Outstation Sedan</p>
+              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Excellent rear legroom and cushioned seating</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Best-in-class 592-liter boot for flight luggage</li>
+                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Low per-km tariff for budget journeys</li>
+           
