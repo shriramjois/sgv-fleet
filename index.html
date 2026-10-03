@@ -287,180 +287,245 @@
     </div>
   </section>
 
-  <!-- MODERN & COLORFUL OFFICE LOCATIONS SECTION -->
-  <section id="offices" class="py-20 px-4 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 text-white relative overflow-hidden" itemscope itemtype="https://schema.org/TravelAgency">
-    <!-- Decorative Ambient Glows -->
-    <div class="absolute -top-24 -left-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- REDESIGNED BENTO OFFICE LOCATIONS SECTION -->
+  <section id="offices" class="py-20 px-4 bg-slate-950 text-white relative overflow-hidden" itemscope itemtype="https://schema.org/TravelAgency">
+    <!-- Subtle Ambient Glows -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto relative z-10">
-      <div class="text-center mb-14">
-        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-400 border border-amber-500/30">
-          <i class="fa-solid fa-compass text-[11px]"></i> Direct Regional Hubs
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight mt-3 text-white">
-          Visit Our Regional Offices
-        </h2>
-        <p class="text-slate-400 text-sm mt-2 max-w-xl mx-auto">
-          Strategically located in Bengaluru &amp; Mangaluru to serve local city pickups, airport runs, and interstate tours 24/7.
-        </p>
+      
+      <!-- Section Header & Branch Switcher -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-slate-800">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-3">
+            <i class="fa-solid fa-location-crosshairs text-[10px]"></i> Physical Hubs
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">
+            Our Regional Offices
+          </h2>
+          <p class="text-slate-400 text-sm mt-1.5 max-w-lg">
+            Visit our branch hubs for vehicle inspection, driver verification, and customized tour consultations.
+          </p>
+        </div>
+
+        <!-- Segmented City Switcher -->
+        <div class="inline-flex p-1.5 bg-slate-900 border border-slate-800 rounded-2xl self-start md:self-auto shadow-inner">
+          <button 
+            id="btn-tab-blr" 
+            onclick="switchOffice('blr')" 
+            type="button"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-amber-500 text-slate-950 shadow-md">
+            <i class="fa-solid fa-crown text-[11px]"></i> Bengaluru Hub
+          </button>
+          <button 
+            id="btn-tab-mxe" 
+            onclick="switchOffice('mxe')" 
+            type="button"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white">
+            <i class="fa-solid fa-plane text-[11px]"></i> Mangaluru Branch
+          </button>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- 1. BENGALURU HUB PANE -->
+      <div id="pane-blr" class="grid grid-cols-1 lg:grid-cols-12 gap-6 transition-all duration-300" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
+        <meta itemprop="name" content="Shree Rajarajeshwari Tours & Travels - Bangalore Head Office" />
 
-        <!-- 1. BANGALORE HEAD OFFICE -->
-        <div class="group relative rounded-3xl p-[1px] bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 shadow-xl shadow-amber-500/5 hover:shadow-amber-500/15 transition-all duration-300" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
-          <meta itemprop="name" content="Shree Rajarajeshwari Tours & Travels - Bangalore Hub" />
-          <div class="h-full bg-slate-900/90 backdrop-blur-xl rounded-[23px] p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden">
-            <i class="fa-solid fa-landmark text-amber-500/[0.04] text-9xl absolute -bottom-4 -right-4 pointer-events-none group-hover:scale-105 transition-transform duration-500"></i>
-            
-            <div>
-              <!-- Header Pill & Live Status -->
-              <div class="flex items-center justify-between gap-3 mb-6">
-                <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black text-xs uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm">
-                  <i class="fa-solid fa-crown text-[10px]"></i> Head Office
-                </span>
-                <span class="text-xs font-medium text-amber-400 flex items-center gap-1.5 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open 24/7 &bull; All Days
-                </span>
-              </div>
+        <!-- Left Column: Details & Operations (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900/90 border border-amber-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
+          <i class="fa-solid fa-landmark text-amber-500/[0.03] text-[200px] absolute -bottom-10 -right-10 pointer-events-none"></i>
 
-              <!-- Title & City -->
-              <div class="flex items-start gap-4 mb-5">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-slate-950 flex items-center justify-center text-xl font-bold shadow-md shadow-amber-500/20 shrink-0">
-                  <i class="fa-solid fa-building"></i>
-                </div>
+          <div>
+            <!-- Status & Badges -->
+            <div class="flex items-center justify-between gap-2 mb-5">
+              <span class="inline-flex items-center gap-1.5 bg-amber-500 text-slate-950 font-black text-[11px] uppercase tracking-wider px-3 py-1 rounded-full">
+                Headquarters
+              </span>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open 24/7 &bull; Fleet On-Site
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-black text-white mb-1">Nagarabhavi 2nd Stage</h3>
+            <p class="text-xs text-amber-400/90 font-medium mb-5">West Bengaluru Central Dispatch Hub</p>
+
+            <!-- Address Card -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 mb-5 relative group/addr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <button 
+                type="button" 
+                onclick="copyOfficeAddr('#215, A & B, 1st Floor, 1st Main, 3rd Block, Nagarabhavi 2nd Stage, Bangalore - 560072', this)"
+                class="absolute top-3.5 right-3.5 text-slate-400 hover:text-amber-400 text-xs px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700/80 transition flex items-center gap-1.5" title="Copy Address">
+                <i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>
+              </button>
+              <p class="text-sm font-bold text-slate-200 leading-snug pr-16" itemprop="streetAddress">
+                #215, A &amp; B, 1st Floor, 1st Main
+              </p>
+              <p class="text-xs text-slate-400 mt-0.5">3rd Block, Nagarabhavi 2nd Stage</p>
+              <p class="text-xs text-slate-400">
+                <span itemprop="addressLocality">Bengaluru</span>, <span itemprop="addressRegion">KA</span> &mdash; <span class="font-bold text-amber-300" itemprop="postalCode">560072</span>
+              </p>
+            </div>
+
+            <!-- Transit & Accessibility Grid -->
+            <div class="grid grid-cols-2 gap-2.5 mb-6 text-[11px]">
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-train-subway text-amber-400 text-sm shrink-0"></i>
                 <div>
-                  <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-amber-300 transition">
-                    Bengaluru (Nagarabhavi)
-                  </h3>
-                  <p class="text-xs text-slate-400 mt-0.5">Corporate Headquarters &amp; Central Fleet Dispatch</p>
+                  <p class="font-bold text-slate-200">10 Mins</p>
+                  <p class="text-slate-400 text-[10px]">Mysore Rd / Nayandahalli</p>
                 </div>
               </div>
-
-              <!-- Address Box with Schema & Quick Copy -->
-              <div class="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 sm:p-5 mb-5 relative group/addr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <button type="button" onclick="copyAddress('#215, A & B, 1st Floor, 1st Main, 3rd Block, Nagarabhavi 2nd Stage, Bangalore - 560072', this)" class="absolute top-3 right-3 text-slate-400 hover:text-amber-400 text-xs px-2.5 py-1 rounded bg-slate-900 border border-slate-700 transition flex items-center gap-1.5" title="Copy Address">
-                  <i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>
-                </button>
-
-                <p class="text-sm font-bold text-amber-300 flex items-center gap-2 mb-1" itemprop="streetAddress">
-                  <i class="fa-solid fa-map-pin text-amber-400 text-xs shrink-0"></i>
-                  #215, A &amp; B, 1st Floor, 1st Main
-                </p>
-                <p class="text-xs text-slate-300 pl-5">3rd Block, Nagarabhavi 2nd Stage</p>
-                <p class="text-xs text-slate-300 pl-5">
-                  <span itemprop="addressLocality">Bengaluru</span>, <span itemprop="addressRegion">Karnataka</span> &mdash; <span class="font-bold text-white" itemprop="postalCode">560072</span>
-                </p>
-                
-                <!-- Transit Note -->
-                <div class="mt-3 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center gap-1.5 pl-0.5">
-                  <i class="fa-solid fa-train-subway text-amber-400"></i>
-                  <span>Near Outer Ring Road &bull; 10 mins from Nayandahalli / Mysore Road Metro</span>
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-road text-amber-400 text-sm shrink-0"></i>
+                <div>
+                  <p class="font-bold text-slate-200">500 Meters</p>
+                  <p class="text-slate-400 text-[10px]">From Outer Ring Road</p>
                 </div>
               </div>
-
-              <!-- Embedded Live Map -->
-              <div class="rounded-xl overflow-hidden border border-slate-800 mb-6 h-36 bg-slate-950">
-                <iframe 
-                  title="Bangalore Office Map"
-                  class="w-full h-full grayscale-[25%] contrast-[1.1] opacity-90 hover:opacity-100 hover:grayscale-0 transition duration-300 border-0"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  src="https://maps.google.com/maps?q=Nagarabhavi%202nd%20Stage%20Bangalore%20560072&t=&z=14&ie=UTF8&iwloc=&output=embed">
-                </iframe>
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-square-parking text-emerald-400 text-sm shrink-0"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Free Parking</p>
+                  <p class="text-slate-400 text-[10px]">Visitor &amp; Boarding Bay</p>
+                </div>
+              </div>
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-van-shuttle text-cyan-400 text-sm shrink-0"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Live Yard</p>
+                  <p class="text-slate-400 text-[10px]">Urbania &amp; Crysta Demos</p>
+                </div>
               </div>
             </div>
+          </div>
 
-            <!-- Action Buttons -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <a href="tel:+919008681881" itemprop="telephone" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md">
-                <i class="fa-solid fa-phone"></i> Call Bangalore Hub
-              </a>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=Nagarabhavi+2nd+Stage+Bangalore+560072" target="_blank" rel="noopener noreferrer" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-diamond-turn-right text-amber-400"></i> Get Driving Directions
-              </a>
-            </div>
+          <!-- Action CTA Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <a href="tel:+919008681881" itemprop="telephone" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
+              <i class="fa-solid fa-phone"></i> Call Bangalore Hub
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Nagarabhavi+2nd+Stage+Bangalore+560072" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-diamond-turn-right text-amber-400"></i> Get Directions
+            </a>
           </div>
         </div>
 
-        <!-- 2. MANGALORE BRANCH OFFICE -->
-        <div class="group relative rounded-3xl p-[1px] bg-gradient-to-br from-cyan-400 via-teal-500 to-emerald-500 shadow-xl shadow-cyan-500/5 hover:shadow-cyan-500/15 transition-all duration-300" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
-          <meta itemprop="name" content="Shree Rajarajeshwari Tours & Travels - Mangalore Coastal Hub" />
-          <div class="h-full bg-slate-900/90 backdrop-blur-xl rounded-[23px] p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden">
-            <i class="fa-solid fa-plane-departure text-cyan-500/[0.04] text-9xl absolute -bottom-4 -right-4 pointer-events-none group-hover:scale-105 transition-transform duration-500"></i>
-            
-            <div>
-              <!-- Header Pill & Live Status -->
-              <div class="flex items-center justify-between gap-3 mb-6">
-                <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-black text-xs uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm">
-                  <i class="fa-solid fa-plane text-[10px]"></i> Coastal Branch
-                </span>
-                <span class="text-xs font-medium text-cyan-300 flex items-center gap-1.5 bg-cyan-500/10 px-2.5 py-1 rounded-full border border-cyan-500/20">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 24/7 Airport Support
-                </span>
-              </div>
+        <!-- Right Column: Expansive Map View (7 Cols) -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 min-h-[380px] lg:min-h-full relative shadow-2xl">
+          <iframe 
+            title="Bangalore Office Location"
+            class="w-full h-full min-h-[380px] grayscale-[20%] contrast-[1.1] opacity-95 hover:opacity-100 hover:grayscale-0 transition duration-300 border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Nagarabhavi%202nd%20Stage%20Bangalore%20560072&t=&z=15&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+          <div class="absolute bottom-4 left-4 bg-slate-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700/60 text-[11px] text-slate-300 flex items-center gap-2 pointer-events-none">
+            <i class="fa-solid fa-circle text-emerald-400 text-[8px] animate-ping"></i>
+            <span>Live Highway Dispatch: Mysuru Rd, Tumakuru Rd &amp; Airport Corridor</span>
+          </div>
+        </div>
+      </div>
 
-              <!-- Title & City -->
-              <div class="flex items-start gap-4 mb-5">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-500 text-slate-950 flex items-center justify-center text-xl font-bold shadow-md shadow-cyan-500/20 shrink-0">
-                  <i class="fa-solid fa-route"></i>
-                </div>
+      <!-- 2. MANGALURU BRANCH PANE (Hidden by default, toggled via JS) -->
+      <div id="pane-mxe" class="grid grid-cols-1 lg:grid-cols-12 gap-6 transition-all duration-300 hidden" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
+        <meta itemprop="name" content="Shree Rajarajeshwari Tours & Travels - Mangalore Coastal Hub" />
+
+        <!-- Left Column: Details & Operations (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900/90 border border-cyan-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
+          <i class="fa-solid fa-plane-departure text-cyan-500/[0.03] text-[200px] absolute -bottom-10 -right-10 pointer-events-none"></i>
+
+          <div>
+            <!-- Status & Badges -->
+            <div class="flex items-center justify-between gap-2 mb-5">
+              <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-black text-[11px] uppercase tracking-wider px-3 py-1 rounded-full">
+                Coastal Hub
+              </span>
+              <span class="text-xs font-semibold text-cyan-300 flex items-center gap-1.5 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> 24/7 Airport Fleet Support
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-black text-white mb-1">Airport Road, Yeyyadi</h3>
+            <p class="text-xs text-cyan-400 font-medium mb-5">Mangaluru Coastal &amp; Temple Circuit Hub</p>
+
+            <!-- Address Card -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 mb-5 relative group/addr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <button 
+                type="button" 
+                onclick="copyOfficeAddr('Abish Square, Yeyyadi, Airport Road, Mangaluru - 575008', this)"
+                class="absolute top-3.5 right-3.5 text-slate-400 hover:text-cyan-400 text-xs px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700/80 transition flex items-center gap-1.5" title="Copy Address">
+                <i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>
+              </button>
+              <p class="text-sm font-bold text-slate-200 leading-snug pr-16" itemprop="streetAddress">
+                Abish Square, Yeyyadi
+              </p>
+              <p class="text-xs text-slate-400 mt-0.5">Direct on Airport Road</p>
+              <p class="text-xs text-slate-400">
+                <span itemprop="addressLocality">Mangaluru</span>, <span itemprop="addressRegion">KA</span> &mdash; <span class="font-bold text-cyan-300" itemprop="postalCode">575008</span>
+              </p>
+            </div>
+
+            <!-- Transit & Accessibility Grid -->
+            <div class="grid grid-cols-2 gap-2.5 mb-6 text-[11px]">
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-plane text-cyan-400 text-sm shrink-0"></i>
                 <div>
-                  <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-cyan-300 transition">
-                    Mangaluru (Airport Road)
-                  </h3>
-                  <p class="text-xs text-slate-400 mt-0.5">Coastal Karnataka &amp; IXE Airport Express Fleet</p>
+                  <p class="font-bold text-slate-200">15 Mins</p>
+                  <p class="text-slate-400 text-[10px]">Mangaluru Airport (IXE)</p>
                 </div>
               </div>
-
-              <!-- Address Box with Schema & Quick Copy -->
-              <div class="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 sm:p-5 mb-5 relative group/addr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <button type="button" onclick="copyAddress('Abish Square, Yeyyadi, Airport Road, Mangaluru - 575008', this)" class="absolute top-3 right-3 text-slate-400 hover:text-cyan-400 text-xs px-2.5 py-1 rounded bg-slate-900 border border-slate-700 transition flex items-center gap-1.5" title="Copy Address">
-                  <i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>
-                </button>
-
-                <p class="text-sm font-bold text-cyan-300 flex items-center gap-2 mb-1" itemprop="streetAddress">
-                  <i class="fa-solid fa-map-pin text-cyan-400 text-xs shrink-0"></i>
-                  Abish Square, Yeyyadi
-                </p>
-                <p class="text-xs text-slate-300 pl-5">Airport Road</p>
-                <p class="text-xs text-slate-300 pl-5">
-                  <span itemprop="addressLocality">Mangaluru</span>, <span itemprop="addressRegion">Karnataka</span> &mdash; <span class="font-bold text-white" itemprop="postalCode">575008</span>
-                </p>
-
-                <!-- Transit Note -->
-                <div class="mt-3 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center gap-1.5 pl-0.5">
-                  <i class="fa-solid fa-plane text-cyan-400"></i>
-                  <span>Direct on Airport Road &bull; 15 mins to Mangaluru International Airport (IXE)</span>
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-train text-cyan-400 text-sm shrink-0"></i>
+                <div>
+                  <p class="font-bold text-slate-200">12 Mins</p>
+                  <p class="text-slate-400 text-[10px]">Mangaluru Central (MAQ)</p>
                 </div>
               </div>
-
-              <!-- Embedded Live Map -->
-              <div class="rounded-xl overflow-hidden border border-slate-800 mb-6 h-36 bg-slate-950">
-                <iframe 
-                  title="Mangalore Office Map"
-                  class="w-full h-full grayscale-[25%] contrast-[1.1] opacity-90 hover:opacity-100 hover:grayscale-0 transition duration-300 border-0"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  src="https://maps.google.com/maps?q=Abish%20Square%20Yeyyadi%20Airport%20Road%20Mangalore%20575008&t=&z=14&ie=UTF8&iwloc=&output=embed">
-                </iframe>
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-gopuram text-amber-400 text-sm shrink-0"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Pilgrim Hub</p>
+                  <p class="text-slate-400 text-[10px]">Kudroli, Kateel &amp; Dharmasthala</p>
+                </div>
+              </div>
+              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                <i class="fa-solid fa-shield-halved text-emerald-400 text-sm shrink-0"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Ghat Drivers</p>
+                  <p class="text-slate-400 text-[10px]">Charmadi &amp; Shiradi Experts</p>
+                </div>
               </div>
             </div>
+          </div>
 
-            <!-- Action Buttons -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <a href="tel:+919008681881" itemprop="telephone" class="bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md">
-                <i class="fa-solid fa-phone"></i> Call Mangalore Hub
-              </a>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=Abish+Square+Yeyyadi+Airport+Road+Mangaluru+575008" target="_blank" rel="noopener noreferrer" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-diamond-turn-right text-cyan-400"></i> Get Driving Directions
-              </a>
-            </div>
+          <!-- Action CTA Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <a href="tel:+919008681881" itemprop="telephone" class="bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
+              <i class="fa-solid fa-phone"></i> Call Mangalore Hub
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Abish+Square+Yeyyadi+Airport+Road+Mangaluru+575008" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-diamond-turn-right text-cyan-400"></i> Get Directions
+            </a>
           </div>
         </div>
 
+        <!-- Right Column: Expansive Map View (7 Cols) -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 min-h-[380px] lg:min-h-full relative shadow-2xl">
+          <iframe 
+            title="Mangalore Office Location"
+            class="w-full h-full min-h-[380px] grayscale-[20%] contrast-[1.1] opacity-95 hover:opacity-100 hover:grayscale-0 transition duration-300 border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Abish%20Square%20Yeyyadi%20Airport%20Road%20Mangalore%20575008&t=&z=15&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+          <div class="absolute bottom-4 left-4 bg-slate-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700/60 text-[11px] text-slate-300 flex items-center gap-2 pointer-events-none">
+            <i class="fa-solid fa-circle text-cyan-400 text-[8px] animate-ping"></i>
+            <span>Direct Runway Corridor &bull; Udupi, Manipal &amp; Kasaragod Connectivity</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -595,22 +660,43 @@
       window.open(`https://wa.me/919008681881?text=${text}`, '_blank');
     }
 
-    function copyAddress(text, btnElement) {
+    function switchOffice(branch) {
+      const blrPane = document.getElementById('pane-blr');
+      const mxePane = document.getElementById('pane-mxe');
+      const blrBtn = document.getElementById('btn-tab-blr');
+      const mxeBtn = document.getElementById('btn-tab-mxe');
+
+      if (branch === 'blr') {
+        blrPane.classList.remove('hidden');
+        mxePane.classList.add('hidden');
+        
+        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-amber-500 text-slate-950 shadow-md";
+        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white";
+      } else {
+        mxePane.classList.remove('hidden');
+        blrPane.classList.add('hidden');
+
+        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 shadow-md";
+        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white";
+      }
+    }
+
+    function copyOfficeAddr(text, btnElement) {
       navigator.clipboard.writeText(text).then(() => {
         const originalHTML = btnElement.innerHTML;
-        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-[11px]"></i> <span class="text-emerald-400">Copied!</span>';
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-[11px]"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
         setTimeout(() => {
           btnElement.innerHTML = originalHTML;
         }, 2000);
       }).catch(() => {
-        // Fallback for non-HTTPS or permission denial
+        // Fallback for non-HTTPS or permission block
         const tempInput = document.createElement('input');
         tempInput.value = text;
         document.body.appendChild(tempInput);
         tempInput.select();
         document.execCommand('copy');
         document.body.removeChild(tempInput);
-        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-[11px]"></i> <span class="text-emerald-400">Copied!</span>';
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-[11px]"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
         setTimeout(() => {
           btnElement.innerHTML = '<i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>';
         }, 2000);
