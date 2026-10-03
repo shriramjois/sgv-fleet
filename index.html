@@ -1,239 +1,437 @@
 
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devi Prasad Fleet Solutions | Driver Attachment & Car Rental</title>
+  <title>Shree Rajarajeshwari Travels | Premium Cab & Luxury Van Rentals</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              900: '#78350f',
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-400 selection:text-slate-900">
 
-  <!-- Top Bar -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+  <div class="bg-slate-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
     <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex items-center space-x-4">
-        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Bengaluru, Karnataka</span>
-        <span><i class="fa-solid fa-clock text-amber-500 mr-1"></i> Mon - Sat: 9:00 AM - 7:00 PM</span>
+        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> Karnataka, South India</span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-clock text-amber-500 mr-1.5"></i> 24/7 Cab & Luxury Van Booking</span>
       </div>
-      <div>
-        <a href="tel:+919876543210" class="hover:text-amber-400"><i class="fa-solid fa-phone text-amber-500 mr-1"></i> +91 9008681881</a>
+      <div class="flex items-center space-x-4">
+        <a href="tel:+919008681881" class="hover:text-amber-400 font-semibold transition flex items-center">
+          <i class="fa-solid fa-phone text-amber-500 mr-1.5"></i> +91 90086 81881
+        </a>
+        <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Travels%2C%20I%20need%20a%20cab%20enquiry." target="_blank" class="hover:text-emerald-400 font-semibold transition flex items-center">
+          <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> WhatsApp
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <header class="bg-white sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="#" class="flex items-center space-x-2">
-        <span class="text-2xl font-black tracking-tight text-slate-900">
-          DEVI PRASAD<span class="text-amber-500">FLEET</span>
+  <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+      <a href="#" class="flex flex-col">
+        <span class="text-lg sm:text-2xl font-black tracking-tight text-slate-900">
+          SHREE RAJARAJESHWARI <span class="text-amber-500">TRAVELS</span>
+        </span>
+        <span class="text-[10px] sm:text-xs tracking-wider uppercase font-semibold text-slate-500">
+          Premium Cab & Luxury Van Rental
         </span>
       </a>
-      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-700">
+      
+      <nav class="hidden md:flex space-x-7 text-sm font-medium text-slate-700">
         <a href="#services" class="hover:text-amber-600 transition">Services</a>
         <a href="#fleet" class="hover:text-amber-600 transition">Our Fleet</a>
-        <a href="#attachment" class="hover:text-amber-600 transition">Driver Attachment</a>
-        <a href="#investment" class="hover:text-amber-600 transition">Partnership</a>
-        <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+        <a href="#why-us" class="hover:text-amber-600 transition">Why Choose Us</a>
+        <a href="#booking" class="hover:text-amber-600 transition">Book Online</a>
       </nav>
-      <a href="#apply" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition">
-        Apply Now
+
+      <a href="tel:+919008681881" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs sm:text-sm shadow-sm transition flex items-center">
+        <i class="fa-solid fa-phone-volume mr-1.5"></i> Call Now
       </a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white py-20 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-      <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-        Driven by Trust • Powered by Excellence
+  <section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-900 text-white py-16 sm:py-24 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <span class="inline-flex items-center gap-1.5 bg-amber-500/15 text-amber-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-5 border border-amber-500/30">
+        <i class="fa-solid fa-star text-[10px]"></i> Reliable • Punctual • Sanitized Cabs
       </span>
-      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-        Smart Fleet Management & <br class="hidden sm:inline" />Driver Attachment in Bengaluru
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+        Your Trusted Travel Partner for <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">
+          Outstation & Group Journeys
+        </span>
       </h1>
-      <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto mb-8">
-        Attach your vehicle or rent fuel-efficient cars for Ola, Uber, and Namma Yatri. High earnings, full maintenance support, and transparent daily payouts.
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+        Experience seamless long-distance travel, airport transfers, corporate transit, and pilgrimage tours with experienced chauffeurs and impeccably maintained luxury vehicles.
       </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#apply" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-md transition">
-          Drive With Us
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-md mx-auto">
+        <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/20 transition flex items-center justify-center text-sm">
+          <i class="fa-solid fa-calendar-check mr-2"></i> Book Vehicle Now
         </a>
-        <a href="https://wa.me/919876543210" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition flex items-center justify-center">
-          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Support
+        <a href="https://wa.me/919008681881?text=Hi%20Shree%20Rajarajeshwari%20Travels%2C%20I%20want%20to%20check%20cab%20availability." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center text-sm">
+          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Booking
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Supported Platforms -->
-  <section class="py-6 bg-slate-100 border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <p class="text-xs uppercase tracking-widest text-slate-500 font-semibold mb-4">Eligible Attachment Platforms</p>
-      <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-12 font-bold text-slate-700 text-sm sm:text-base">
-        <span class="bg-white px-4 py-2 rounded-md shadow-sm border border-slate-200">OLA CABS</span>
-        <span class="bg-white px-4 py-2 rounded-md shadow-sm border border-slate-200">UBER</span>
-        <span class="bg-white px-4 py-2 rounded-md shadow-sm border border-slate-200">NAMMA YATRI</span>
-        <span class="bg-white px-4 py-2 rounded-md shadow-sm border border-slate-200">RAPIDO</span>
+  <section class="py-6 bg-amber-500 text-slate-950 font-semibold text-xs sm:text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="flex items-center justify-center gap-2">
+        <i class="fa-solid fa-shield-halved text-base"></i> Verified Chauffeurs
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <i class="fa-solid fa-coins text-base"></i> Transparent Pricing
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <i class="fa-solid fa-snowflake text-base"></i> 100% AC & Clean Fleet
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <i class="fa-solid fa-headset text-base"></i> 24x7 Customer Support
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
   <section id="services" class="py-16 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">What We Offer</h2>
-        <p class="text-slate-500 text-sm mt-2">Comprehensive commercial fleet solutions tailored for Bangalore drivers and enterprises</p>
+        <h2 class="text-xs uppercase font-bold tracking-widest text-amber-600 mb-1">Our Offerings</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Customized Travel Solutions</h3>
+        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Whether for business, family getaways, or group excursions, we guarantee reliable mobility without hidden charges.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-car"></i>
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-road"></i>
           </div>
-          <h3 class="text-lg font-bold mb-2">Driver Attachment</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Smooth onboarding for Uber, Ola, and local aggregators with profile checks and paperwork guidance.</p>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Outstation Round Trips</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">Comfortable one-way and round trips for vacation getaways, temple tours, and family journeys across Karnataka and neighboring states.</p>
+          <ul class="text-xs text-slate-500 space-y-1.5 border-t pt-3">
+            <li><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Custom day itineraries</li>
+            <li><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Zero return tolls for one-way</li>
+          </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-gas-pump"></i>
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-plane-departure"></i>
           </div>
-          <h3 class="text-lg font-bold mb-2">Flexible Vehicle Rentals</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Daily and monthly rental Dzire, WagonR, and Ertiga CNG cars ready to drive on preferred platforms.</p>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Airport Pick & Drop</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">Timely, dependable airport transfers with complete flight schedule tracking so you never experience flight delays or wait times.</p>
+          <ul class="text-xs text-slate-500 space-y-1.5 border-t pt-3">
+            <li><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Guaranteed on-time pickup</li>
+            <li><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Dedicated luggage space</li>
+          </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-building"></i>
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-users-rays"></i>
           </div>
-          <h3 class="text-lg font-bold mb-2">Corporate Mobility</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Dedicated employee commute and cab infrastructure for IT parks and enterprises in Bangalore.</p>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Group & Pilgrimage Tours</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">Specialized Force Urbania and multi-MPV arrangements for wedding guests, corporate teams, and temple pilgrimages.</p>
+          <ul class="text-xs text-slate-500 space-y-1.5 border-t pt-3">
+            <li><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Recliner bucket seating</li>
+            <li><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Experienced highway drivers</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Fleet Showcase -->
   <section id="fleet" class="py-16 bg-slate-100 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Our Commercial Fleet</h2>
-        <p class="text-slate-500 text-sm mt-2">Well-maintained, CNG & petrol vehicles ready for immediate deployment</p>
+        <h2 class="text-xs uppercase font-bold tracking-widest text-amber-600 mb-1">Our Fleet</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Premium Commercial Vehicles</h3>
+        <p class="text-slate-500 text-sm mt-2">Well-maintained, licensed, and sanitized vehicles with professional drivers</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Vehicle 1 -->
-        <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
-          <div class="bg-slate-200 h-44 flex items-center justify-center text-slate-400">
-            <i class="fa-solid fa-car-side text-6xl"></i>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Toyota Innova Crysta -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-slate-200 relative group">
+              <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=700&q=80" alt="Toyota Innova Crysta" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Toyota+Innova+Crysta'" />
+              <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded shadow">Premium Luxury</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-slate-900 text-lg">Toyota Innova Crysta</h4>
+              <p class="text-xs text-amber-600 font-semibold mb-2">7+1 & 6+1 Captain Seats • AC</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                The gold standard in comfort. Exceptional suspension, ample legroom, and generous luggage capacity for outstation trips.
+              </p>
+            </div>
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-slate-900">Maruti Suzuki Dzire</h3>
-            <p class="text-xs text-slate-500 mb-3">CNG • Sedan • Premium Mileage</p>
-            <p class="text-sm text-slate-600 mb-4">Starting from <span class="text-amber-600 font-bold">₹1,100/day</span> on prompt payment.</p>
-            <a href="#apply" class="block text-center w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-2 rounded-lg transition">Enquire Dzire</a>
-          </div>
-        </div>
-
-        <!-- Vehicle 2 -->
-        <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
-          <div class="bg-slate-200 h-44 flex items-center justify-center text-slate-400">
-            <i class="fa-solid fa-van-shuttle text-6xl"></i>
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-slate-900">Maruti Suzuki Ertiga</h3>
-            <p class="text-xs text-slate-500 mb-3">7-Seater • MPV • Corporate Trips</p>
-            <p class="text-sm text-slate-600 mb-4">Best suited for airport transfers, corporate contracts, and intercity trips.</p>
-            <a href="#apply" class="block text-center w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-2 rounded-lg transition">Enquire Ertiga</a>
+          <div class="p-5 pt-0">
+            <a href="https://wa.me/919008681881?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Toyota%20Innova%20Crysta" target="_blank" class="block w-full text-center bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold py-2.5 rounded-lg text-xs transition duration-200">
+              Book Innova Crysta
+            </a>
           </div>
         </div>
 
-        <!-- Vehicle 3 -->
-        <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
-          <div class="bg-slate-200 h-44 flex items-center justify-center text-slate-400">
-            <i class="fa-solid fa-car text-6xl"></i>
+        <!-- Toyota Rumion -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-slate-200 relative group">
+              <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=700&q=80" alt="Toyota Rumion" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Toyota+Rumion'" />
+              <span class="absolute top-3 right-3 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Smart MPV</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-slate-900 text-lg">Toyota Rumion</h4>
+              <p class="text-xs text-amber-600 font-semibold mb-2">6+1 Seater • Dual AC</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Modern styling, great ride comfort, and smooth highway stability for small families and airport commutes.
+              </p>
+            </div>
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-slate-900">Maruti Suzuki WagonR</h3>
-            <p class="text-xs text-slate-500 mb-3">Hatchback • City Commute • Economical</p>
-            <p class="text-sm text-slate-600 mb-4">High city mileage, ideal for daily intracity ride-hailing trips.</p>
-            <a href="#apply" class="block text-center w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-2 rounded-lg transition">Enquire WagonR</a>
+          <div class="p-5 pt-0">
+            <a href="https://wa.me/919008681881?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Toyota%20Rumion" target="_blank" class="block w-full text-center bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold py-2.5 rounded-lg text-xs transition duration-200">
+              Book Toyota Rumion
+            </a>
+          </div>
+        </div>
+
+        <!-- Maruti Suzuki Ertiga -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-slate-200 relative group">
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80" alt="Maruti Suzuki Ertiga" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Maruti+Suzuki+Ertiga'" />
+              <span class="absolute top-3 right-3 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Value Choice</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-slate-900 text-lg">Maruti Suzuki Ertiga</h4>
+              <p class="text-xs text-amber-600 font-semibold mb-2">6+1 Seater • Highly Economical</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Cost-effective family MPV offering high mileage, chill air-conditioning, and reliable city and highway performance.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <a href="https://wa.me/919008681881?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Maruti%20Suzuki%20Ertiga" target="_blank" class="block w-full text-center bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold py-2.5 rounded-lg text-xs transition duration-200">
+              Book Maruti Ertiga
+            </a>
+          </div>
+        </div>
+
+        <!-- Force Urbania -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-slate-200 relative group">
+              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=700&q=80" alt="Force Urbania Luxury Van" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Force+Urbania'" />
+              <span class="absolute top-3 right-3 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Luxury Van</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-slate-900 text-lg">Force Urbania</h4>
+              <p class="text-xs text-amber-600 font-semibold mb-2">10 - 17 Seater • Recliner Seats</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Next-gen luxury van equipped with individual AC vents, reclining comfort seats, USB ports, and panoramic windows.
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <a href="https://wa.me/919008681881?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Force%20Urbania" target="_blank" class="block w-full text-center bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold py-2.5 rounded-lg text-xs transition duration-200">
+              Book Force Urbania
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span class="text-amber-400 text-xs uppercase font-bold tracking-widest">Why Shree Rajarajeshwari Travels</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold mt-2 mb-4">Dedicated to Safer, Cleaner, and Timely Travel</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              With decades of combined driving experience across South India routes, we treat every customer journey as our priority. From pristine vehicle condition to round-the-clock driver availability, we make your journey hassle-free.
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-center text-sm text-slate-200">
+                <i class="fa-solid fa-circle-check text-amber-400 mr-2.5"></i> Commercial yellow board compliance & valid all-India permits
+              </div>
+              <div class="flex items-center text-sm text-slate-200">
+                <i class="fa-solid fa-circle-check text-amber-400 mr-2.5"></i> Polite chauffeurs fluent in Kannada, English, and Hindi
+              </div>
+              <div class="flex items-center text-sm text-slate-200">
+                <i class="fa-solid fa-circle-check text-amber-400 mr-2.5"></i> Direct contact with owners without mediator commissions
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700/60 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Need an Instant Travel Quote?</h4>
+            <p class="text-slate-400 text-xs mb-6">Call our travel coordinator directly on mobile or send a quick WhatsApp itinerary.</p>
+            <div class="flex flex-col gap-3">
+              <a href="tel:+919008681881" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition text-sm">
+                <i class="fa-solid fa-phone mr-2"></i> +91 90086 81881
+              </a>
+              <a href="https://wa.me/919008681881?text=Hi%2C%20please%20send%20me%20rental%20rates%20for%20a%20trip." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center">
+                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Chat on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Driver Application Form -->
-  <section id="apply" class="py-16 px-4">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow border border-slate-200">
-      <h2 class="text-2xl font-bold text-slate-900 text-center mb-2">Join as a Driver Partner</h2>
-      <p class="text-sm text-slate-500 text-center mb-6">Submit your details to start driving with our fleet</p>
+  <section id="booking" class="py-16 bg-slate-100 px-4">
+    <div class="max-w-2xl mx-auto bg-white p-7 sm:p-10 rounded-3xl shadow-sm border border-slate-200">
+      <div class="text-center mb-8">
+        <span class="text-amber-600 text-xs uppercase font-bold tracking-widest">Instant Booking</span>
+        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Book Your Journey</h3>
+        <p class="text-slate-500 text-xs mt-1">Fill out the form below to initiate booking directly over WhatsApp or call.</p>
+      </div>
 
-      <form action="#" onsubmit="event.preventDefault(); alert('Demo Form: Replace action with Formspree or your API URL!');" class="space-y-4">
+      <form id="tripForm" onsubmit="handleBooking(event)" class="space-y-4">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name</label>
-          <input type="text" required class="w-full px-4 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="Enter your full name" />
+          <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Your Full Name</label>
+          <input type="text" id="custName" required class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="e.g. Ramesh Kumar" />
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Phone Number</label>
-            <input type="tel" required class="w-full px-4 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="10-digit mobile number" />
+            <input type="tel" id="custPhone" required class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="10-digit mobile number" />
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Vehicle Preference</label>
-            <select class="w-full px-4 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-amber-500 outline-none">
-              <option>Maruti Dzire (Sedan)</option>
-              <option>Maruti Ertiga (MPV)</option>
-              <option>Maruti WagonR (Hatchback)</option>
-              <option>Own Vehicle Attachment</option>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Select Vehicle</label>
+            <select id="custVehicle" class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none bg-white">
+              <option value="Toyota Innova Crysta">Toyota Innova Crysta</option>
+              <option value="Toyota Rumion">Toyota Rumion</option>
+              <option value="Maruti Suzuki Ertiga">Maruti Suzuki Ertiga</option>
+              <option value="Force Urbania">Force Urbania (Luxury Van)</option>
             </select>
           </div>
         </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Location in Bangalore</label>
-          <input type="text" class="w-full px-4 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="e.g. Nagarbhavi, Hebbal, Whitefield" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Pickup Location</label>
+            <input type="text" id="pickupLoc" required class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="e.g. Bengaluru, Airport" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Destination</label>
+            <input type="text" id="dropLoc" required class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none" placeholder="e.g. Coorg, Mysore, Tirupati" />
+          </div>
         </div>
-        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-lg transition">
-          Submit Application
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Trip Date</label>
+            <input type="date" id="tripDate" required class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Trip Type</label>
+            <select id="tripType" class="w-full px-4 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 outline-none bg-white">
+              <option value="Round Trip">Outstation Round Trip</option>
+              <option value="One Way Drop">One-way Drop</option>
+              <option value="Airport Transfer">Airport Transfer</option>
+              <option value="Local Day Rental">Local City Rental</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 rounded-xl shadow-md transition duration-200 flex items-center justify-center text-sm mt-3">
+          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Submit & Send Enquiry via WhatsApp
         </button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-400 py-10 px-4 border-t border-slate-800 text-sm">
+  <footer class="bg-slate-950 text-slate-400 py-12 px-4 border-t border-slate-900 text-sm">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
-        <h4 class="text-white font-bold text-lg mb-2">Devi Prasad Fleet Solutions</h4>
+        <h4 class="text-white font-extrabold text-base mb-3">Shree Rajarajeshwari Travels</h4>
         <p class="text-xs text-slate-400 leading-relaxed mb-4">
-          Empowering drivers and corporate mobility with tech-backed fleet management and rental services across Karnataka.
+          Dedicated car rental and passenger transport solutions offering pristine MPVs and luxury executive vans for holidays, weddings, corporate transit, and pilgrimages across South India.
         </p>
+        <div class="flex space-x-3 text-slate-300">
+          <a href="tel:+919008681881" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://wa.me/919008681881" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
       </div>
+
       <div>
-        <h4 class="text-white font-semibold mb-2">Office Address</h4>
-        <p class="text-xs leading-relaxed">
-          Outer Ring Road, Bengaluru, Karnataka 560072<br />
-          Email: info@garudafleet.example.com<br />
-          Phone: +91 90086 81881
-        </p>
+        <h4 class="text-white font-bold text-sm mb-3">Contact & Reservations</h4>
+        <ul class="text-xs space-y-2 text-slate-400">
+          <li class="flex items-center"><i class="fa-solid fa-phone text-amber-500 mr-2"></i> <a href="tel:+919008681881" class="hover:text-white">+91 90086 81881</a></li>
+          <li class="flex items-center"><i class="fa-brands fa-whatsapp text-emerald-500 mr-2"></i> <a href="https://wa.me/919008681881" class="hover:text-white">+91 90086 81881</a></li>
+          <li class="flex items-start"><i class="fa-solid fa-location-dot text-amber-500 mr-2 mt-0.5"></i> Karnataka, India</li>
+          <li class="flex items-center"><i class="fa-solid fa-clock text-amber-500 mr-2"></i> 24x7 Cab Dispatch Service</li>
+        </ul>
       </div>
+
       <div>
-        <h4 class="text-white font-semibold mb-2">Operating Hours</h4>
-        <p class="text-xs leading-relaxed">
-          Monday - Saturday: 9:00 AM - 7:00 PM<br />
-          24/7 Roadside Driver Assistance
+        <h4 class="text-white font-bold text-sm mb-3">Fleet Overview</h4>
+        <p class="text-xs text-slate-400 leading-relaxed mb-3">
+          Specialists in 6-seater, 7-seater, and 10 to 17-seater luxury group mobility:
         </p>
+        <div class="flex flex-wrap gap-1.5 text-[11px]">
+          <span class="bg-slate-900 border border-slate-800 px-2 py-1 rounded text-slate-300">Toyota Crysta</span>
+          <span class="bg-slate-900 border border-slate-800 px-2 py-1 rounded text-slate-300">Toyota Rumion</span>
+          <span class="bg-slate-900 border border-slate-800 px-2 py-1 rounded text-slate-300">Maruti Ertiga</span>
+          <span class="bg-slate-900 border border-slate-800 px-2 py-1 rounded text-slate-300">Force Urbania</span>
+        </div>
       </div>
     </div>
-    <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-900 text-center text-xs text-slate-500">
-      © 2026 Devi Prasad Fleet Solutions. For demonstration & trial purposes.
+
+    <div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
+      <p>© 2026 Shree Rajarajeshwari Travels. All rights reserved.</p>
+      <p>Direct Booking Hotline: <span class="text-slate-300 font-semibold">+91 90086 81881</span></p>
     </div>
   </footer>
 
+  <script>
+    function handleBooking(event) {
+      event.preventDefault();
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const vehicle = document.getElementById('custVehicle').value;
+      const pickup = document.getElementById('pickupLoc').value.trim();
+      const drop = document.getElementById('dropLoc').value.trim();
+      const date = document.getElementById('tripDate').value;
+      const tripType = document.getElementById('tripType').value;
+
+      const message = `*New Booking Enquiry - Shree Rajarajeshwari Travels*%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Phone:* ${encodeURIComponent(phone)}%0A` +
+        `*Vehicle:* ${encodeURIComponent(vehicle)}%0A` +
+        `*Trip Type:* ${encodeURIComponent(tripType)}%0A` +
+        `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
+        `*Destination:* ${encodeURIComponent(drop)}%0A` +
+        `*Travel Date:* ${encodeURIComponent(date)}`;
+
+      window.open(`https://wa.me/919008681881?text=${message}`, '_blank');
+    }
+  </script>
 </body>
 </html>
-
+```
