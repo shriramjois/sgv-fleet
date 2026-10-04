@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shree Rajarajeshwari Tours & Travels | Cab Rentals Bangalore & Mangalore</title>
-  <meta name="description" content="Chauffeur-driven tourist vehicle rentals in Bangalore & Mangalore. Force Urbania, Innova Crysta, Tempo Traveller, Toyota Rumion, and Etios." />
+  <meta name="description" content="Chauffeur-driven tourist vehicle rentals in Bangalore & Mangalore. Force Urbania, Innova Crysta, Tempo Traveller, Toyota Rumion, and Etios for Round Trips, One Way Drops, and Airport Transfers." />
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Shree Rajarajeshwari Tours & Travels | Bangalore & Mangalore Cab Rentals" />
-  <meta property="og:description" content="Book Force Urbania, Innova Crysta, and Tempo Traveller for temple pilgrimages, hill station vacations & airport transfers." />
+  <meta property="og:description" content="Book Force Urbania, Innova Crysta, and Tempo Traveller for temple pilgrimages, outstation round trips & airport transfers." />
   <meta property="og:type" content="website" />
 
   <!-- Google Fonts: Manrope (Headings) & Inter (UI/Body) -->
@@ -52,13 +52,38 @@
       font-size: 15px !important;
     }
     @media print {
-      body * { visibility: hidden; }
-      #printable-estimate-modal, #printable-estimate-modal * { visibility: visible; }
-      #printable-estimate-modal {
-        position: fixed; left: 0; top: 0; width: 100%; height: 100%;
-        background: white !important; padding: 0 !important; margin: 0 !important; display: block !important;
+      body {
+        background: white !important;
+        color: black !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
-      .no-print { display: none !important; }
+      body > div:not(#printable-estimate-modal),
+      header,
+      section,
+      footer {
+        display: none !important;
+      }
+      #printable-estimate-modal {
+        display: block !important;
+        position: static !important;
+        background: white !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+      }
+      #printable-estimate-modal > div {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+      }
+      .no-print {
+        display: none !important;
+      }
     }
   </style>
 
@@ -139,7 +164,7 @@
           <i class="fa-solid fa-shield-halved text-emerald-400 mr-2 text-sm"></i>
           <span data-i18n="topGps">GPS Monitored Commercial Fleet</span>
         </span>
-        <!-- Synchronized Live Visitor Counter -->
+        <!-- Live Visitor Ticket Counter -->
         <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-700/80 px-3 py-1 rounded-full text-[11px] text-slate-200 shadow-inner">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span class="text-slate-400">Total Visits:</span>
@@ -160,11 +185,10 @@
     </div>
   </div>
 
-  <!-- STICKY NAVBAR: Prominent Brand Emblem + Scaled Typography -->
+  <!-- STICKY NAVBAR -->
   <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200 transition-all">
     <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
       <a href="#" class="flex items-center gap-3 group">
-        <!-- Custom Brand Emblem with Smooth Hover Rotate -->
         <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-slate-950 text-amber-400 flex items-center justify-center font-heading font-black text-base sm:text-lg border border-amber-500/40 shadow-sm group-hover:border-amber-400 group-hover:shadow-amber-500/10 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0">
           SR
         </div>
@@ -214,13 +238,11 @@
     </div>
   </header>
 
-  <!-- HERO SECTION: Subtle Fade-in Entrance -->
+  <!-- HERO SECTION -->
   <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 px-4 border-b border-slate-800 relative overflow-hidden">
-    <!-- Ambient glow behind brand -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-up">
-      <!-- Formal Brand Pre-Title Tag -->
       <div class="inline-flex items-center gap-2 bg-slate-900/90 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 shadow-inner">
         <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
         <span>Shree Rajarajeshwari Tours &amp; Travels</span>
@@ -230,7 +252,7 @@
         Trusted Passenger Tours &amp; Luxury Cab Rentals
       </h1>
       <p class="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal" data-i18n="heroSubhead">
-        Outstation round trips, airport drops, family temple pilgrimages, and corporate luxury transport across Karnataka with Bangalore &amp; Mangalore hubs.
+        Outstation round trips, one-way highway drops, airport transfers, family temple pilgrimages &amp; corporate luxury transport across Karnataka.
       </p>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
         <a href="#calculator" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center text-sm gap-2">
@@ -246,7 +268,7 @@
     </div>
   </section>
 
-  <!-- FLEET SECTION: Smooth Hover Elevate Cards -->
+  <!-- FLEET SECTION -->
   <section id="fleet" class="py-16 sm:py-20 px-4 bg-slate-100">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-14">
@@ -481,18 +503,18 @@
     </div>
   </section>
 
-  <!-- FARE CALCULATOR -->
+  <!-- FARE CALCULATOR: WITH INTERACTIVE ROUND TRIP, ONE WAY & AIRPORT SWITCHER -->
   <section id="calculator" class="py-16 sm:py-20 px-4 bg-slate-950 text-white border-y border-slate-800">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12">
         <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">
-          <i class="fa-solid fa-calculator text-amber-400"></i> Interactive Price Estimator
+          <i class="fa-solid fa-calculator text-amber-400"></i> Live Fare &amp; Route Estimator
         </span>
         <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="calcHeading">
           Estimate Your Journey Budget
         </h2>
         <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="calcDesc">
-          Adjust distance, trip days, and vehicle type to calculate an indicative upfront fare and download a branded estimate slip.
+          Select trip type (Round Trip, One Way, or Airport), adjust distance &amp; days, and download your instant estimate slip.
         </p>
       </div>
 
@@ -500,8 +522,26 @@
         
         <!-- Controls Column -->
         <div class="md:col-span-7 space-y-6">
+          
+          <!-- Segmented Journey Type Selector Inside Calculator -->
           <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase mb-2 tracking-wide">1. Select Vehicle Class</label>
+            <label class="block text-xs font-bold text-slate-200 uppercase mb-2 tracking-wide">1. Select Journey Type</label>
+            <div class="grid grid-cols-3 gap-2.5 p-1.5 bg-slate-950 rounded-2xl border border-slate-800">
+              <button type="button" id="calc-type-round" onclick="setCalcTripType('round')" class="py-2.5 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 bg-amber-400 text-slate-950 shadow">
+                <i class="fa-solid fa-arrows-rotate text-xs"></i> <span>Round Trip</span>
+              </button>
+              <button type="button" id="calc-type-oneway" onclick="setCalcTripType('oneway')" class="py-2.5 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 text-slate-300 hover:text-white">
+                <i class="fa-solid fa-arrow-right text-xs"></i> <span>One Way</span>
+              </button>
+              <button type="button" id="calc-type-airport" onclick="setCalcTripType('airport')" class="py-2.5 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 text-slate-300 hover:text-white">
+                <i class="fa-solid fa-plane text-xs"></i> <span>Airport Drop</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Vehicle Selector -->
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase mb-2 tracking-wide">2. Select Vehicle Class</label>
             <select id="calcVehicle" onchange="calculateFare()" class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-sm font-semibold text-white focus:ring-2 focus:ring-amber-400 outline-none">
               <option value="etios">Toyota Etios (₹13/km &bull; Batta ₹400/day)</option>
               <option value="rumion">Toyota Rumion (₹15/km &bull; Batta ₹450/day)</option>
@@ -511,33 +551,35 @@
             </select>
           </div>
 
-          <div>
+          <!-- Days Slider (hidden for Airport transfers) -->
+          <div id="calcDaysWrapper">
             <div class="flex justify-between items-center text-xs font-bold text-slate-200 mb-2">
-              <span class="uppercase tracking-wide">2. Trip Duration (Days)</span>
+              <span class="uppercase tracking-wide">3. Trip Duration (Days)</span>
               <span id="calcDaysDisplay" class="text-amber-400 font-extrabold text-sm bg-slate-950 px-2.5 py-0.5 rounded-lg border border-slate-800">2 Days</span>
             </div>
             <input type="range" id="calcDays" min="1" max="10" value="2" oninput="calculateFare()" class="w-full accent-amber-400 h-2.5 bg-slate-950 rounded-lg cursor-pointer border border-slate-800" />
             <div class="flex justify-between text-[11px] text-slate-400 mt-1.5 font-medium">
               <span>1 Day</span>
-              <span>300 km/day minimum standard</span>
+              <span id="calcMinRuleNote">300 km/day minimum standard applies</span>
               <span>10 Days</span>
             </div>
           </div>
 
+          <!-- Distance Slider -->
           <div>
             <div class="flex justify-between items-center text-xs font-bold text-slate-200 mb-2">
-              <span class="uppercase tracking-wide">3. Total Estimated Distance</span>
+              <span class="uppercase tracking-wide" id="calcDistLabel">4. Total Estimated Distance</span>
               <span id="calcDistanceDisplay" class="text-amber-400 font-extrabold text-sm bg-slate-950 px-2.5 py-0.5 rounded-lg border border-slate-800">600 km</span>
             </div>
-            <input type="range" id="calcDistance" min="300" max="3000" step="50" value="600" oninput="calculateFare()" class="w-full accent-amber-400 h-2.5 bg-slate-950 rounded-lg cursor-pointer border border-slate-800" />
+            <input type="range" id="calcDistance" min="300" max="3000" step="25" value="600" oninput="calculateFare()" class="w-full accent-amber-400 h-2.5 bg-slate-950 rounded-lg cursor-pointer border border-slate-800" />
             <div class="flex justify-between text-[11px] text-slate-400 mt-1.5 font-medium">
-              <span>300 km</span>
-              <span>BLR &harr; IXE ~750 km</span>
-              <span>3000 km</span>
+              <span id="calcMinDistLabel">300 km</span>
+              <span id="calcRouteHint">BLR &harr; IXE ~750 km</span>
+              <span id="calcMaxDistLabel">3000 km</span>
             </div>
           </div>
 
-          <!-- Highlighted High-Visibility Notice -->
+          <!-- Notice Regarding Tolls & Parking -->
           <div class="bg-amber-400/10 border-2 border-amber-400/40 rounded-2xl p-4 text-xs">
             <div class="flex items-start gap-3">
               <i class="fa-solid fa-triangle-exclamation text-amber-400 text-lg mt-0.5 shrink-0"></i>
@@ -554,20 +596,22 @@
         <!-- Breakdown Card Column -->
         <div class="md:col-span-5 bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-7 flex flex-col justify-between text-center relative shadow-2xl">
           <div>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Estimated Total Fare</span>
-            <div class="text-4xl sm:text-5xl font-heading font-black text-amber-400 my-3" id="calcTotalFare">₹11,800</div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-800 text-amber-300 mb-2">
+              <span id="calcTripBadge">Round Trip Estimate</span>
+            </div>
+            <div class="text-4xl sm:text-5xl font-heading font-black text-amber-400 my-2" id="calcTotalFare">₹11,800</div>
             
             <div class="space-y-2.5 text-xs text-slate-200 border-t border-slate-800 pt-4 text-left font-medium">
               <div class="flex justify-between">
                 <span class="text-slate-400">Running Distance Charge:</span>
                 <span id="calcBaseFare" class="font-bold text-white">₹10,800</span>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between" id="calcBattaRow">
                 <span class="text-slate-400">Driver Allowance (Batta):</span>
                 <span id="calcBattaFare" class="font-bold text-white">₹1,000</span>
               </div>
-              <div class="flex justify-between">
-                <span class="text-slate-400">Base Unit Rate:</span>
+              <div class="flex justify-between text-[11px] text-slate-400">
+                <span>Base Unit Rate:</span>
                 <span id="calcRatePerKm" class="text-emerald-400 font-bold">₹18/km</span>
               </div>
               <div class="flex justify-between text-amber-300 font-bold pt-1.5 border-t border-slate-800/80">
@@ -578,7 +622,7 @@
           </div>
 
           <div class="mt-7 pt-4 border-t border-slate-800 space-y-3">
-            <button onclick="openPrintModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 border border-slate-700 shadow-md">
+            <button onclick="directPrintEstimate()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 border border-slate-700 shadow-md">
               <i class="fa-solid fa-file-pdf text-amber-400"></i> Download / Print Estimate Slip
             </button>
             <button onclick="applyEstimateToBooking()" class="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
@@ -591,13 +635,13 @@
     </div>
   </section>
 
-  <!-- POPULAR ROUTES SECTION -->
+  <!-- POPULAR ROUTES SECTION: Operational "Select" Buttons -->
   <section id="routes" class="py-16 sm:py-20 px-4 bg-white border-y border-slate-200">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-14">
         <span class="font-heading text-amber-700 font-extrabold text-xs uppercase tracking-widest" data-i18n="routesSub">Fixed Fare &amp; Outstation Corridors</span>
         <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-slate-950 mt-1" data-i18n="routesHeading">High-Frequency Routes Across Karnataka</h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="routesDesc">Departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.</p>
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="routesDesc">Click 'Select' on any corridor to automatically prefill your booking form.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -619,7 +663,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Kempegowda Airport (BLR)</p>
                 <p class="text-xs text-slate-500">Doorstep pickup &bull; Flight tracking included</p>
               </div>
-              <button onclick="setRoute('Bengaluru City', 'Kempegowda Airport (BLR)', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Bengaluru City', 'Kempegowda Airport (BLR)', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
 
             <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
@@ -627,7 +671,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Coorg / Madikeri</p>
                 <p class="text-xs text-slate-500">250 km &bull; Coffee plantations &amp; Talakaveri</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Coorg / Madikeri', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Bengaluru', 'Coorg / Madikeri', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
 
             <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
@@ -635,7 +679,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Chikmagalur</p>
                 <p class="text-xs text-slate-500">245 km &bull; Mullayanagiri &amp; Baba Budangiri</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Chikmagalur', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Bengaluru', 'Chikmagalur', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
 
             <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
@@ -643,7 +687,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Tirupati Balaji Darshan</p>
                 <p class="text-xs text-slate-500">Same-day darshan &bull; Round trip package</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Tirupati Balaji Darshan', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Bengaluru', 'Tirupati Balaji Darshan', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
           </div>
         </div>
@@ -666,7 +710,7 @@
                 <p class="font-bold text-sm text-slate-900">Mangalore Airport (IXE) &rarr; Udupi / Manipal</p>
                 <p class="text-xs text-slate-500">Flight pickup &bull; Sri Krishna Temple</p>
               </div>
-              <button onclick="setRoute('Mangaluru Airport (IXE)', 'Udupi / Manipal', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Mangaluru Airport (IXE)', 'Udupi / Manipal', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
 
             <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
@@ -674,7 +718,7 @@
                 <p class="font-bold text-sm text-slate-900">Coastal Temple Circuit (Kukke - Dharmasthala)</p>
                 <p class="text-xs text-slate-500">Kukke Subrahmanya &bull; Dharmasthala Manjunatha</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Dharmasthala & Kukke Temple', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Mangaluru', 'Dharmasthala & Kukke Temple', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
 
             <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
@@ -682,7 +726,7 @@
                 <p class="font-bold text-sm text-slate-900">Mangalore &rarr; Kollur Mookambika &amp; Murudeshwar</p>
                 <p class="text-xs text-slate-500">Scenic coast drive &bull; Famous Shiva temple</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Kollur & Murudeshwar', 'Force Urbania (10-17 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Mangaluru', 'Kollur & Murudeshwar', 'Force Urbania (10-17 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
 
             <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
@@ -690,7 +734,7 @@
                 <p class="font-bold text-sm text-slate-900">Mangalore &harr; Bangalore Ghat Intercity</p>
                 <p class="text-xs text-slate-500">Charmadi / Shiradi ghat certified drivers</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Bengaluru City', 'Toyota Innova Crysta (7+1 Seater)', 'One Way Drop')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
+              <button onclick="setRoute('Mangaluru', 'Bengaluru City', 'Toyota Innova Crysta (7+1 Seater)', 'One Way Drop')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition shadow-sm hover:scale-105">Select</button>
             </div>
           </div>
         </div>
@@ -1081,6 +1125,222 @@
     </div>
   </section>
 
+  <!-- BOOKING FORM SECTION: Integrated Trip Types & Conditional Return Date -->
+  <section id="booking" class="py-16 sm:py-20 px-4 bg-white border-t border-slate-200">
+    <div class="max-w-3xl mx-auto bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-md">
+      <div class="text-center mb-8">
+        <span class="font-heading text-amber-700 font-extrabold text-xs uppercase tracking-widest" data-i18n="bookSub">Instant Booking Request</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-950 mt-1" data-i18n="bookHeading">Get an Instant Trip Quote</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1.5" data-i18n="bookDesc">No advance payment needed to enquire. Share details to receive confirmed vehicle rates on WhatsApp or Telegram.</p>
+      </div>
+
+      <form id="tripBookingForm" class="space-y-5">
+        <!-- Journey Type Radios -->
+        <div>
+          <label class="block text-xs font-bold text-slate-800 uppercase mb-2" data-i18n="lblTripType">Select Journey Type</label>
+          <div class="grid grid-cols-3 gap-3">
+            <label class="cursor-pointer border-2 border-slate-300 bg-white p-3 rounded-xl flex items-center justify-center text-xs font-bold text-slate-800 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 has-[:checked]:text-amber-950 transition shadow-xs">
+              <input type="radio" name="tripType" value="Round Trip" class="sr-only" checked onchange="handleFormTripTypeChange()" />
+              <i class="fa-solid fa-arrows-rotate mr-2 text-amber-600"></i> <span data-i18n="typeRound">Round Trip</span>
+            </label>
+            <label class="cursor-pointer border-2 border-slate-300 bg-white p-3 rounded-xl flex items-center justify-center text-xs font-bold text-slate-800 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 has-[:checked]:text-amber-950 transition shadow-xs">
+              <input type="radio" name="tripType" value="One Way Drop" class="sr-only" onchange="handleFormTripTypeChange()" />
+              <i class="fa-solid fa-arrow-right mr-2 text-amber-600"></i> <span data-i18n="typeOneWay">One Way</span>
+            </label>
+            <label class="cursor-pointer border-2 border-slate-300 bg-white p-3 rounded-xl flex items-center justify-center text-xs font-bold text-slate-800 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 has-[:checked]:text-amber-950 transition shadow-xs">
+              <input type="radio" name="tripType" value="Airport Transfer" class="sr-only" onchange="handleFormTripTypeChange()" />
+              <i class="fa-solid fa-plane-departure mr-2 text-amber-600"></i> <span data-i18n="typeAirport">Airport</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Name & Phone -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblName">Your Full Name</label>
+            <input type="text" id="custName" required placeholder="e.g. Ramesh Kumar" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPhone">Mobile / WhatsApp Number</label>
+            <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
+          </div>
+        </div>
+
+        <!-- Pickup & Destination -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPickup">Pickup Location</label>
+            <input type="text" id="custPickup" required placeholder="e.g. Bangalore Airport / Nagarabhavi" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblDrop">Destination / Route</label>
+            <input type="text" id="custDrop" required placeholder="e.g. Coorg, Mysore, Dharmasthala" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
+          </div>
+        </div>
+
+        <!-- Dates & Timing Section (Conditional Return Date) -->
+        <div id="datesContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblDepDate">Departure Date</label>
+            <input type="date" id="custDate" required onchange="syncReturnMinDate()" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+
+          <div id="returnDateCol" class="transition-all duration-300">
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+              <span data-i18n="lblRetDate">Return Date</span> <span class="text-amber-600 font-black">*</span>
+            </label>
+            <input type="date" id="custReturnDate" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+
+          <div id="timeCol">
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblTime">Pickup Time</label>
+            <input type="time" id="custTime" required value="06:00" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+        </div>
+
+        <!-- Vehicle, Passengers & Luggage -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblVehicle">Vehicle Type</label>
+            <select id="custVehicle" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm font-semibold text-slate-900 bg-white focus:ring-2 focus:ring-amber-500 outline-none">
+              <option value="Force Urbania (10-17 Seater)">Force Urbania (10-17 Seater)</option>
+              <option value="Toyota Innova Crysta (7+1 Seater)">Toyota Innova Crysta (7+1 Seater)</option>
+              <option value="Toyota Rumion (6+1 Seater)">Toyota Rumion (6+1 Seater)</option>
+              <option value="Force Tempo Traveller (12-20 Seater)">Force Tempo Traveller (12-20 Seater)</option>
+              <option value="Toyota Etios (4+1 Sedan)">Toyota Etios (4+1 Sedan)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPax">Passengers</label>
+            <select id="custPax" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm font-semibold text-slate-900 bg-white focus:ring-2 focus:ring-amber-500 outline-none">
+              <option value="1-4 Persons">1 - 4 Persons</option>
+              <option value="5-7 Persons">5 - 7 Persons</option>
+              <option value="8-12 Persons">8 - 12 Persons</option>
+              <option value="13-17 Persons">13 - 17 Persons</option>
+              <option value="18+ Group">18+ Group</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblBags">Luggage Bags</label>
+            <select id="custLuggage" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm font-semibold text-slate-900 bg-white focus:ring-2 focus:ring-amber-500 outline-none">
+              <option value="1-2 Small Bags">1 - 2 Bags</option>
+              <option value="3-5 Medium Bags">3 - 5 Bags</option>
+              <option value="6-10 Heavy Luggage">6 - 10 Bags</option>
+              <option value="10+ Carrier Required">10+ Heavy Bags</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit CTAs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3">
+          <button type="button" onclick="handleTripBooking('whatsapp')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-xl shadow transition flex items-center justify-center text-sm gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="btnSendWa">Send via WhatsApp</span>
+          </button>
+          <button type="button" onclick="handleTripBooking('telegram')" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-extrabold py-3.5 rounded-xl shadow transition flex items-center justify-center text-sm gap-2">
+            <i class="fa-brands fa-telegram text-lg"></i> <span data-i18n="btnSendTg">Send via Telegram</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- PRINTABLE / PDF MODAL DIALOG -->
+  <div id="printable-estimate-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white text-slate-950 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+      <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-200 no-print">
+        <span class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-300 px-3 py-1 rounded-full">
+          <i class="fa-solid fa-file-invoice"></i> Trip Quotation Preview
+        </span>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </button>
+          <button onclick="closePrintModal()" class="text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Document Header -->
+      <div class="border-b-2 border-slate-950 pb-4 mb-5">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="font-heading font-black text-2xl text-slate-950 tracking-tight">SHREE RAJARAJESHWARI</h2>
+            <p class="font-heading font-extrabold text-xs text-amber-700 tracking-widest uppercase">TOURS &amp; TRAVELS</p>
+            <p class="text-xs text-slate-600 mt-1">Bangalore &bull; Mangalore Commercial Fleet Network</p>
+          </div>
+          <div class="text-right text-xs">
+            <p class="font-mono font-bold text-slate-900">Date: <span id="slip-current-date">--</span></p>
+            <p class="text-xs text-slate-600">Ref: SRR-EST-<span id="slip-ref-no">9821</span></p>
+            <p class="text-xs font-bold text-slate-900 mt-1">Ph: +91 90086 81881</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quotation Specs Table -->
+      <div class="space-y-4 text-xs">
+        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Journey Plan</p>
+            <p id="slip-journey-type" class="font-bold text-amber-800 text-sm mt-0.5">Round Trip</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Vehicle Class</p>
+            <p id="slip-vehicle-name" class="font-bold text-slate-950 text-sm mt-0.5">Toyota Innova Crysta</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Distance &bull; Days</p>
+            <p id="slip-distance-days" class="font-bold text-slate-950 text-sm mt-0.5">600 km (2 Days)</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Base Unit Rate</p>
+            <p id="slip-base-rate" class="font-bold text-emerald-700 text-sm mt-0.5">₹18 / km</p>
+          </div>
+        </div>
+
+        <table class="w-full text-left border border-slate-200 rounded-2xl overflow-hidden text-xs">
+          <thead class="bg-slate-100 font-bold text-slate-800">
+            <tr>
+              <th class="p-3.5">Component Description</th>
+              <th class="p-3.5">Calculation Basis</th>
+              <th class="p-3.5 text-right">Amount (₹)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="p-3.5 font-bold text-slate-900">Kilometer Running Charge</td>
+              <td id="slip-km-basis" class="p-3.5 text-slate-700">600 km × ₹18/km</td>
+              <td id="slip-km-amount" class="p-3.5 text-right font-black text-slate-950 text-sm">₹10,800</td>
+            </tr>
+            <tr id="slip-batta-row">
+              <td class="p-3.5 font-bold text-slate-900">Driver Daily Allowance (Batta)</td>
+              <td id="slip-batta-basis" class="p-3.5 text-slate-700">2 Days × ₹500/day</td>
+              <td id="slip-batta-amount" class="p-3.5 text-right font-black text-slate-950 text-sm">₹1,000</td>
+            </tr>
+            <tr class="bg-amber-50">
+              <td class="p-3.5 font-bold text-amber-950">Fastag Tolls, State Border Permits &amp; Parking</td>
+              <td class="p-3.5 text-amber-900 font-medium">Charged as per electronic receipts during trip</td>
+              <td class="p-3.5 text-right font-black text-amber-950 uppercase tracking-wide">Extra at Actuals</td>
+            </tr>
+            <tr class="bg-slate-950 text-white font-bold text-sm">
+              <td class="p-4" colspan="2">ESTIMATED BASE TOTAL</td>
+              <td id="slip-total-amount" class="p-4 text-right font-black text-amber-400 text-lg">₹11,800</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-300 text-xs text-amber-950 leading-relaxed font-medium">
+          <p class="font-extrabold flex items-center gap-2 mb-1 text-amber-900">
+            <i class="fa-solid fa-triangle-exclamation"></i> Mandatory Policy on Tolls, Parking &amp; State Taxes:
+          </p>
+          <p>
+            The above figure constitutes the base vehicle rental and driver allowance. <strong>Fastag toll plaza deductions, tourist parking permits, and inter-state commercial entry taxes</strong> are strictly paid as per actual electronic slips.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="bg-slate-950 text-slate-300 py-12 px-4 border-t border-slate-800 text-sm">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
@@ -1152,7 +1412,7 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // SYNCHRONIZED VISITOR COUNTER WITH RELIABLE FALLBACK
+    // SYNCHRONIZED VISITOR COUNTER
     async function initVisitorCounter() {
       const counterEl = document.getElementById('visitor-counter-val');
       const baseCount = 14845;
@@ -1167,7 +1427,7 @@
           return;
         }
       } catch (err) {
-        console.warn('Network visitor sync unreachable, using fallback counter.');
+        console.warn('Visitor sync using fallback counter.');
       }
 
       let localFallback = localStorage.getItem('srr_visitor_fallback');
@@ -1180,35 +1440,108 @@
       counterEl.innerText = Number(localFallback).toLocaleString('en-IN');
     }
 
-    // FARE MATRIX
+    // VEHICLE SPECIFICATIONS MATRIX
     const fareMatrix = {
-      etios: { name: 'Toyota Etios (4+1 Sedan)', rate: 13, batta: 400, minKmPerDay: 300 },
-      rumion: { name: 'Toyota Rumion (6+1 Seater)', rate: 15, batta: 450, minKmPerDay: 300 },
-      crysta: { name: 'Toyota Innova Crysta (7+1 Seater)', rate: 18, batta: 500, minKmPerDay: 300 },
-      traveller: { name: 'Force Tempo Traveller (12-20 Seater)', rate: 22, batta: 600, minKmPerDay: 300 },
-      urbania: { name: 'Force Urbania (10-17 Seater)', rate: 26, batta: 700, minKmPerDay: 300 }
+      etios: { name: 'Toyota Etios (4+1 Sedan)', rate: 13, batta: 400, roundMinKm: 300, onewayMinKm: 200 },
+      rumion: { name: 'Toyota Rumion (6+1 Seater)', rate: 15, batta: 450, roundMinKm: 300, onewayMinKm: 250 },
+      crysta: { name: 'Toyota Innova Crysta (7+1 Seater)', rate: 18, batta: 500, roundMinKm: 300, onewayMinKm: 250 },
+      traveller: { name: 'Force Tempo Traveller (12-20 Seater)', rate: 22, batta: 600, roundMinKm: 300, onewayMinKm: 300 },
+      urbania: { name: 'Force Urbania (10-17 Seater)', rate: 26, batta: 700, roundMinKm: 300, onewayMinKm: 300 }
     };
+
+    // CURRENT CALCULATOR STATE
+    let currentCalcTripType = 'round'; // 'round', 'oneway', or 'airport'
+
+    function setCalcTripType(type) {
+      currentCalcTripType = type;
+      
+      const btnRound = document.getElementById('calc-type-round');
+      const btnOneWay = document.getElementById('calc-type-oneway');
+      const btnAirport = document.getElementById('calc-type-airport');
+      const daysWrapper = document.getElementById('calcDaysWrapper');
+      const routeHint = document.getElementById('calcRouteHint');
+      const minRuleNote = document.getElementById('calcMinRuleNote');
+      const distSlider = document.getElementById('calcDistance');
+      const distLabel = document.getElementById('calcDistLabel');
+
+      // Update button visual styles
+      const activeClass = "py-2.5 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 bg-amber-400 text-slate-950 shadow";
+      const inactiveClass = "py-2.5 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 text-slate-300 hover:text-white";
+
+      btnRound.className = type === 'round' ? activeClass : inactiveClass;
+      btnOneWay.className = type === 'oneway' ? activeClass : inactiveClass;
+      btnAirport.className = type === 'airport' ? activeClass : inactiveClass;
+
+      if (type === 'round') {
+        daysWrapper.classList.remove('hidden');
+        minRuleNote.innerText = "300 km/day minimum standard applies";
+        distLabel.innerText = "4. Total Estimated Distance (Round Trip)";
+        routeHint.innerText = "BLR ↔ IXE ~750 km (Round Trip)";
+        distSlider.max = 3000;
+      } else if (type === 'oneway') {
+        daysWrapper.classList.remove('hidden');
+        minRuleNote.innerText = "200-250 km minimum on highway drops";
+        distLabel.innerText = "4. One Way Route Distance";
+        routeHint.innerText = "Bangalore → Mysore ~150km / Mangalore ~375km";
+        distSlider.max = 1500;
+      } else if (type === 'airport') {
+        daysWrapper.classList.add('hidden');
+        distLabel.innerText = "3. Estimated Airport Transfer Distance";
+        routeHint.innerText = "Bangalore City ↔ BLR Airport (~40-50 km)";
+        distSlider.min = 40;
+        distSlider.max = 200;
+        distSlider.value = 50;
+      }
+
+      calculateFare();
+    }
 
     function calculateFare() {
       const vehicleKey = document.getElementById('calcVehicle').value;
-      const days = parseInt(document.getElementById('calcDays').value, 10);
       const vehicle = fareMatrix[vehicleKey];
-
-      document.getElementById('calcDaysDisplay').innerText = `${days} Day${days > 1 ? 's' : ''}`;
-
-      const minDistance = days * vehicle.minKmPerDay;
+      const days = parseInt(document.getElementById('calcDays').value, 10);
       const distSlider = document.getElementById('calcDistance');
-      distSlider.min = minDistance;
+      const badgeEl = document.getElementById('calcTripBadge');
+      const battaRowEl = document.getElementById('calcBattaRow');
 
-      if (parseInt(distSlider.value, 10) < minDistance) {
-        distSlider.value = minDistance;
+      let minDistance = 300;
+      let totalBatta = 0;
+      let effectiveDistance = parseInt(distSlider.value, 10);
+
+      if (currentCalcTripType === 'round') {
+        badgeEl.innerText = "Round Trip Estimate";
+        battaRowEl.classList.remove('hidden');
+        minDistance = days * vehicle.roundMinKm;
+        distSlider.min = minDistance;
+        if (effectiveDistance < minDistance) {
+          effectiveDistance = minDistance;
+          distSlider.value = minDistance;
+        }
+        totalBatta = days * vehicle.batta;
+        document.getElementById('calcDaysDisplay').innerText = `${days} Day${days > 1 ? 's' : ''}`;
+      } else if (currentCalcTripType === 'oneway') {
+        badgeEl.innerText = "One Way Drop Estimate";
+        battaRowEl.classList.remove('hidden');
+        minDistance = vehicle.onewayMinKm;
+        distSlider.min = minDistance;
+        if (effectiveDistance < minDistance) {
+          effectiveDistance = minDistance;
+          distSlider.value = minDistance;
+        }
+        totalBatta = vehicle.batta; // 1 day batta on one way drops
+        document.getElementById('calcDaysDisplay').innerText = `1 Day (Drop)`;
+      } else if (currentCalcTripType === 'airport') {
+        badgeEl.innerText = "Airport Transfer Estimate";
+        battaRowEl.classList.add('hidden'); // No outstation batta for local airport trips
+        minDistance = 40;
+        distSlider.min = minDistance;
+        totalBatta = 0;
       }
 
-      const currentDistance = parseInt(distSlider.value, 10);
-      document.getElementById('calcDistanceDisplay').innerText = `${currentDistance} km`;
+      document.getElementById('calcMinDistLabel').innerText = `${minDistance} km`;
+      document.getElementById('calcDistanceDisplay').innerText = `${effectiveDistance} km`;
 
-      const baseDistanceFare = currentDistance * vehicle.rate;
-      const totalBatta = days * vehicle.batta;
+      const baseDistanceFare = effectiveDistance * vehicle.rate;
       const totalFare = baseDistanceFare + totalBatta;
 
       document.getElementById('calcBaseFare').innerText = `₹${baseDistanceFare.toLocaleString('en-IN')}`;
@@ -1217,29 +1550,57 @@
       document.getElementById('calcTotalFare').innerText = `₹${totalFare.toLocaleString('en-IN')}`;
     }
 
+    // Direct Print Flow
+    function directPrintEstimate() {
+      openPrintModal();
+      setTimeout(() => {
+        window.print();
+      }, 150);
+    }
+
     function openPrintModal() {
       const vehicleKey = document.getElementById('calcVehicle').value;
       const vehicle = fareMatrix[vehicleKey];
       const days = parseInt(document.getElementById('calcDays').value, 10);
       const currentDistance = parseInt(document.getElementById('calcDistance').value, 10);
       
+      let journeyTitle = "Round Trip";
+      let durationText = `${days} Day(s)`;
+      let battaBasis = `${days} Day(s) × ₹${vehicle.batta}/day`;
+      let totalBatta = days * vehicle.batta;
+
+      if (currentCalcTripType === 'oneway') {
+        journeyTitle = "One Way Highway Drop";
+        durationText = "Single Day Drop";
+        battaBasis = `1 Day Allowance (₹${vehicle.batta})`;
+        totalBatta = vehicle.batta;
+        document.getElementById('slip-batta-row').classList.remove('hidden');
+      } else if (currentCalcTripType === 'airport') {
+        journeyTitle = "Airport Scheduled Transfer";
+        durationText = "Point to Point";
+        battaBasis = "N/A (Included)";
+        totalBatta = 0;
+        document.getElementById('slip-batta-row').classList.add('hidden');
+      } else {
+        document.getElementById('slip-batta-row').classList.remove('hidden');
+      }
+
       const baseDistanceFare = currentDistance * vehicle.rate;
-      const totalBatta = days * vehicle.batta;
       const totalFare = baseDistanceFare + totalBatta;
 
       document.getElementById('slip-current-date').innerText = new Date().toLocaleDateString('en-IN', {
         day: '2-digit', month: 'short', year: 'numeric'
       });
       document.getElementById('slip-ref-no').innerText = Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('slip-journey-type').innerText = journeyTitle;
       document.getElementById('slip-vehicle-name').innerText = vehicle.name;
-      document.getElementById('slip-distance').innerText = `${currentDistance} km`;
-      document.getElementById('slip-duration').innerText = `${days} Day${days > 1 ? 's' : ''}`;
+      document.getElementById('slip-distance-days').innerText = `${currentDistance} km (${durationText})`;
       document.getElementById('slip-base-rate').innerText = `₹${vehicle.rate} / km`;
 
       document.getElementById('slip-km-basis').innerText = `${currentDistance} km × ₹${vehicle.rate}/km`;
       document.getElementById('slip-km-amount').innerText = `₹${baseDistanceFare.toLocaleString('en-IN')}`;
 
-      document.getElementById('slip-batta-basis').innerText = `${days} Day(s) × ₹${vehicle.batta}/day`;
+      document.getElementById('slip-batta-basis').innerText = battaBasis;
       document.getElementById('slip-batta-amount').innerText = `₹${totalBatta.toLocaleString('en-IN')}`;
 
       document.getElementById('slip-total-amount').innerText = `₹${totalFare.toLocaleString('en-IN')}`;
@@ -1255,6 +1616,7 @@
       modal.classList.remove('flex');
     }
 
+    // Transfers calculator parameters directly to booking form
     function applyEstimateToBooking() {
       const vehicleKey = document.getElementById('calcVehicle').value;
       const vehicle = fareMatrix[vehicleKey];
@@ -1265,10 +1627,14 @@
       const formVehicle = document.getElementById('custVehicle');
       if (formVehicle) formVehicle.value = vehicle.name;
 
-      const roundTripRadio = document.querySelector('input[name="tripType"][value="Round Trip"]');
-      if (roundTripRadio) {
-        roundTripRadio.checked = true;
-        toggleReturnDateField();
+      let matchedRadioValue = 'Round Trip';
+      if (currentCalcTripType === 'oneway') matchedRadioValue = 'One Way Drop';
+      if (currentCalcTripType === 'airport') matchedRadioValue = 'Airport Transfer';
+
+      const targetRadio = document.querySelector(`input[name="tripType"][value="${matchedRadioValue}"]`);
+      if (targetRadio) {
+        targetRadio.checked = true;
+        handleFormTripTypeChange();
       }
 
       const depInput = document.getElementById('custDate');
@@ -1276,11 +1642,13 @@
       const today = new Date();
       depInput.value = today.toISOString().split('T')[0];
 
-      const returnDate = new Date();
-      returnDate.setDate(today.getDate() + (days - 1));
-      retInput.value = returnDate.toISOString().split('T')[0];
+      if (matchedRadioValue === 'Round Trip') {
+        const returnDate = new Date();
+        returnDate.setDate(today.getDate() + (days - 1));
+        retInput.value = returnDate.toISOString().split('T')[0];
+      }
 
-      document.getElementById('custDrop').value = `Outstation Round Trip (~${distance} km • Est. ${totalFare})`;
+      document.getElementById('custDrop').value = `${matchedRadioValue} (~${distance} km • Est. ${totalFare})`;
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -1293,6 +1661,185 @@
                    `--------------------------------%0A` +
                    `_Enquiry via Shree Rajarajeshwari Website_`;
       window.open(`https://wa.me/919008681881?text=${text}`, '_blank');
+    }
+
+    // FORM TRIP TYPE RADIO TOGGLE
+    function handleFormTripTypeChange() {
+      const tripType = document.querySelector('input[name="tripType"]:checked').value;
+      const returnCol = document.getElementById('returnDateCol');
+      const returnInput = document.getElementById('custReturnDate');
+      const datesContainer = document.getElementById('datesContainer');
+
+      if (tripType === 'Round Trip') {
+        returnCol.classList.remove('hidden');
+        returnInput.setAttribute('required', 'required');
+        datesContainer.className = "grid grid-cols-1 sm:grid-cols-3 gap-4";
+        syncReturnMinDate();
+      } else {
+        returnCol.classList.add('hidden');
+        returnInput.removeAttribute('required');
+        returnInput.value = '';
+        datesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4";
+      }
+    }
+
+    function syncReturnMinDate() {
+      const depDate = document.getElementById('custDate').value;
+      const returnInput = document.getElementById('custReturnDate');
+      if (depDate) {
+        returnInput.min = depDate;
+        if (returnInput.value && returnInput.value < depDate) {
+          returnInput.value = depDate;
+        }
+      }
+    }
+
+    // DOM Ready Initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      initVisitorCounter();
+      const datePicker = document.getElementById('custDate');
+      const returnPicker = document.getElementById('custReturnDate');
+      if (datePicker) {
+        const today = new Date().toISOString().split('T')[0];
+        datePicker.min = today;
+        datePicker.value = today;
+        if (returnPicker) {
+          returnPicker.min = today;
+          returnPicker.value = today;
+        }
+      }
+      handleFormTripTypeChange();
+      setCalcTripType('round');
+    });
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        menu.classList.add('hidden');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    function preselectVehicle(vehicleName) {
+      const select = document.getElementById('custVehicle');
+      if (select) select.value = vehicleName;
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Handles route card selection
+    function setRoute(pickup, destination, vehicle, tripType) {
+      document.getElementById('custPickup').value = pickup;
+      document.getElementById('custDrop').value = destination;
+      if (vehicle) document.getElementById('custVehicle').value = vehicle;
+      if (tripType) {
+        const radio = document.querySelector(`input[name="tripType"][value="${tripType}"]`);
+        if (radio) {
+          radio.checked = true;
+          handleFormTripTypeChange();
+        }
+      }
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleTripBooking(platform) {
+      const form = document.getElementById('tripBookingForm');
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const pickup = document.getElementById('custPickup').value.trim();
+      const drop = document.getElementById('custDrop').value.trim();
+      const date = document.getElementById('custDate').value;
+      const returnDate = document.getElementById('custReturnDate').value;
+      const time = document.getElementById('custTime').value;
+      const vehicle = document.getElementById('custVehicle').value;
+      const pax = document.getElementById('custPax').value;
+      const luggage = document.getElementById('custLuggage').value;
+      const tripType = document.querySelector('input[name="tripType"]:checked').value;
+
+      if (!name || !phone || !pickup || !drop || !date) {
+        form.reportValidity();
+        return;
+      }
+
+      if (tripType === 'Round Trip' && !returnDate) {
+        document.getElementById('custReturnDate').reportValidity();
+        return;
+      }
+
+      let dateDetails = `*Departure:* ${encodeURIComponent(date)} at ${encodeURIComponent(time)}`;
+      if (tripType === 'Round Trip' && returnDate) {
+        dateDetails += `%0A*Return Date:* ${encodeURIComponent(returnDate)}`;
+      }
+
+      const text = `*New Trip Booking Enquiry*%0A` +
+                   `--------------------------------%0A` +
+                   `*Journey Type:* ${encodeURIComponent(tripType)}%0A` +
+                   `*Name:* ${encodeURIComponent(name)}%0A` +
+                   `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                   `*Vehicle:* ${encodeURIComponent(vehicle)}%0A` +
+                   `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
+                   `*Destination:* ${encodeURIComponent(drop)}%0A` +
+                   `${dateDetails}%0A` +
+                   `*Passengers:* ${encodeURIComponent(pax)}%0A` +
+                   `*Luggage:* ${encodeURIComponent(luggage)}%0A` +
+                   `*Note:* Fastag Tolls, State Permits & Parking at actuals.%0A` +
+                   `--------------------------------%0A` +
+                   `_Enquiry via Shree Rajarajeshwari Website_`;
+
+      if (platform === 'whatsapp') {
+        window.open(`https://wa.me/919008681881?text=${text}`, '_blank');
+      } else if (platform === 'telegram') {
+        window.open(`https://t.me/+919008681881?text=${text}`, '_blank');
+      }
+    }
+
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('i');
+      const isHidden = content.classList.contains('hidden');
+
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('#faq button i').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    function switchOffice(branch) {
+      const blrPane = document.getElementById('pane-blr');
+      const mxePane = document.getElementById('pane-mxe');
+      const blrBtn = document.getElementById('btn-tab-blr');
+      const mxeBtn = document.getElementById('btn-tab-mxe');
+
+      if (branch === 'blr') {
+        blrPane.classList.remove('hidden');
+        mxePane.classList.add('hidden');
+        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-amber-400 text-slate-950 shadow-md";
+        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white";
+      } else {
+        mxePane.classList.remove('hidden');
+        blrPane.classList.add('hidden');
+        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-cyan-500 text-slate-950 shadow-md";
+        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white";
+      }
+    }
+
+    function copyOfficeAddr(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalHTML = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
+        setTimeout(() => { btnElement.innerHTML = originalHTML; }, 2000);
+      }).catch(() => {
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
+        setTimeout(() => { btnElement.innerHTML = '<i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>'; }, 2000);
+      });
     }
 
     // TRANSLATIONS
@@ -1312,7 +1859,7 @@
         navBook: "Book Trip",
         heroBadge: "100% Insured • GPS Monitored • Sanity Checked",
         heroHeadline: "Trusted Passenger Tours & Luxury Cab Rentals",
-        heroSubhead: "Outstation round trips, airport drops, family temple pilgrimages, and corporate luxury transport across Karnataka with Bangalore & Mangalore hubs.",
+        heroSubhead: "Outstation round trips, one-way highway drops, airport transfers, family temple pilgrimages & corporate luxury transport across Karnataka.",
         heroBtnFare: "Calculate Trip Fare",
         fleetSub: "Our Fleet Lineup",
         fleetHeading: "Available Commercial Vehicles",
@@ -1328,10 +1875,10 @@
         bookTraveller: "Book Tempo Traveller",
         bookEtios: "Book Toyota Etios",
         calcHeading: "Estimate Your Journey Budget",
-        calcDesc: "Adjust distance, trip days, and vehicle type to calculate an indicative upfront fare and download a branded estimate slip.",
+        calcDesc: "Select trip type (Round Trip, One Way, or Airport), adjust distance & days, and download your instant estimate slip.",
         routesSub: "Fixed Fare & Outstation Corridors",
         routesHeading: "High-Frequency Routes Across Karnataka",
-        routesDesc: "Departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.",
+        routesDesc: "Click 'Select' on any corridor to automatically prefill your booking form.",
         stdTag: "The Rajarajeshwari Standard",
         stdHeading: "Uncompromised Safety & Vehicle Hygiene",
         stdDesc: "Every vehicle is rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.",
@@ -1411,10 +1958,10 @@
         bookTraveller: "ಟೆಂಪೋ ಟ್ರಾವೆಲರ್ ಬುಕ್ ಮಾಡಿ",
         bookEtios: "ಟೊಯೋಟಾ ಎಟಿಯೋಸ್ ಬುಕ್ ಮಾಡಿ",
         calcHeading: "ನಿಮ್ಮ ಪ್ರವಾಸದ ದರವನ್ನು ಅಂದಾಜಿಸಿ",
-        calcDesc: "ದೂರ, ದಿನಗಳು ಮತ್ತು ವಾಹನವನ್ನು ಆಯ್ಕೆ ಮಾಡುವ ಮೂಲಕ ಅಂದಾಜು ಬಜೆಟ್ ಲೆಕ್ಕಹಾಕಿ ರಸೀದಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.",
+        calcDesc: "ರೌಂಡ್ ಟ್ರಿಪ್, ಒನ್ ವೇ ಅಥವಾ ಏರ್‌ಪೋರ್ಟ್ ಡ್ರಾಪ್ ಆಯ್ಕೆಮಾಡಿ ಅಂದಾಜು ಬಜೆಟ್ ರಸೀದಿ ಪಡೆಯಿರಿ.",
         routesSub: "ಪ್ರಸಿದ್ಧ ಯಾತ್ರಾ ಮಾರ್ಗಗಳು",
         routesHeading: "ಕರ್ನಾಟಕದ ಜನಪ್ರಿಯ ಪ್ರವಾಸ ಮಾರ್ಗಗಳು",
-        routesDesc: "ಬೆಂಗಳೂರು ಮತ್ತು ಮಂಗಳೂರಿನಿಂದ ಪ್ರತಿದಿನ ಹೊರಡುವ ಪಾರದರ್ಶಕ ದರಗಳ ಟೂರ್ ಪ್ಯಾಕೇಜ್‌ಗಳು.",
+        routesDesc: "ಯಾವುದೇ ಮಾರ್ಗದ ಮೇಲೆ 'Select' ಕ್ಲಿಕ್ ಮಾಡಿ ತಕ್ಷಣ ಫಾರ್ಮ್ ಭರ್ತಿ ಮಾಡಿ.",
         stdTag: "ರಾಜರಾಜೇಶ್ವರಿ ಗುಣಮಟ್ಟ",
         stdHeading: "ರಾಜಿ ಇಲ್ಲದ ಪ್ರಯಾಣಿಕರ ಸುರಕ್ಷತೆ ಮತ್ತು ಸ್ವಚ್ಛತೆ",
         stdDesc: "ಘಾಟಿ ರಸ್ತೆಗಳು, ಹೈವೇಗಳು ಹಾಗೂ ನಗರ ಪ್ರಯಾಣಕ್ಕೆ ಸೂಕ್ತವಾಗಿ ತಪಾಸಣೆಗೊಳಪಟ್ಟ ಅತ್ಯುತ್ತಮ ವಾಹನಗಳು.",
@@ -1437,8 +1984,8 @@
         faq3A: "ಚಾಲಕರ ದಿನಭತ್ಯೆ ದಿನಕ್ಕೆ ₹350 ರಿಂದ ₹700 ಇರುತ್ತದೆ (ವಾಹನದ ಆಧಾರದ ಮೇಲೆ). ರಾತ್ರಿ 10:00 ಗಂಟೆಯ ನಂತರ ಚಾಲನೆ ಮುಂದುವರಿದರೆ ಸಾಮಾನ್ಯ ನೈಟ್ ಭತ್ಯೆ ಅನ್ವಯಿಸುತ್ತದೆ.",
         faq4Q: "ನಿಮ್ಮ ಚಾಲಕರು ಚಾರ್ಮಾಡಿ ಹಾಗೂ ಶಿರಾಡಿ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆಯೇ?",
         faq4A: "ಹೌದು, ಖಂಡಿತ. ಪಶ್ಚಿಮ ಘಟ್ಟಗಳ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಚಾಲನೆ ಮಾಡಲು ನಮ್ಮ ಎಲ್ಲಾ ಚಾಲಕರು ಕನಿಷ್ಠ 7+ ವರ್ಷಗಳ ಚಾಲನಾ ಅನುಭವ ಹೊಂದಿದ್ದು, ಸುರಕ್ಷತೆಗೆ ಮೊದಲ ಆದ್ಯತೆ ನೀಡುತ್ತಾರೆ.",
-        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್‌‌ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
-        faq5A: "ಹೌದು, ಎಲ್ಲಾ ಕಾರ್ಪೊರೇಟ್ ಮತ್ತು ವಾಣಿಜ್ಯ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ನಾವು ಅಧಿಕೃತ ಜಿಎಸ್‌ಟಿ ತೆರಿಗೆ ಇನ್‌‌ವಾಯ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ.",
+        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
+        faq5A: "ಹೌದು, ಎಲ್ಲಾ ಕಾರ್ಪೊರೇಟ್ ಮತ್ತು ವಾಣಿಜ್ಯ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ನಾವು ಅಧಿಕೃತ ಜಿಎಸ್‌ಟಿ ತೆರಿಗೆ ಇನ್ವಾಯ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ.",
         officeTag: "ಕಚೇರಿಗಳು",
         officeHeading: "ನಮ್ಮ ಪ್ರಾದೇಶಿಕ ಕೇಂದ್ರಗಳು",
         officeDesc: "ವಾಹನ ಪರಿಶೀಲನೆ ಮತ್ತು ಪ್ರವಾಸ ಸಮಾಲೋಚನೆಗಾಗಿ ನಮ್ಮ ಶಾಖೆಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ.",
@@ -1480,182 +2027,6 @@
         if (translations[lang] && translations[lang][key]) {
           el.innerHTML = translations[lang][key];
         }
-      });
-    }
-
-    function toggleFaq(button) {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector('i');
-      const isHidden = content.classList.contains('hidden');
-
-      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-      document.querySelectorAll('#faq button i').forEach(i => i.classList.remove('rotate-180'));
-
-      if (isHidden) {
-        content.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-      }
-    }
-
-    function toggleReturnDateField() {
-      const tripType = document.querySelector('input[name="tripType"]:checked').value;
-      const returnCol = document.getElementById('returnDateCol');
-      const returnInput = document.getElementById('custReturnDate');
-      const datesContainer = document.getElementById('datesContainer');
-
-      if (tripType === 'Round Trip') {
-        returnCol.classList.remove('hidden');
-        returnInput.setAttribute('required', 'required');
-        datesContainer.className = "grid grid-cols-1 sm:grid-cols-3 gap-4";
-        syncReturnMinDate();
-      } else {
-        returnCol.classList.add('hidden');
-        returnInput.removeAttribute('required');
-        returnInput.value = '';
-        datesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4";
-      }
-    }
-
-    function syncReturnMinDate() {
-      const depDate = document.getElementById('custDate').value;
-      const returnInput = document.getElementById('custReturnDate');
-      if (depDate) {
-        returnInput.min = depDate;
-        if (returnInput.value && returnInput.value < depDate) {
-          returnInput.value = depDate;
-        }
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initVisitorCounter();
-      const datePicker = document.getElementById('custDate');
-      const returnPicker = document.getElementById('custReturnDate');
-      if (datePicker) {
-        const today = new Date().toISOString().split('T')[0];
-        datePicker.min = today;
-        datePicker.value = today;
-        if (returnPicker) {
-          returnPicker.min = today;
-          returnPicker.value = today;
-        }
-      }
-      toggleReturnDateField();
-      calculateFare();
-    });
-
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const icon = document.getElementById('menuIcon');
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-      } else {
-        menu.classList.add('hidden');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-      }
-    }
-
-    function preselectVehicle(vehicleName) {
-      const select = document.getElementById('custVehicle');
-      if (select) select.value = vehicleName;
-      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function setRoute(pickup, destination, vehicle, tripType) {
-      document.getElementById('custPickup').value = pickup;
-      document.getElementById('custDrop').value = destination;
-      if (vehicle) document.getElementById('custVehicle').value = vehicle;
-      if (tripType) {
-        const radio = document.querySelector(`input[name="tripType"][value="${tripType}"]`);
-        if (radio) {
-          radio.checked = true;
-          toggleReturnDateField();
-        }
-      }
-      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function handleTripBooking(platform) {
-      const form = document.getElementById('tripBookingForm');
-      const name = document.getElementById('custName').value.trim();
-      const phone = document.getElementById('custPhone').value.trim();
-      const pickup = document.getElementById('custPickup').value.trim();
-      const drop = document.getElementById('custDrop').value.trim();
-      const date = document.getElementById('custDate').value;
-      const returnDate = document.getElementById('custReturnDate').value;
-      const time = document.getElementById('custTime').value;
-      const vehicle = document.getElementById('custVehicle').value;
-      const pax = document.getElementById('custPax').value;
-      const luggage = document.getElementById('custLuggage').value;
-      const tripType = document.querySelector('input[name="tripType"]:checked').value;
-
-      if (!name || !phone || !pickup || !drop || !date) {
-        form.reportValidity();
-        return;
-      }
-
-      if (tripType === 'Round Trip' && !returnDate) {
-        document.getElementById('custReturnDate').reportValidity();
-        return;
-      }
-
-      let dateDetails = `*Departure:* ${encodeURIComponent(date)} at ${encodeURIComponent(time)}`;
-      if (tripType === 'Round Trip' && returnDate) {
-        dateDetails += `%0A*Return Date:* ${encodeURIComponent(returnDate)}`;
-      }
-
-      const text = `*New Trip Booking Enquiry*%0A` +
-                   `--------------------------------%0A` +
-                   `*Journey Type:* ${encodeURIComponent(tripType)}%0A` +
-                   `*Name:* ${encodeURIComponent(name)}%0A` +
-                   `*Phone:* ${encodeURIComponent(phone)}%0A` +
-                   `*Vehicle:* ${encodeURIComponent(vehicle)}%0A` +
-                   `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
-                   `*Destination:* ${encodeURIComponent(drop)}%0A` +
-                   `${dateDetails}%0A` +
-                   `*Passengers:* ${encodeURIComponent(pax)}%0A` +
-                   `*Luggage:* ${encodeURIComponent(luggage)}%0A` +
-                   `*Note:* Fastag Tolls, State Permits & Parking at actuals.%0A` +
-                   `--------------------------------%0A` +
-                   `_Enquiry via Shree Rajarajeshwari Website_`;
-
-      if (platform === 'whatsapp') {
-        window.open(`https://wa.me/919008681881?text=${text}`, '_blank');
-      } else if (platform === 'telegram') {
-        window.open(`https://t.me/+919008681881?text=${text}`, '_blank');
-      }
-    }
-
-    function switchOffice(branch) {
-      const blrPane = document.getElementById('pane-blr');
-      const mxePane = document.getElementById('pane-mxe');
-      const blrBtn = document.getElementById('btn-tab-blr');
-      const mxeBtn = document.getElementById('btn-tab-mxe');
-
-      if (branch === 'blr') {
-        blrPane.classList.remove('hidden');
-        mxePane.classList.add('hidden');
-        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-amber-400 text-slate-950 shadow-md";
-        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white";
-      } else {
-        mxePane.classList.remove('hidden');
-        blrPane.classList.add('hidden');
-        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-cyan-500 text-slate-950 shadow-md";
-        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white";
-      }
-    }
-
-    function copyOfficeAddr(text, btnElement) {
-      navigator.clipboard.writeText(text).then(() => {
-        const originalHTML = btnElement.innerHTML;
-        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
-        setTimeout(() => { btnElement.innerHTML = originalHTML; }, 2000);
-      }).catch(() => {
-        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
-        setTimeout(() => { btnElement.innerHTML = '<i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>'; }, 2000);
       });
     }
   </script>
