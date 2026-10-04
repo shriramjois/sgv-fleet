@@ -98,10 +98,15 @@
   <div class="bg-slate-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
     <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex items-center space-x-4">
-        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> Bangalore &amp; Mangalore</span>
-        <span class="hidden sm:inline"><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> GPS Monitored &amp; Sanitized Commercial Fleet</span>
+        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> <span data-i18n="topHubs">Bangalore &amp; Mangalore</span></span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> <span data-i18n="topGps">GPS Monitored &amp; Sanitized Commercial Fleet</span></span>
       </div>
       <div class="flex items-center space-x-4">
+        <!-- Language Switcher Pill -->
+        <div class="inline-flex items-center bg-slate-900 border border-slate-700/80 rounded-full p-0.5 text-[11px] font-bold">
+          <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 transition">EN</button>
+          <button id="lang-kn" onclick="setLanguage('kn')" class="px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition">ಕನ್ನಡ</button>
+        </div>
         <a href="tel:+919008681881" class="hover:text-amber-400 font-bold text-slate-100 flex items-center transition">
           <i class="fa-solid fa-phone text-amber-500 mr-1.5"></i> +91 90086 81881
         </a>
@@ -113,22 +118,23 @@
   <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
     <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center gap-2">
       <a href="#" class="flex flex-col">
-        <span class="font-heading text-lg md:text-xl font-black tracking-tight text-slate-900 leading-tight">
+        <span class="font-heading text-lg md:text-xl font-black tracking-tight text-slate-900 leading-tight" data-i18n="brandTitle">
           SHREE RAJARAJESHWARI
         </span>
-        <span class="font-heading text-xs md:text-sm font-extrabold tracking-wider text-amber-500 uppercase">
+        <span class="font-heading text-xs md:text-sm font-extrabold tracking-wider text-amber-500 uppercase" data-i18n="brandSubtitle">
           TOURS &amp; TRAVELS
         </span>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-sm font-semibold text-slate-700">
-        <a href="#fleet" class="hover:text-amber-600 transition">Our Fleet</a>
-        <a href="#routes" class="hover:text-amber-600 transition">Popular Routes</a>
-        <a href="#standards" class="hover:text-amber-600 transition">Fleet Standards</a>
-        <a href="#services" class="hover:text-amber-600 transition">Services</a>
-        <a href="#offices" class="hover:text-amber-600 transition">Our Offices</a>
-        <a href="#booking" class="hover:text-amber-600 transition">Book Trip</a>
+        <a href="#fleet" class="hover:text-amber-600 transition" data-i18n="navFleet">Our Fleet</a>
+        <a href="#routes" class="hover:text-amber-600 transition" data-i18n="navRoutes">Popular Routes</a>
+        <a href="#standards" class="hover:text-amber-600 transition" data-i18n="navStandards">Fleet Standards</a>
+        <a href="#services" class="hover:text-amber-600 transition" data-i18n="navServices">Services</a>
+        <a href="#faq" class="hover:text-amber-600 transition" data-i18n="navFaq">FAQs</a>
+        <a href="#offices" class="hover:text-amber-600 transition" data-i18n="navOffices">Our Offices</a>
+        <a href="#booking" class="hover:text-amber-600 transition text-amber-600 font-bold" data-i18n="navBook">Book Trip</a>
       </nav>
 
       <!-- Desktop Contact CTA & Mobile Hamburger Button -->
@@ -149,12 +155,13 @@
 
     <!-- Mobile Drawer Menu -->
     <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 text-white border-b border-slate-800 px-5 py-4 space-y-3 shadow-xl transition-all duration-300">
-      <a href="#fleet" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-car-side text-amber-500 mr-2.5 w-4"></i>Our Fleet</a>
-      <a href="#routes" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-map-location-dot text-amber-500 mr-2.5 w-4"></i>Popular Routes</a>
-      <a href="#standards" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-shield-check text-amber-500 mr-2.5 w-4"></i>Fleet Standards</a>
-      <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-bell-concierge text-amber-500 mr-2.5 w-4"></i>Services</a>
-      <a href="#offices" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-building text-amber-500 mr-2.5 w-4"></i>Our Offices</a>
-      <a href="#booking" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-amber-400"><i class="fa-solid fa-calendar-check text-amber-400 mr-2.5 w-4"></i>Book Your Trip</a>
+      <a href="#fleet" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-car-side text-amber-500 mr-2.5 w-4"></i><span data-i18n="navFleet">Our Fleet</span></a>
+      <a href="#routes" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-map-location-dot text-amber-500 mr-2.5 w-4"></i><span data-i18n="navRoutes">Popular Routes</span></a>
+      <a href="#standards" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-shield-check text-amber-500 mr-2.5 w-4"></i><span data-i18n="navStandards">Fleet Standards</span></a>
+      <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-bell-concierge text-amber-500 mr-2.5 w-4"></i><span data-i18n="navServices">Services</span></a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-circle-question text-amber-500 mr-2.5 w-4"></i><span data-i18n="navFaq">FAQs</span></a>
+      <a href="#offices" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-building text-amber-500 mr-2.5 w-4"></i><span data-i18n="navOffices">Our Offices</span></a>
+      <a href="#booking" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-amber-400"><i class="fa-solid fa-calendar-check text-amber-400 mr-2.5 w-4"></i><span data-i18n="navBook">Book Your Trip</span></a>
       <div class="pt-2 flex gap-2">
         <a href="tel:+919008681881" class="flex-1 bg-amber-500 text-slate-950 font-bold py-2.5 rounded-lg text-xs text-center flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-phone"></i> Call Direct
@@ -170,17 +177,17 @@
   <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 md:py-24 px-4 border-b border-slate-800">
     <div class="max-w-4xl mx-auto text-center">
       <span class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-4">
-        <i class="fa-solid fa-shield-check text-[11px]"></i> 100% Insured &bull; GPS Tracked &bull; Multi-Point Inspected
+        <i class="fa-solid fa-shield-check text-[11px]"></i> <span data-i18n="heroBadge">100% Insured &bull; GPS Tracked &bull; Multi-Point Inspected</span>
       </span>
-      <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5">
+      <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5" data-i18n="heroHeadline">
         Trusted Passenger Tours &amp; Luxury Cab Rentals
       </h1>
-      <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+      <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="heroSubhead">
         Serving Outstation Trips, Airport Transfers, Temple Pilgrimages &amp; Corporate Fleets across Karnataka with dedicated Bangalore &amp; Mangalore hubs.
       </p>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-3.5">
         <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg transition flex items-center justify-center text-sm">
-          <i class="fa-solid fa-calculator mr-2"></i> Get Instant Trip Quote
+          <i class="fa-solid fa-calculator mr-2"></i> <span data-i18n="heroBtnQuote">Get Instant Trip Quote</span>
         </a>
         <a href="https://wa.me/919008681881?text=Hi%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20please%20share%20vehicle%20rates%20for%20a%20trip." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-lg shadow-lg transition flex items-center justify-center text-sm">
           <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Enquiry
@@ -196,9 +203,9 @@
   <section id="fleet" class="py-16 px-4 bg-slate-100">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest">Our Fleet Lineup</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Available Commercial Vehicles</h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Well-maintained tourist cabs with yellow-board commercial permits, live GPS, and experienced chauffeurs.</p>
+        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="fleetSub">Our Fleet Lineup</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="fleetHeading">Available Commercial Vehicles</h2>
+        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="fleetDesc">Well-maintained tourist cabs with yellow-board commercial permits, live GPS, and experienced chauffeurs.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -219,9 +226,8 @@
             </div>
             <div class="p-5">
               <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Force Urbania</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3">VIP Group &amp; Delegation Transport</p>
+              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="urbaniaRole">VIP Group &amp; Delegation Transport</p>
 
-              <!-- Micro-Badges Grid -->
               <div class="grid grid-cols-2 gap-2 mb-4">
                 <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 10-17 Seats
@@ -245,7 +251,7 @@
           </div>
           <div class="p-5 pt-0">
             <button onclick="preselectVehicle('Force Urbania (10-17 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-calendar-check"></i> Book Force Urbania
+              <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookUrbania">Book Force Urbania</span>
             </button>
           </div>
         </div>
@@ -266,9 +272,8 @@
             </div>
             <div class="p-5">
               <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Toyota Innova Crysta</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3">Premium Executive SUV / MPV</p>
+              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="crystaRole">Premium Executive SUV / MPV</p>
 
-              <!-- Micro-Badges Grid -->
               <div class="grid grid-cols-2 gap-2 mb-4">
                 <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 6+1 / 7+1 Seats
@@ -292,7 +297,7 @@
           </div>
           <div class="p-5 pt-0">
             <button onclick="preselectVehicle('Toyota Innova Crysta (7+1 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-calendar-check"></i> Book Innova Crysta
+              <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookCrysta">Book Innova Crysta</span>
             </button>
           </div>
         </div>
@@ -313,9 +318,8 @@
             </div>
             <div class="p-5">
               <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Toyota Rumion</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3">Modern Budget-Friendly 6-Seater</p>
+              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="rumionRole">Modern Budget-Friendly 6-Seater</p>
 
-              <!-- Micro-Badges Grid -->
               <div class="grid grid-cols-2 gap-2 mb-4">
                 <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 6+1 Seats
@@ -339,7 +343,7 @@
           </div>
           <div class="p-5 pt-0">
             <button onclick="preselectVehicle('Toyota Rumion (6+1 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-calendar-check"></i> Book Toyota Rumion
+              <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookRumion">Book Toyota Rumion</span>
             </button>
           </div>
         </div>
@@ -360,9 +364,8 @@
             </div>
             <div class="p-5">
               <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Force Tempo Traveller</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3">Group Pilgrimages &amp; Team Outings</p>
+              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="travellerRole">Group Pilgrimages &amp; Team Outings</p>
 
-              <!-- Micro-Badges Grid -->
               <div class="grid grid-cols-2 gap-2 mb-4">
                 <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 12 to 20 Seats
@@ -386,7 +389,7 @@
           </div>
           <div class="p-5 pt-0">
             <button onclick="preselectVehicle('Force Tempo Traveller (12-20 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-calendar-check"></i> Book Tempo Traveller
+              <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookTraveller">Book Tempo Traveller</span>
             </button>
           </div>
         </div>
@@ -407,9 +410,8 @@
             </div>
             <div class="p-5">
               <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Toyota Etios</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3">Reliable Economical Highway Sedan</p>
+              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="etiosRole">Reliable Economical Highway Sedan</p>
 
-              <!-- Micro-Badges Grid -->
               <div class="grid grid-cols-2 gap-2 mb-4">
                 <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 4+1 Seats
@@ -433,7 +435,7 @@
           </div>
           <div class="p-5 pt-0">
             <button onclick="preselectVehicle('Toyota Etios (4+1 Sedan)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-calendar-check"></i> Book Toyota Etios
+              <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookEtios">Book Toyota Etios</span>
             </button>
           </div>
         </div>
@@ -442,13 +444,13 @@
     </div>
   </section>
 
-  <!-- POPULAR ROUTES & LOCAL SEO SECTION -->
+  <!-- POPULAR ROUTES SECTION -->
   <section id="routes" class="py-16 px-4 bg-white border-y border-slate-200">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest">Fixed Fare &amp; Outstation Corridors</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">High-Frequency Routes Across Karnataka</h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Daily departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.</p>
+        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="routesSub">Fixed Fare &amp; Outstation Corridors</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="routesHeading">High-Frequency Routes Across Karnataka</h2>
+        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="routesDesc">Daily departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -471,7 +473,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Kempegowda Airport (BLR)</p>
                 <p class="text-xs text-slate-500">Doorstep pickup &bull; Flight track guarantee</p>
               </div>
-              <button onclick="setRoute('Bengaluru City', 'Kempegowda Airport (BLR)', 'Toyota Etios (4+1 Sedan)')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Bengaluru City', 'Kempegowda Airport (BLR)', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -481,7 +483,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Coorg / Madikeri</p>
                 <p class="text-xs text-slate-500">250 km &bull; Coffee estates &amp; Talakaveri</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Coorg / Madikeri', 'Toyota Innova Crysta (7+1 Seater)')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Bengaluru', 'Coorg / Madikeri', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -491,7 +493,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Chikmagalur</p>
                 <p class="text-xs text-slate-500">245 km &bull; Mullayanagiri peak &amp; Baba Budangiri</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Chikmagalur', 'Toyota Innova Crysta (7+1 Seater)')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Bengaluru', 'Chikmagalur', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -501,7 +503,7 @@
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Tirupati Balaji Darshan</p>
                 <p class="text-xs text-slate-500">Same-day darshan &bull; Round trip package</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Tirupati Balaji Darshan', 'Toyota Innova Crysta (7+1 Seater)')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Bengaluru', 'Tirupati Balaji Darshan', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -526,7 +528,7 @@
                 <p class="font-bold text-sm text-slate-900">Mangalore Airport (IXE) &rarr; Udupi / Manipal</p>
                 <p class="text-xs text-slate-500">Direct flight pickup &bull; University &amp; Sri Krishna Temple</p>
               </div>
-              <button onclick="setRoute('Mangaluru Airport (IXE)', 'Udupi / Manipal', 'Toyota Etios (4+1 Sedan)')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Mangaluru Airport (IXE)', 'Udupi / Manipal', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -536,7 +538,7 @@
                 <p class="font-bold text-sm text-slate-900">Coastal Temple Circuit (Kukke - Dharmasthala)</p>
                 <p class="text-xs text-slate-500">Kukke Subrahmanya &bull; Dharmasthala Manjunatha</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Dharmasthala & Kukke Temple', 'Toyota Innova Crysta (7+1 Seater)')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Mangaluru', 'Dharmasthala & Kukke Temple', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -546,7 +548,7 @@
                 <p class="font-bold text-sm text-slate-900">Mangalore &rarr; Kollur Mookambika &amp; Murudeshwar</p>
                 <p class="text-xs text-slate-500">Scenic coastal drive &bull; Famous Shiva temple &amp; beach</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Kollur & Murudeshwar', 'Force Urbania (10-17 Seater)')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Mangaluru', 'Kollur & Murudeshwar', 'Force Urbania (10-17 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -556,7 +558,7 @@
                 <p class="font-bold text-sm text-slate-900">Mangalore &harr; Bangalore Ghat Intercity</p>
                 <p class="text-xs text-slate-500">Charmadi / Shiradi ghat certified expert drivers</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Bengaluru City', 'Toyota Innova Crysta (7+1 Seater)')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
+              <button onclick="setRoute('Mangaluru', 'Bengaluru City', 'Toyota Innova Crysta (7+1 Seater)', 'One Way Drop')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
                 Select
               </button>
             </div>
@@ -572,12 +574,12 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
         <span class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3">
-          <i class="fa-solid fa-award text-[11px]"></i> The Rajarajeshwari Standard
+          <i class="fa-solid fa-award text-[11px]"></i> <span data-i18n="stdTag">The Rajarajeshwari Standard</span>
         </span>
-        <h2 class="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+        <h2 class="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight" data-i18n="stdHeading">
           Uncompromised Safety &amp; Vehicle Hygiene
         </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-2xl mx-auto leading-relaxed" data-i18n="stdDesc">
           Every vehicle in our fleet is company-owned or rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.
         </p>
       </div>
@@ -589,8 +591,8 @@
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-wrench"></i>
           </div>
-          <h3 class="font-heading text-base font-bold text-white mb-2">Rigorous Maintenance</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
+          <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard1Title">Rigorous Maintenance</h3>
+          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard1Desc">
             Strict 50-point checklist inspection before every trip: suspension check, tire tread depth, dual-zone AC gas performance, and braking systems tuned for ghat descents.
           </p>
         </div>
@@ -600,9 +602,9 @@
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-spray-can-sparkles"></i>
           </div>
-          <h3 class="font-heading text-base font-bold text-white mb-2">Deep Sanitization</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            High-pressure vacuuming, steam disinfection of fabric upholstery, sanitized touch points, and clean air filtration before every departure to guarantee fresh, germ-free cabins.
+          <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard2Title">Deep Sanitization</h3>
+          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard2Desc">
+            High-pressure vacuuming, steam disinfection of fabric upholstery, sanitized touch points, and clean air filtration before departure for fresh, germ-free cabins.
           </p>
         </div>
 
@@ -611,9 +613,9 @@
           <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-file-shield"></i>
           </div>
-          <h3 class="font-heading text-base font-bold text-white mb-2">Comprehensive Insurance</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            100% yellow-board commercial registration with all-India tourist permits, comprehensive passenger liability cover, up-to-date fitness certificates, and valid emission clearances.
+          <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard3Title">Comprehensive Insurance</h3>
+          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard3Desc">
+            100% yellow-board commercial registration with all-India tourist permits, comprehensive passenger liability cover, fitness certificates, and valid emission clearances.
           </p>
         </div>
 
@@ -622,8 +624,8 @@
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-satellite-dish"></i>
           </div>
-          <h3 class="font-heading text-base font-bold text-white mb-2">Real-Time GPS Tracking</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
+          <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard4Title">Real-Time GPS Tracking</h3>
+          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard4Desc">
             24/7 telematics, live route monitoring, SOS panic triggers, and automated speed alerts. Share live trip tracking links with family for complete peace of mind.
           </p>
         </div>
@@ -644,9 +646,9 @@
   <section id="services" class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest">Our Expertise</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Travel Services We Provide</h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Transparent pricing, experienced drivers, and round-the-clock journey assistance.</p>
+        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="svcSub">Our Expertise</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="svcHeading">Travel Services We Provide</h2>
+        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="svcDesc">Transparent pricing, experienced drivers, and round-the-clock journey assistance.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -654,8 +656,8 @@
           <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-route"></i>
           </div>
-          <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-2">Outstation Round Trips</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-2" data-i18n="svc1Title">Outstation Round Trips</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="svc1Desc">
             Hassle-free holiday tours, hill station vacations (Coorg, Ooty, Chikmagalur, Wayanad) and temple pilgrimages across South India.
           </p>
         </div>
@@ -664,8 +666,8 @@
           <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-plane-departure"></i>
           </div>
-          <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-2">Airport Pick &amp; Drop</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-2" data-i18n="svc2Title">Airport Pick &amp; Drop</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="svc2Desc">
             Reliable scheduled transfers to Kempegowda International Airport (BLR) and Mangaluru International Airport (IXE) with zero surge pricing.
           </p>
         </div>
@@ -674,10 +676,78 @@
           <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-champagne-glasses"></i>
           </div>
-          <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-2">Weddings &amp; Corporate</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-2" data-i18n="svc3Title">Weddings &amp; Corporate</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="svc3Desc">
             Multi-vehicle fleet coordination with luxury Force Urbania and Innova Crysta for guest transportation, corporate delegations, and VIP transits.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (ACCORDION) -->
+  <section id="faq" class="py-16 px-4 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="faqSub">Got Questions?</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="faqHeading">Frequently Asked Questions</h2>
+        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="faqDesc">Clear answers on fares, outstation minimums, toll charges, and driver allowances.</p>
+      </div>
+
+      <div class="space-y-3.5">
+        <!-- Item 1 -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+            <span data-i18n="faq1Q">Are toll charges, parking fees, and interstate permits included in the quote?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq1A">
+            Our standard quotes include vehicle rental, fuel, and chauffeur charges. Fastag toll charges, parking tickets at tourist destinations, and interstate border entry taxes (if crossing into Kerala, Tamil Nadu, or Andhra Pradesh) are paid as per actuals by the guest during the trip or billed on final invoice.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+            <span data-i18n="faq2Q">What is the minimum kilometer rule for outstation cab bookings?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq2A">
+            For all outstation round trips originating from Bangalore or Mangalore, a standard minimum of 250 km to 300 km per calendar day applies (depending on the vehicle class). If the total kilometers driven exceed this cumulative average, extra kilometers are charged at the vehicle's standard per-km rate.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+            <span data-i18n="faq3Q">How is the driver batta (daily food/stay allowance) calculated?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq3A">
+            Driver allowance (Batta) is charged on a per-day basis (typically ₹350–₹600/day depending on vehicle class). If the trip involves night driving between 10:00 PM and 6:00 AM, a standard nominal night allowance is applicable to ensure driver safety and refreshment.
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+            <span data-i18n="faq4Q">Are your chauffeurs trained for Western Ghats (Charmadi &amp; Shiradi) roads?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq4A">
+            Yes, 100%. Driving the Western Ghat hairpins (Charmadi, Shiradi, Sampaje, or Bisle Ghat) requires seasoned commercial drivers. All our drivers operating between Mangalore, Udupi, and Bangalore have over 7+ years of ghat handling experience, strictly observing hill-station safety norms.
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+            <span data-i18n="faq5Q">Do you provide GST invoices for corporate company bookings?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq5A">
+            Yes. We issue formal GST tax invoices for all corporate transfers, conference delegations, and business guest travel across Bangalore and Mangalore. Simply share your organization's GSTIN and billing address during booking.
+          </div>
         </div>
       </div>
     </div>
@@ -694,12 +764,12 @@
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-slate-800">
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-3">
-            <i class="fa-solid fa-location-crosshairs text-[10px]"></i> Physical Hubs
+            <i class="fa-solid fa-location-crosshairs text-[10px]"></i> <span data-i18n="officeTag">Physical Hubs</span>
           </div>
-          <h2 class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-white">
+          <h2 class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-white" data-i18n="officeHeading">
             Our Regional Offices
           </h2>
-          <p class="text-slate-400 text-sm mt-1.5 max-w-lg">
+          <p class="text-slate-400 text-sm mt-1.5 max-w-lg" data-i18n="officeDesc">
             Visit our branch hubs for vehicle inspection, driver verification, and customized tour consultations.
           </p>
         </div>
@@ -912,32 +982,32 @@
     </div>
   </section>
 
-  <!-- UPGRADED HIGH-CONVERSION BOOKING FORM -->
+  <!-- UPGRADED HIGH-CONVERSION BOOKING FORM WITH CONDITIONAL RETURN DATE -->
   <section id="booking" class="py-16 px-4 bg-white border-t border-slate-200">
     <div class="max-w-3xl mx-auto bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-md">
       <div class="text-center mb-8">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest">Instant Booking Request</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 mt-1">Get an Instant Trip Quote</h2>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1.5">No advance payment needed to enquire. Share details to receive confirmed vehicle rates on WhatsApp or Telegram.</p>
+        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="bookSub">Instant Booking Request</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 mt-1" data-i18n="bookHeading">Get an Instant Trip Quote</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1.5" data-i18n="bookDesc">No advance payment needed to enquire. Share details to receive confirmed vehicle rates on WhatsApp or Telegram.</p>
       </div>
 
       <form id="tripBookingForm" class="space-y-4">
         
         <!-- Journey Type Radios -->
         <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Select Journey Type</label>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-2" data-i18n="lblTripType">Select Journey Type</label>
           <div class="grid grid-cols-3 gap-2.5">
             <label class="cursor-pointer border border-slate-300 bg-white p-2.5 rounded-xl flex items-center justify-center text-xs font-bold text-slate-700 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:text-amber-900 transition">
-              <input type="radio" name="tripType" value="Round Trip" class="sr-only" checked />
-              <i class="fa-solid fa-arrows-rotate mr-1.5 text-amber-600"></i> Round Trip
+              <input type="radio" name="tripType" value="Round Trip" class="sr-only" checked onchange="toggleReturnDateField()" />
+              <i class="fa-solid fa-arrows-rotate mr-1.5 text-amber-600"></i> <span data-i18n="typeRound">Round Trip</span>
             </label>
             <label class="cursor-pointer border border-slate-300 bg-white p-2.5 rounded-xl flex items-center justify-center text-xs font-bold text-slate-700 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:text-amber-900 transition">
-              <input type="radio" name="tripType" value="One Way Drop" class="sr-only" />
-              <i class="fa-solid fa-arrow-right mr-1.5 text-amber-600"></i> One Way
+              <input type="radio" name="tripType" value="One Way Drop" class="sr-only" onchange="toggleReturnDateField()" />
+              <i class="fa-solid fa-arrow-right mr-1.5 text-amber-600"></i> <span data-i18n="typeOneWay">One Way</span>
             </label>
             <label class="cursor-pointer border border-slate-300 bg-white p-2.5 rounded-xl flex items-center justify-center text-xs font-bold text-slate-700 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:text-amber-900 transition">
-              <input type="radio" name="tripType" value="Airport Transfer" class="sr-only" />
-              <i class="fa-solid fa-plane-departure mr-1.5 text-amber-600"></i> Airport
+              <input type="radio" name="tripType" value="Airport Transfer" class="sr-only" onchange="toggleReturnDateField()" />
+              <i class="fa-solid fa-plane-departure mr-1.5 text-amber-600"></i> <span data-i18n="typeAirport">Airport</span>
             </label>
           </div>
         </div>
@@ -945,11 +1015,11 @@
         <!-- Name & Phone -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Full Name</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblName">Your Full Name</label>
             <input type="text" id="custName" required placeholder="e.g. Shriram Jois" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile / WhatsApp Number</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblPhone">Mobile / WhatsApp Number</label>
             <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
           </div>
         </div>
@@ -957,31 +1027,40 @@
         <!-- Pickup & Destination -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Pickup Location</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblPickup">Pickup Location</label>
             <input type="text" id="custPickup" required placeholder="e.g. Bangalore Airport / Nagarabhavi / Mangalore" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Destination / Route</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblDrop">Destination / Route</label>
             <input type="text" id="custDrop" required placeholder="e.g. Coorg, Mysore, Dharmasthala, Tirupati" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
           </div>
         </div>
 
-        <!-- Travel Date & Time -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Dates & Timing Section (Includes Conditional Return Date) -->
+        <div id="datesContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Departure Date</label>
-            <input type="date" id="custDate" required class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblDepDate">Departure Date</label>
+            <input type="date" id="custDate" required onchange="syncReturnMinDate()" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
           </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Pickup Time</label>
-            <input type="time" id="custTime" required value="06:00" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+
+          <!-- CONDITIONAL RETURN DATE CONTAINER -->
+          <div id="returnDateCol" class="transition-all duration-300">
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
+              <span data-i18n="lblRetDate">Return Date</span> <span class="text-amber-600 font-bold">*</span>
+            </label>
+            <input type="date" id="custReturnDate" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+          </div>
+
+          <div id="timeCol">
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblTime">Pickup Time</label>
+            <input type="time" id="custTime" required value="06:00" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
           </div>
         </div>
 
         <!-- Vehicle, Passengers & Luggage -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Vehicle Type</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblVehicle">Vehicle Type</label>
             <select id="custVehicle" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium">
               <option value="Force Urbania (10-17 Seater)">Force Urbania (10-17 Seater)</option>
               <option value="Toyota Innova Crysta (7+1 Seater)">Toyota Innova Crysta (7+1 Seater)</option>
@@ -991,7 +1070,7 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Passengers</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblPax">Passengers</label>
             <select id="custPax" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium">
               <option value="1-4 Persons">1 - 4 Persons</option>
               <option value="5-7 Persons">5 - 7 Persons</option>
@@ -1001,7 +1080,7 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Luggage Bags</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblBags">Luggage Bags</label>
             <select id="custLuggage" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium">
               <option value="1-2 Small Bags">1 - 2 Bags</option>
               <option value="3-5 Medium Bags">3 - 5 Bags</option>
@@ -1014,10 +1093,10 @@
         <!-- Submit CTAs -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
           <button type="button" onclick="handleTripBooking('whatsapp')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-md transition flex items-center justify-center text-sm gap-2">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Send via WhatsApp
+            <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="btnSendWa">Send via WhatsApp</span>
           </button>
           <button type="button" onclick="handleTripBooking('telegram')" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3.5 rounded-xl shadow-md transition flex items-center justify-center text-sm gap-2">
-            <i class="fa-brands fa-telegram text-lg"></i> Send via Telegram
+            <i class="fa-brands fa-telegram text-lg"></i> <span data-i18n="btnSendTg">Send via Telegram</span>
           </button>
         </div>
       </form>
@@ -1031,7 +1110,7 @@
       <!-- Brand Info -->
       <div>
         <h4 class="font-heading text-white font-black text-lg mb-2">Shree Rajarajeshwari Tours &amp; Travels</h4>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+        <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="footerAbout">
           Premier passenger vehicle rental and outstation tour specialists serving Karnataka with reliable chauffeurs, clean cabs, and verified safety protocols.
         </p>
         <p class="text-xs font-bold text-amber-400">
@@ -1099,14 +1178,272 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // Set default date to today
+    // BILINGUAL TRANSLATION DICTIONARY (EN & KN)
+    const translations = {
+      en: {
+        topHubs: "Bangalore & Mangalore",
+        topGps: "GPS Monitored & Sanitized Commercial Fleet",
+        brandTitle: "SHREE RAJARAJESHWARI",
+        brandSubtitle: "TOURS & TRAVELS",
+        navFleet: "Our Fleet",
+        navRoutes: "Popular Routes",
+        navStandards: "Fleet Standards",
+        navServices: "Services",
+        navFaq: "FAQs",
+        navOffices: "Our Offices",
+        navBook: "Book Trip",
+        heroBadge: "100% Insured • GPS Tracked • Multi-Point Inspected",
+        heroHeadline: "Trusted Passenger Tours & Luxury Cab Rentals",
+        heroSubhead: "Serving Outstation Trips, Airport Transfers, Temple Pilgrimages & Corporate Fleets across Karnataka with dedicated Bangalore & Mangalore hubs.",
+        heroBtnQuote: "Get Instant Trip Quote",
+        fleetSub: "Our Fleet Lineup",
+        fleetHeading: "Available Commercial Vehicles",
+        fleetDesc: "Well-maintained tourist cabs with yellow-board commercial permits, live GPS, and experienced chauffeurs.",
+        urbaniaRole: "VIP Group & Delegation Transport",
+        crystaRole: "Premium Executive SUV / MPV",
+        rumionRole: "Modern Budget-Friendly 6-Seater",
+        travellerRole: "Group Pilgrimages & Team Outings",
+        etiosRole: "Reliable Economical Highway Sedan",
+        bookUrbania: "Book Force Urbania",
+        bookCrysta: "Book Innova Crysta",
+        bookRumion: "Book Toyota Rumion",
+        bookTraveller: "Book Tempo Traveller",
+        bookEtios: "Book Toyota Etios",
+        routesSub: "Fixed Fare & Outstation Corridors",
+        routesHeading: "High-Frequency Routes Across Karnataka",
+        routesDesc: "Daily departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.",
+        stdTag: "The Rajarajeshwari Standard",
+        stdHeading: "Uncompromised Safety & Vehicle Hygiene",
+        stdDesc: "Every vehicle in our fleet is company-owned or rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.",
+        stdCard1Title: "Rigorous Maintenance",
+        stdCard1Desc: "Strict 50-point checklist inspection before every trip: suspension check, tire tread depth, dual-zone AC gas performance, and braking systems tuned for ghat descents.",
+        stdCard2Title: "Deep Sanitization",
+        stdCard2Desc: "High-pressure vacuuming, steam disinfection of fabric upholstery, sanitized touch points, and clean air filtration before departure for fresh, germ-free cabins.",
+        stdCard3Title: "Comprehensive Insurance",
+        stdCard3Desc: "100% yellow-board commercial registration with all-India tourist permits, comprehensive passenger liability cover, fitness certificates, and valid emission clearances.",
+        stdCard4Title: "Real-Time GPS Tracking",
+        stdCard4Desc: "24/7 telematics, live route monitoring, SOS panic triggers, and automated speed alerts. Share live trip tracking links with family for complete peace of mind.",
+        svcSub: "Our Expertise",
+        svcHeading: "Travel Services We Provide",
+        svcDesc: "Transparent pricing, experienced drivers, and round-the-clock journey assistance.",
+        svc1Title: "Outstation Round Trips",
+        svc1Desc: "Hassle-free holiday tours, hill station vacations (Coorg, Ooty, Chikmagalur, Wayanad) and temple pilgrimages across South India.",
+        svc2Title: "Airport Pick & Drop",
+        svc2Desc: "Reliable scheduled transfers to Kempegowda International Airport (BLR) and Mangaluru International Airport (IXE) with zero surge pricing.",
+        svc3Title: "Weddings & Corporate",
+        svc3Desc: "Multi-vehicle fleet coordination with luxury Force Urbania and Innova Crysta for guest transportation, corporate delegations, and VIP transits.",
+        faqSub: "Got Questions?",
+        faqHeading: "Frequently Asked Questions",
+        faqDesc: "Clear answers on fares, outstation minimums, toll charges, and driver allowances.",
+        faq1Q: "Are toll charges, parking fees, and interstate permits included in the quote?",
+        faq1A: "Our standard quotes include vehicle rental, fuel, and chauffeur charges. Fastag toll charges, parking tickets at tourist destinations, and interstate border entry taxes (if crossing into Kerala, Tamil Nadu, or Andhra Pradesh) are paid as per actuals by the guest during the trip or billed on final invoice.",
+        faq2Q: "What is the minimum kilometer rule for outstation cab bookings?",
+        faq2A: "For all outstation round trips originating from Bangalore or Mangalore, a standard minimum of 250 km to 300 km per calendar day applies (depending on the vehicle class). If the total kilometers driven exceed this cumulative average, extra kilometers are charged at the vehicle's standard per-km rate.",
+        faq3Q: "How is the driver batta (daily food/stay allowance) calculated?",
+        faq3A: "Driver allowance (Batta) is charged on a per-day basis (typically ₹350–₹600/day depending on vehicle class). If the trip involves night driving between 10:00 PM and 6:00 AM, a standard nominal night allowance is applicable to ensure driver safety and refreshment.",
+        faq4Q: "Are your chauffeurs trained for Western Ghats (Charmadi & Shiradi) roads?",
+        faq4A: "Yes, 100%. Driving the Western Ghat hairpins (Charmadi, Shiradi, Sampaje, or Bisle Ghat) requires seasoned commercial drivers. All our drivers operating between Mangalore, Udupi, and Bangalore have over 7+ years of ghat handling experience, strictly observing hill-station safety norms.",
+        faq5Q: "Do you provide GST invoices for corporate company bookings?",
+        faq5A: "Yes. We issue formal GST tax invoices for all corporate transfers, conference delegations, and business guest travel across Bangalore and Mangalore. Simply share your organization's GSTIN and billing address during booking.",
+        officeTag: "Physical Hubs",
+        officeHeading: "Our Regional Offices",
+        officeDesc: "Visit our branch hubs for vehicle inspection, driver verification, and customized tour consultations.",
+        bookSub: "Instant Booking Request",
+        bookHeading: "Get an Instant Trip Quote",
+        bookDesc: "No advance payment needed to enquire. Share details to receive confirmed vehicle rates on WhatsApp or Telegram.",
+        lblTripType: "Select Journey Type",
+        typeRound: "Round Trip",
+        typeOneWay: "One Way",
+        typeAirport: "Airport",
+        lblName: "Your Full Name",
+        lblPhone: "Mobile / WhatsApp Number",
+        lblPickup: "Pickup Location",
+        lblDrop: "Destination / Route",
+        lblDepDate: "Departure Date",
+        lblRetDate: "Return Date",
+        lblTime: "Pickup Time",
+        lblVehicle: "Vehicle Type",
+        lblPax: "Passengers",
+        lblBags: "Luggage Bags",
+        btnSendWa: "Send via WhatsApp",
+        btnSendTg: "Send via Telegram",
+        footerAbout: "Premier passenger vehicle rental and outstation tour specialists serving Karnataka with reliable chauffeurs, clean cabs, and verified safety protocols."
+      },
+      kn: {
+        topHubs: "ಬೆಂಗಳೂರು ಮತ್ತು ಮಂಗಳೂರು",
+        topGps: "ಜಿಪಿಎಸ್ ಮಾನಿಟರ್ ಮಾಡಿದ ಸ್ವಚ್ಛ ವಾಣಿಜ್ಯ ವಾಹನಗಳು",
+        brandTitle: "ಶ್ರೀ ರಾಜರಾಜೇಶ್ವರಿ",
+        brandSubtitle: "ಟೂರ್ಸ್ & ಟ್ರಾವೆಲ್ಸ್",
+        navFleet: "ನಮ್ಮ ವಾಹನಗಳು",
+        navRoutes: "ಪ್ರಮುಖ ಮಾರ್ಗಗಳು",
+        navStandards: "ಸುರಕ್ಷತಾ ಗುಣಮಟ್ಟ",
+        navServices: "ಸೇವೆಗಳು",
+        navFaq: "ಪ್ರಶ್ನೋತ್ತರಗಳು",
+        navOffices: "ನಮ್ಮ ಕಚೇರಿಗಳು",
+        navBook: "ಬುಕಿಂಗ್ ಮಾಡಿ",
+        heroBadge: "100% ವಿಮೆ ಸಹಿತ • ಜಿಪಿಎಸ್ ಟ್ರ್ಯಾಕಿಂಗ್ • ಸುರಕ್ಷಿತ ಚಾಲಕರು",
+        heroHeadline: "ವಿಶ್ವಾಸಾರ್ಹ ಪ್ರವಾಸಿ ವಾಹನ ಹಾಗೂ ಲಕ್ಸುರಿ ಕ್ಯಾಬ್ ಸೇವೆ",
+        heroSubhead: "ಬೆಂಗಳೂರು ಮತ್ತು ಮಂಗಳೂರು ಕೇಂದ್ರಗಳಿಂದ ದೇವಸ್ಥಾನಗಳ ಯಾತ್ರೆ, ಏರ್‌ಪೋರ್ಟ್ ಡ್ರಾಪ್ ಹಾಗೂ ಪ್ರವಾಸಗಳಿಗೆ ಅತ್ಯುತ್ತಮ ಚಾಲಕ ಸಹಿತ ವಾಹನಗಳು.",
+        heroBtnQuote: "ದರ ವಿವರ ಪಡೆಯಿರಿ",
+        fleetSub: "ವಾಹನಗಳ ಶ್ರೇಣಿ",
+        fleetHeading: "ಲಭ್ಯವಿರುವ ವಾಣಿಜ್ಯ ಪ್ರವಾಸಿ ವಾಹನಗಳು",
+        fleetDesc: "ಯೆಲ್ಲೋ ಬೋರ್ಡ್ ಪರ್ಮಿಟ್, ನುರಿತ ಚಾಲಕರು ಮತ್ತು ಲೈವ್ ಜಿಪಿಎಸ್ ಹೊಂದಿರುವ ಅತ್ಯಾಧುನಿಕ ವಾಹನಗಳು.",
+        urbaniaRole: "ವಿಐಪಿ ಗ್ರೂಪ್ ಹಾಗೂ ಕುಟುಂಬದ ಪ್ರವಾಸಕ್ಕೆ",
+        crystaRole: "ಪ್ರೀಮಿಯಂ ಎಕ್ಸಿಕ್ಯೂಟಿವ್ ಎಸ್‌ಯುವಿ",
+        rumionRole: "ಆಧುನಿಕ ಮಿತವ್ಯಯದ 6-ಸೀಟರ್ ಎಂಪಿವಿ",
+        travellerRole: "ತೀರ್ಥಯಾತ್ರೆ ಹಾಗೂ ದೊಡ್ಡ ಕುಟುಂಬಕ್ಕೆ",
+        etiosRole: "ವಿಶ್ವಾಸಾರ್ಹ ಕಡಿಮೆ ವೆಚ್ಚದ ಸೆಡಾನ್",
+        bookUrbania: "ಫೋರ್ಸ್ ಅರ್ಬಾನಿಯಾ ಬುಕ್ ಮಾಡಿ",
+        bookCrysta: "ಇನ್ನೋವಾ ಕ್ರಿಸ್ಟಾ ಬುಕ್ ಮಾಡಿ",
+        bookRumion: "ಟೊಯೋಟಾ ರೂಮಿಯಾನ್ ಬುಕ್ ಮಾಡಿ",
+        bookTraveller: "ಟೆಂಪೋ ಟ್ರಾವೆಲರ್ ಬುಕ್ ಮಾಡಿ",
+        bookEtios: "ಟೊಯೋಟಾ ಎಟಿಯೋಸ್ ಬುಕ್ ಮಾಡಿ",
+        routesSub: "ಪ್ರಸಿದ್ಧ ಯಾತ್ರಾ ಮಾರ್ಗಗಳು",
+        routesHeading: "ಕರ್ನಾಟಕದ ಜನಪ್ರಿಯ ಪ್ರವಾಸ ಮಾರ್ಗಗಳು",
+        routesDesc: "ಬೆಂಗಳೂರು ಮತ್ತು ಮಂಗಳೂರಿನಿಂದ ಪ್ರತಿದಿನ ಹೊರಡುವ ಪಾರದರ್ಶಕ ದರಗಳ ಟೂರ್ ಪ್ಯಾಕೇಜ್‌ಗಳು.",
+        stdTag: "ರಾಜರಾಜೇಶ್ವರಿ ಗುಣಮಟ್ಟ",
+        stdHeading: "ರಾಜಿ ಇಲ್ಲದ ಪ್ರಯಾಣಿಕರ ಸುರಕ್ಷತೆ ಮತ್ತು ಸ್ವಚ್ಛತೆ",
+        stdDesc: "ಘಾಟಿ ರಸ್ತೆಗಳು, ಹೈವೇಗಳು ಹಾಗೂ ನಗರ ಪ್ರಯಾಣಕ್ಕೆ ಸೂಕ್ತವಾಗಿ ತಪಾಸಣೆಗೊಳಪಟ್ಟ ಅತ್ಯುತ್ತಮ ವಾಹನಗಳು.",
+        stdCard1Title: "ನಿಯಮಿತ ನಿರ್ವಹಣೆ",
+        stdCard1Desc: "ಪ್ರತಿ ಪ್ರವಾಸಕ್ಕೂ ಮುನ್ನ 50-ಪಾಯಿಂಟ್ ತಪಾಸಣೆ: ಸಸ್ಪೆನ್ಷನ್, ಟೈರ್ ಗ್ರಿಪ್, ಬ್ರೇಕಿಂಗ್ ಮತ್ತು ಎಸಿ ತಪಾಸಣೆ.",
+        stdCard2Title: "ಸಂಪೂರ್ಣ ಸ್ಯಾನಿಟೈಸೇಶನ್",
+        stdCard2Desc: "ವ್ಯಾಕ್ಯೂಮ್ ಕ್ಲೀನಿಂಗ್ ಹಾಗೂ ಸೀಟುಗಳ ಸ್ವಚ್ಛತೆ. ಪ್ರತಿಯೊಂದು ಟ್ರಿಪ್ ಆರಂಭಕ್ಕೂ ಮುನ್ನ ಶುದ್ಧ ಕ್ಯಾಬಿನ್ ಖಾತರಿ.",
+        stdCard3Title: "ಸಂಪೂರ್ಣ ವಿಮೆ ರಕ್ಷಣೆ",
+        stdCard3Desc: "100% ಯೆಲ್ಲೋ ಬೋರ್ಡ್ ವಾಣಿಜ್ಯ ನೋಂದಣಿ, ಆಲ್-ಇಂಡಿಯಾ ಪರ್ಮಿಟ್ ಹಾಗೂ ಪ್ರಯಾಣಿಕರ ಪೂರ್ಣ ವಿಮೆ.",
+        stdCard4Title: "ಲೈವ್ ಜಿಪಿಎಸ್ ಟ್ರ್ಯಾಕಿಂಗ್",
+        stdCard4Desc: "24/7 ಲೈವ್ ಲೊಕೇಶನ್ ಮಾನಿಟರಿಂಗ್, ಎಸ್‌ಒಎಸ್ ಬಟನ್ ಹಾಗೂ ಕುಟುಂಬದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಬಹುದಾದ ಲೈವ್ ಲಿಂಕ್.",
+        svcSub: "ನಮ್ಮ ಪರಿಣತಿ",
+        svcHeading: "ನಾವು ಒದಗಿಸುವ ಪ್ರವಾಸ ಸೇವೆಗಳು",
+        svcDesc: "ಪಾರದರ್ಶಕ ದರಗಳು, ಅನುಭವಿ ಚಾಲಕರು ಮತ್ತು 24 ಗಂಟೆಗಳ ಸಹಾಯ.",
+        svc1Title: "ಔಟ್‌ಸ್ಟೇಷನ್ ರೌಂಡ್ ಟ್ರಿಪ್ಸ್",
+        svc1Desc: "ಕುಕ್ಕೆ, ಧರ್ಮಸ್ಥಳ, ಹೊರನಾಡು, ಶೃಂಗೇರಿ, ತಿರುಪತಿ ಹಾಗೂ ಕೂರ್ಗ್, ಊಟಿ, ಚಿಕ್ಕಮಗಳೂರು ಪ್ರವಾಸಗಳು.",
+        svc2Title: "ಏರ್‌ಪೋರ್ಟ್ ಪಿಕ್ & ಡ್ರಾಪ್",
+        svc2Desc: "ಬೆಂಗಳೂರು (BLR) ಮತ್ತು ಮಂಗಳೂರು (IXE) ವಿಮಾನ ನಿಲ್ದಾಣಗಳಿಗೆ ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ನಿಖರ ಸೇವೆ.",
+        svc3Title: "ಮದುವೆ & ಕಾರ್ಪೊರೇಟ್ ಸೇವೆ",
+        svc3Desc: "ಅತಿಥಿಗಳ ಸಾರಿಗೆ, ಕಾರ್ಪೊರೇಟ್ ನಿಯೋಗಗಳಿಗೆ ಅರ್ಬಾನಿಯಾ ಹಾಗೂ ಇನ್ನೋವಾ ಕ್ರಿಸ್ಟಾ ಸಮನ್ವಯ ಸೇವೆ.",
+        faqSub: "ಸಂದೇಹಗಳಿವೆಯೇ?",
+        faqHeading: "ಸಾಮಾನ್ಯವಾಗಿ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು",
+        faqDesc: "ಟೋಲ್, ಕನಿಷ್ಠ ಕಿ.ಮೀ ಹಾಗೂ ಚಾಲಕರ ಭತ್ಯೆಯ ಕುರಿತ ಸ್ಪಷ್ಟ ಮಾಹಿತಿ.",
+        faq1Q: "ಟೋಲ್, ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಇಂಟರ್‌ಸ್ಟೇಟ್ ಶುಲ್ಕಗಳು ದರದಲ್ಲಿ ಸೇರಿವೆಯೇ?",
+        faq1A: "ನಮ್ಮ ಮೂಲ ದರವು ವಾಹನ ಬಾಡಿಗೆ, ಇಂಧನ ಮತ್ತು ಚಾಲಕರನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ಫಾಸ್ಟ್ಯಾಗ್ ಟೋಲ್, ಪ್ರವಾಸಿ ತಾಣಗಳ ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಗಡಿ ಪ್ರವೇಶ ತೆರಿಗೆಗಳನ್ನು ಅತಿಥಿಗಳು ಪ್ರವಾಸದ ವೇಳೆ ನೇರವಾಗಿ ಪಾವತಿಸಬೇಕಾಗುತ್ತದೆ.",
+        faq2Q: "ಔಟ್‌ಸ್ಟೇಷನ್ ಟ್ರಿಪ್‌ಗಳಿಗೆ ಕನಿಷ್ಠ ಕಿಲೋಮೀಟರ್ ನಿಯಮವೇನು?",
+        faq2A: "ಬೆಂಗಳೂರು ಅಥವಾ ಮಂಗಳೂರಿನಿಂದ ಹೊರಡುವ ರೌಂಡ್ ಟ್ರಿಪ್‌ಗಳಿಗೆ ದಿನಕ್ಕೆ ಕನಿಷ್ಠ 250 ರಿಂದ 300 ಕಿ.ಮೀ ಲೆಕ್ಕಹಾಕಲಾಗುತ್ತದೆ. ಒಟ್ಟು ಕ್ರಮಿಸಿದ ದೂರ ಇದಕ್ಕಿಂತ ಹೆಚ್ಚಾದರೆ ಹೆಚ್ಚುವರಿ ಕಿ.ಮೀ ದರ ಅನ್ವಯಿಸುತ್ತದೆ.",
+        faq3Q: "ಚಾಲಕರ ದಿನಭತ್ಯೆ (Batta) ಹೇಗೆ ಲೆಕ್ಕಹಾಕಲಾಗುತ್ತದೆ?",
+        faq3A: "ಚಾಲಕರ ದಿನಭತ್ಯೆ ದಿನಕ್ಕೆ ₹350 ರಿಂದ ₹600 ಇರುತ್ತದೆ (ವಾಹನದ ಆಧಾರದ ಮೇಲೆ). ರಾತ್ರಿ 10:00 ಗಂಟೆಯ ನಂತರ ಚಾಲನೆ ಮುಂದುವರಿದರೆ ಸಾಮಾನ್ಯ ನೈಟ್ ಭತ್ಯೆ ಅನ್ವಯಿಸುತ್ತದೆ.",
+        faq4Q: "ನಿಮ್ಮ ಚಾಲಕರು ಚಾರ್ಮಾಡಿ ಹಾಗೂ ಶಿರಾಡಿ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆಯೇ?",
+        faq4A: "ಹೌದು, ಖಂಡಿತ. ಪಶ್ಚಿಮ ಘಟ್ಟಗಳ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಚಾಲನೆ ಮಾಡಲು ನಮ್ಮ ಎಲ್ಲಾ ಚಾಲಕರು ಕನಿಷ್ಠ 7+ ವರ್ಷಗಳ ಚಾಲನಾ ಅನುಭವ ಹೊಂದಿದ್ದು, ಸುರಕ್ಷತೆಗೆ ಮೊದಲ ಆದ್ಯತೆ ನೀಡುತ್ತಾರೆ.",
+        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್‌ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
+        faq5A: "ಹೌದು, ಎಲ್ಲಾ ಕಾರ್ಪೊರೇಟ್ ಮತ್ತು ವಾಣಿಜ್ಯ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ನಾವು ಅಧಿಕೃತ ಜಿಎಸ್‌ಟಿ ತೆರಿಗೆ ಇನ್‌ವಾಯ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ.",
+        officeTag: "ಕಚೇರಿಗಳು",
+        officeHeading: "ನಮ್ಮ ಪ್ರಾದೇಶಿಕ ಕೇಂದ್ರಗಳು",
+        officeDesc: "ವಾಹನ ಪರಿಶೀಲನೆ ಮತ್ತು ಪ್ರವಾಸ ಸಮಾಲೋಚನೆಗಾಗಿ ನಮ್ಮ ಶಾಖೆಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ.",
+        bookSub: "ತ್ವರಿತ ಬುಕಿಂಗ್",
+        bookHeading: "ಕ್ಷಣಾರ್ಧದಲ್ಲಿ ದರ ವಿವರ ಪಡೆಯಿರಿ",
+        bookDesc: "ಯಾವುದೇ ಮುಂಗಡ ಹಣವಿಲ್ಲದೆ ವಾಟ್ಸಾಪ್ ಅಥವಾ ಟೆಲಿಗ್ರಾಂ ಮೂಲಕ ಖಚಿತ ದರ ವಿವರ ಪಡೆಯಿರಿ.",
+        lblTripType: "ಪ್ರಯಾಣದ ಪ್ರಕಾರ ಆಯ್ಕೆಮಾಡಿ",
+        typeRound: "ರೌಂಡ್ ಟ್ರಿಪ್",
+        typeOneWay: "ಒನ್ ವೇ ಡ್ರಾಪ್",
+        typeAirport: "ಏರ್‌ಪೋರ್ಟ್",
+        lblName: "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು",
+        lblPhone: "ಮೊಬೈಲ್ / ವಾಟ್ಸಾಪ್ ಸಂಖ್ಯೆ",
+        lblPickup: "ಹೊರಡುವ ಸ್ಥಳ",
+        lblDrop: "ತಲುಪುವ ಸ್ಥಳ / ಮಾರ್ಗ",
+        lblDepDate: "ಹೊರಡುವ ದಿನಾಂಕ",
+        lblRetDate: "ಹಿಂತಿರುಗುವ ದಿನಾಂಕ",
+        lblTime: "ಹೊರಡುವ ಸಮಯ",
+        lblVehicle: "ವಾಹನದ ಆಯ್ಕೆ",
+        lblPax: "ಪ್ರಯಾಣಿಕರ ಸಂಖ್ಯೆ",
+        lblBags: "ಲಗೇಜ್ ಚೀಲಗಳು",
+        btnSendWa: "ವಾಟ್ಸಾಪ್ ಮೂಲಕ ಕಳುಹಿಸಿ",
+        btnSendTg: "ಟೆಲಿಗ್ರಾಂ ಮೂಲಕ ಕಳುಹಿಸಿ",
+        footerAbout: "ಕರ್ನಾಟಕದಾದ್ಯಂತ ವಿಶ್ವಾಸಾರ್ಹ ಚಾಲಕರು ಹಾಗೂ ಸ್ವಚ್ಛ ವಾಹನಗಳೊಂದಿಗೆ ಸೇವೆ ಸಲ್ಲಿಸುವ ಪ್ರಮುಖ ಟೂರ್ಸ್ & ಟ್ರಾವೆಲ್ಸ್ ಸಂಸ್ಥೆ."
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const btnEn = document.getElementById('lang-en');
+      const btnKn = document.getElementById('lang-kn');
+
+      if (lang === 'kn') {
+        btnKn.className = "px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 transition font-bold";
+        btnEn.className = "px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition font-bold";
+      } else {
+        btnEn.className = "px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 transition font-bold";
+        btnKn.className = "px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition font-bold";
+      }
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    // Toggle FAQ Accordion
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('i');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all FAQs first
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('#faq button i').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // CONDITIONAL RETURN DATE LOGIC
+    function toggleReturnDateField() {
+      const tripType = document.querySelector('input[name="tripType"]:checked').value;
+      const returnCol = document.getElementById('returnDateCol');
+      const returnInput = document.getElementById('custReturnDate');
+      const datesContainer = document.getElementById('datesContainer');
+
+      if (tripType === 'Round Trip') {
+        returnCol.classList.remove('hidden');
+        returnInput.setAttribute('required', 'required');
+        datesContainer.className = "grid grid-cols-1 sm:grid-cols-3 gap-4";
+        syncReturnMinDate();
+      } else {
+        returnCol.classList.add('hidden');
+        returnInput.removeAttribute('required');
+        returnInput.value = '';
+        datesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4";
+      }
+    }
+
+    function syncReturnMinDate() {
+      const depDate = document.getElementById('custDate').value;
+      const returnInput = document.getElementById('custReturnDate');
+      if (depDate) {
+        returnInput.min = depDate;
+        if (returnInput.value && returnInput.value < depDate) {
+          returnInput.value = depDate;
+        }
+      }
+    }
+
+    // Initialize Default Dates
     document.addEventListener('DOMContentLoaded', () => {
       const datePicker = document.getElementById('custDate');
+      const returnPicker = document.getElementById('custReturnDate');
       if (datePicker) {
         const today = new Date().toISOString().split('T')[0];
         datePicker.min = today;
         datePicker.value = today;
+        if (returnPicker) {
+          returnPicker.min = today;
+          returnPicker.value = today;
+        }
       }
+      toggleReturnDateField();
     });
 
     // Mobile Menu Toggle
@@ -1137,11 +1474,18 @@
     }
 
     // Set Popular Route directly into form
-    function setRoute(pickup, destination, vehicle) {
+    function setRoute(pickup, destination, vehicle, tripType) {
       document.getElementById('custPickup').value = pickup;
       document.getElementById('custDrop').value = destination;
       if (vehicle) {
         document.getElementById('custVehicle').value = vehicle;
+      }
+      if (tripType) {
+        const radio = document.querySelector(`input[name="tripType"][value="${tripType}"]`);
+        if (radio) {
+          radio.checked = true;
+          toggleReturnDateField();
+        }
       }
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
@@ -1154,6 +1498,7 @@
       const pickup = document.getElementById('custPickup').value.trim();
       const drop = document.getElementById('custDrop').value.trim();
       const date = document.getElementById('custDate').value;
+      const returnDate = document.getElementById('custReturnDate').value;
       const time = document.getElementById('custTime').value;
       const vehicle = document.getElementById('custVehicle').value;
       const pax = document.getElementById('custPax').value;
@@ -1167,6 +1512,16 @@
         return;
       }
 
+      if (tripType === 'Round Trip' && !returnDate) {
+        document.getElementById('custReturnDate').reportValidity();
+        return;
+      }
+
+      let dateDetails = `*Departure:* ${encodeURIComponent(date)} at ${encodeURIComponent(time)}`;
+      if (tripType === 'Round Trip' && returnDate) {
+        dateDetails += `%0A*Return Date:* ${encodeURIComponent(returnDate)}`;
+      }
+
       const text = `*New Trip Booking Enquiry*%0A` +
                    `--------------------------------%0A` +
                    `*Journey Type:* ${encodeURIComponent(tripType)}%0A` +
@@ -1175,7 +1530,7 @@
                    `*Vehicle:* ${encodeURIComponent(vehicle)}%0A` +
                    `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
                    `*Destination:* ${encodeURIComponent(drop)}%0A` +
-                   `*Date & Time:* ${encodeURIComponent(date)} at ${encodeURIComponent(time)}%0A` +
+                   `${dateDetails}%0A` +
                    `*Passengers:* ${encodeURIComponent(pax)}%0A` +
                    `*Luggage:* ${encodeURIComponent(luggage)}%0A` +
                    `--------------------------------%0A` +
