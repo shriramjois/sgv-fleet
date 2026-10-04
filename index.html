@@ -39,13 +39,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
   <style>
-    /* WCAG & Clarity Improvements */
     body {
       color: #0F172A;
       background-color: #F8FAFC;
     }
     input, select, textarea {
-      font-size: 15px !important; /* Prevents auto-zoom on mobile safari */
+      font-size: 15px !important;
     }
     @media print {
       body * { visibility: hidden; }
@@ -60,7 +59,7 @@
 </head>
 <body class="antialiased font-sans selection:bg-amber-400 selection:text-slate-950 pb-20 md:pb-0">
 
-  <!-- TOP BAR: Increased contrast & unified vertical alignment -->
+  <!-- TOP BAR -->
   <div class="bg-slate-950 text-slate-200 text-xs py-2.5 px-4 border-b border-slate-800">
     <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-3">
       <div class="flex items-center flex-wrap gap-4 sm:gap-6">
@@ -72,11 +71,11 @@
           <i class="fa-solid fa-shield-halved text-emerald-400 mr-2 text-sm"></i>
           <span data-i18n="topGps">GPS Monitored Commercial Fleet</span>
         </span>
-        <!-- Live Visitor Ticket Counter -->
-        <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-700/80 px-3 py-1 rounded-full text-[11px] text-slate-200">
+        <!-- Real-Time Synchronized Visitor Ticket Counter -->
+        <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-700/80 px-3 py-1 rounded-full text-[11px] text-slate-200 shadow-inner">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span class="text-slate-400">Total Visits:</span>
-          <span id="visitor-counter-val" class="font-mono font-bold text-amber-300">14,845</span>
+          <span id="visitor-counter-val" class="font-mono font-bold text-amber-300">...</span>
         </div>
       </div>
 
@@ -141,7 +140,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION: Improved Typography, High-Contrast Copy & Buttons -->
+  <!-- HERO SECTION -->
   <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 px-4 border-b border-slate-800">
     <div class="max-w-4xl mx-auto text-center">
       <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
@@ -167,7 +166,7 @@
     </div>
   </section>
 
-  <!-- FLEET SECTION: Consistent White Cards, High-Contrast Badges & Text -->
+  <!-- FLEET SECTION -->
   <section id="fleet" class="py-16 sm:py-20 px-4 bg-slate-100">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-14">
@@ -402,7 +401,7 @@
     </div>
   </section>
 
-  <!-- FARE CALCULATOR: High Contrast, Sharp Sliders & Prominent Fastag Banner -->
+  <!-- FARE CALCULATOR -->
   <section id="calculator" class="py-16 sm:py-20 px-4 bg-slate-950 text-white border-y border-slate-800">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12">
@@ -845,7 +844,7 @@
     </div>
   </section>
 
-  <!-- OFFICES SECTION: Clean Tab Contrast & Clear Google Maps Embeds -->
+  <!-- OFFICES SECTION -->
   <section id="offices" class="py-16 sm:py-20 px-4 bg-slate-950 text-white relative overflow-hidden" itemscope itemtype="https://schema.org/TravelAgency">
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b border-slate-800">
@@ -1002,7 +1001,7 @@
     </div>
   </section>
 
-  <!-- BOOKING FORM SECTION: High Contrast Form Fields & Clear Labels -->
+  <!-- BOOKING FORM SECTION -->
   <section id="booking" class="py-16 sm:py-20 px-4 bg-white border-t border-slate-200">
     <div class="max-w-3xl mx-auto bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-md">
       <div class="text-center mb-8">
@@ -1012,7 +1011,6 @@
       </div>
 
       <form id="tripBookingForm" class="space-y-5">
-        <!-- Journey Type Radios -->
         <div>
           <label class="block text-xs font-bold text-slate-800 uppercase mb-2" data-i18n="lblTripType">Select Journey Type</label>
           <div class="grid grid-cols-3 gap-3">
@@ -1031,7 +1029,6 @@
           </div>
         </div>
 
-        <!-- Name & Phone -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblName">Your Full Name</label>
@@ -1043,7 +1040,6 @@
           </div>
         </div>
 
-        <!-- Pickup & Destination -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPickup">Pickup Location</label>
@@ -1055,7 +1051,6 @@
           </div>
         </div>
 
-        <!-- Dates & Timing Section (Conditional Return Date) -->
         <div id="datesContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblDepDate">Departure Date</label>
@@ -1075,7 +1070,6 @@
           </div>
         </div>
 
-        <!-- Vehicle, Passengers & Luggage -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblVehicle">Vehicle Type</label>
@@ -1108,7 +1102,6 @@
           </div>
         </div>
 
-        <!-- Submit CTAs -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3">
           <button type="button" onclick="handleTripBooking('whatsapp')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-xl shadow transition flex items-center justify-center text-sm gap-2">
             <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="btnSendWa">Send via WhatsApp</span>
@@ -1124,7 +1117,6 @@
   <!-- PRINTABLE / PDF MODAL DIALOG -->
   <div id="printable-estimate-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
     <div class="bg-white text-slate-950 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-      <!-- Top Action Bar -->
       <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-200 no-print">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-300 px-3 py-1 rounded-full">
           <i class="fa-solid fa-file-invoice"></i> Trip Quotation Preview
@@ -1139,7 +1131,6 @@
         </div>
       </div>
 
-      <!-- Printable Document Header -->
       <div class="border-b-2 border-slate-950 pb-4 mb-5">
         <div class="flex justify-between items-start">
           <div>
@@ -1155,7 +1146,6 @@
         </div>
       </div>
 
-      <!-- Quotation Specs Table -->
       <div class="space-y-4 text-xs">
         <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
           <div>
@@ -1290,19 +1280,41 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // VISITOR COUNTER
-    function initVisitorCounter() {
+    // REAL-TIME SYNCHRONIZED VISITOR COUNTER WITH FALLBACK
+    async function initVisitorCounter() {
       const counterEl = document.getElementById('visitor-counter-val');
       const baseVisits = 14845;
-      let currentVisits = localStorage.getItem('srr_visitor_count');
-      if (!currentVisits) {
-        currentVisits = baseVisits + Math.floor(Math.random() * 20);
-      } else {
-        currentVisits = parseInt(currentVisits, 10) + 1;
-      }
-      localStorage.setItem('srr_visitor_count', currentVisits);
-      if (counterEl) {
-        counterEl.innerText = Number(currentVisits).toLocaleString('en-IN');
+      const workspace = "shree-rajarajeshwari-tours";
+      const key = "total_visits";
+
+      // Session storage prevents a single visitor from inflating numbers on refresh
+      const hasCountedSession = sessionStorage.getItem('srr_session_hit');
+
+      try {
+        let endpoint = `https://api.counterapi.dev/v1/${workspace}/${key}`;
+        if (!hasCountedSession) {
+          endpoint += `/up`;
+          sessionStorage.setItem('srr_session_hit', 'true');
+        }
+
+        const res = await fetch(endpoint);
+        if (!res.ok) throw new Error('Counter response not ok');
+        const data = await res.json();
+        
+        if (data && typeof data.count === 'number') {
+          const totalCalculated = baseVisits + data.count;
+          if (counterEl) {
+            counterEl.innerText = totalCalculated.toLocaleString('en-IN');
+          }
+          localStorage.setItem('srr_cached_counter', totalCalculated);
+          return;
+        }
+      } catch (err) {
+        // Fallback for offline mode or network blocking
+        const cached = localStorage.getItem('srr_cached_counter') || (baseVisits + 12);
+        if (counterEl) {
+          counterEl.innerText = Number(cached).toLocaleString('en-IN');
+        }
       }
     }
 
@@ -1563,8 +1575,8 @@
         faq3A: "ಚಾಲಕರ ದಿನಭತ್ಯೆ ದಿನಕ್ಕೆ ₹350 ರಿಂದ ₹700 ಇರುತ್ತದೆ (ವಾಹನದ ಆಧಾರದ ಮೇಲೆ). ರಾತ್ರಿ 10:00 ಗಂಟೆಯ ನಂತರ ಚಾಲನೆ ಮುಂದುವರಿದರೆ ಸಾಮಾನ್ಯ ನೈಟ್ ಭತ್ಯೆ ಅನ್ವಯಿಸುತ್ತದೆ.",
         faq4Q: "ನಿಮ್ಮ ಚಾಲಕರು ಚಾರ್ಮಾಡಿ ಹಾಗೂ ಶಿರಾಡಿ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆಯೇ?",
         faq4A: "ಹೌದು, ಖಂಡಿತ. ಪಶ್ಚಿಮ ಘಟ್ಟಗಳ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಚಾಲನೆ ಮಾಡಲು ನಮ್ಮ ಎಲ್ಲಾ ಚಾಲಕರು ಕನಿಷ್ಠ 7+ ವರ್ಷಗಳ ಚಾಲನಾ ಅನುಭವ ಹೊಂದಿದ್ದು, ಸುರಕ್ಷತೆಗೆ ಮೊದಲ ಆದ್ಯತೆ ನೀಡುತ್ತಾರೆ.",
-        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್‌ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
-        faq5A: "ಹೌದು, ಎಲ್ಲಾ ಕಾರ್ಪೊರೇಟ್ ಮತ್ತು ವಾಣಿಜ್ಯ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ನಾವು ಅಧಿಕೃತ ಜಿಎಸ್‌ಟಿ ತೆರಿಗೆ ಇನ್‌ವಾಯ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ.",
+        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್‌‌ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
+        faq5A: "ಹೌದು, ಎಲ್ಲಾ ಕಾರ್ಪೊರೇಟ್ ಮತ್ತು ವಾಣಿಜ್ಯ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ನಾವು ಅಧಿಕೃತ ಜಿಎಸ್‌ಟಿ ತೆರಿಗೆ ಇನ್‌‌ವಾಯ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ.",
         officeTag: "ಕಚೇರಿಗಳು",
         officeHeading: "ನಮ್ಮ ಪ್ರಾದೇಶಿಕ ಕೇಂದ್ರಗಳು",
         officeDesc: "ವಾಹನ ಪರಿಶೀಲನೆ ಮತ್ತು ಪ್ರವಾಸ ಸಮಾಲೋಚನೆಗಾಗಿ ನಮ್ಮ ಶಾಖೆಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ.",
