@@ -4,27 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shree Rajarajeshwari Tours & Travels | Cab Rentals Bangalore & Mangalore</title>
-  <meta name="description" content="Premium chauffeur-driven car rentals, outstation cabs, and luxury tempo traveller hire in Bangalore and Mangalore. Force Urbania, Innova Crysta, Rumion, and Etios for temple tours and airport transfers." />
+  <meta name="description" content="Chauffeur-driven tourist vehicle rentals in Bangalore & Mangalore. Force Urbania, Innova Crysta, Tempo Traveller, Toyota Rumion, and Etios." />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Shree Rajarajeshwari Tours & Travels | Bangalore & Mangalore Cab Rentals" />
-  <meta property="og:description" content="Book Force Urbania, Innova Crysta, and Tempo Traveller for temple pilgrimages, hill station vacations & airport transfers." />
-  <meta property="og:type" content="website" />
-
-  <!-- Google Fonts: Manrope (Headings) & Inter (Body, UI, Navigation) -->
+  <!-- Google Fonts: Manrope (Headings) & Inter (UI/Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN with Enhanced Theme Palette -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
             heading: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              gold: '#F59E0B',
+              goldLight: '#FEF3C7',
+              navy: '#0F172A',
+              cardDark: '#1E293B',
+              accent: '#0284C7',
+            }
           }
         }
       }
@@ -34,105 +38,75 @@
   <!-- FontAwesome Icons CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
-  <!-- LocalBusiness Rich Results Schema (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "TravelAgency",
-        "@id": "https://rajarajeshwaritours.com/#bangalore-hub",
-        "name": "Shree Rajarajeshwari Tours & Travels - Bangalore",
-        "telephone": "+919008681881",
-        "priceRange": "₹₹",
-        "image": "urbania.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "#215, A & B, 1st Floor, 1st Main, 3rd Block, Nagarabhavi 2nd Stage",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "560072",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "12.9558",
-          "longitude": "77.5106"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
-      },
-      {
-        "@type": "TravelAgency",
-        "@id": "https://rajarajeshwaritours.com/#mangalore-branch",
-        "name": "Shree Rajarajeshwari Tours & Travels - Mangalore",
-        "telephone": "+919008681881",
-        "priceRange": "₹₹",
-        "image": "crysta.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Abish Square, Yeyyadi, Airport Road",
-          "addressLocality": "Mangaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "575008",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "12.9081",
-          "longitude": "74.8637"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
+  <style>
+    /* WCAG & Clarity Improvements */
+    body {
+      color: #0F172A;
+      background-color: #F8FAFC;
+    }
+    input, select, textarea {
+      font-size: 15px !important; /* Prevents auto-zoom on mobile safari */
+    }
+    @media print {
+      body * { visibility: hidden; }
+      #printable-estimate-modal, #printable-estimate-modal * { visibility: visible; }
+      #printable-estimate-modal {
+        position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+        background: white !important; padding: 0 !important; margin: 0 !important; display: block !important;
       }
-    ]
-  }
-  </script>
+      .no-print { display: none !important; }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-amber-500 selection:text-slate-950 pb-16 md:pb-0">
+<body class="antialiased font-sans selection:bg-amber-400 selection:text-slate-950 pb-20 md:pb-0">
 
-  <!-- TOP BAR -->
-  <div class="bg-slate-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
-    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center space-x-4">
-        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> <span data-i18n="topHubs">Bangalore &amp; Mangalore</span></span>
-        <span class="hidden sm:inline"><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> <span data-i18n="topGps">GPS Monitored &amp; Sanitized Commercial Fleet</span></span>
-      </div>
-      <div class="flex items-center space-x-4">
-        <!-- Language Switcher Pill -->
-        <div class="inline-flex items-center bg-slate-900 border border-slate-700/80 rounded-full p-0.5 text-[11px] font-bold">
-          <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 transition">EN</button>
-          <button id="lang-kn" onclick="setLanguage('kn')" class="px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition">ಕನ್ನಡ</button>
+  <!-- TOP BAR: Increased contrast & unified vertical alignment -->
+  <div class="bg-slate-950 text-slate-200 text-xs py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center flex-wrap gap-4 sm:gap-6">
+        <span class="flex items-center text-slate-100 font-semibold tracking-wide">
+          <i class="fa-solid fa-location-dot text-amber-400 mr-2 text-sm"></i>
+          <span data-i18n="topHubs">Bangalore &amp; Mangalore</span>
+        </span>
+        <span class="hidden md:inline-flex items-center text-slate-300">
+          <i class="fa-solid fa-shield-halved text-emerald-400 mr-2 text-sm"></i>
+          <span data-i18n="topGps">GPS Monitored Commercial Fleet</span>
+        </span>
+        <!-- Live Visitor Ticket Counter -->
+        <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-700/80 px-3 py-1 rounded-full text-[11px] text-slate-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-slate-400">Total Visits:</span>
+          <span id="visitor-counter-val" class="font-mono font-bold text-amber-300">14,845</span>
         </div>
-        <a href="tel:+919008681881" class="hover:text-amber-400 font-bold text-slate-100 flex items-center transition">
-          <i class="fa-solid fa-phone text-amber-500 mr-1.5"></i> +91 90086 81881
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <!-- Language Switcher -->
+        <div class="inline-flex items-center bg-slate-900 border border-slate-700 rounded-full p-0.5 text-xs font-bold">
+          <button id="lang-en" onclick="setLanguage('en')" class="px-3 py-0.5 rounded-full bg-amber-400 text-slate-950 transition shadow-sm">EN</button>
+          <button id="lang-kn" onclick="setLanguage('kn')" class="px-3 py-0.5 rounded-full text-slate-300 hover:text-white transition">ಕನ್ನಡ</button>
+        </div>
+        <a href="tel:+919008681881" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-phone text-xs"></i> +91 90086 81881
         </a>
       </div>
     </div>
   </div>
 
-  <!-- NAVBAR -->
-  <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center gap-2">
-      <a href="#" class="flex flex-col">
-        <span class="font-heading text-lg md:text-xl font-black tracking-tight text-slate-900 leading-tight" data-i18n="brandTitle">
+  <!-- STICKY NAVBAR -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center gap-4">
+      <a href="#" class="flex flex-col group">
+        <span class="font-heading text-lg md:text-xl font-black tracking-tight text-slate-950 leading-tight group-hover:text-amber-600 transition" data-i18n="brandTitle">
           SHREE RAJARAJESHWARI
         </span>
-        <span class="font-heading text-xs md:text-sm font-extrabold tracking-wider text-amber-500 uppercase" data-i18n="brandSubtitle">
+        <span class="font-heading text-xs md:text-sm font-extrabold tracking-widest text-amber-600 uppercase" data-i18n="brandSubtitle">
           TOURS &amp; TRAVELS
         </span>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex space-x-6 text-sm font-semibold text-slate-700">
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-700">
         <a href="#fleet" class="hover:text-amber-600 transition" data-i18n="navFleet">Our Fleet</a>
         <a href="#calculator" class="hover:text-amber-600 transition" data-i18n="navFare">Fare Estimator</a>
         <a href="#routes" class="hover:text-amber-600 transition" data-i18n="navRoutes">Popular Routes</a>
@@ -140,324 +114,286 @@
         <a href="#reviews" class="hover:text-amber-600 transition" data-i18n="navReviews">Reviews</a>
         <a href="#faq" class="hover:text-amber-600 transition" data-i18n="navFaq">FAQs</a>
         <a href="#offices" class="hover:text-amber-600 transition" data-i18n="navOffices">Our Offices</a>
-        <a href="#booking" class="hover:text-amber-600 transition text-amber-600 font-bold" data-i18n="navBook">Book Trip</a>
+        <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl transition shadow-sm text-xs uppercase tracking-wide" data-i18n="navBook">Book Trip</a>
       </nav>
 
-      <!-- Desktop Contact CTA & Mobile Hamburger Button -->
+      <!-- Mobile Hamburger Button -->
       <div class="flex items-center gap-2">
-        <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20I%20want%20to%20enquire%20about%20booking%20a%20vehicle." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-2 rounded-lg text-xs md:text-sm transition items-center shadow-sm">
+        <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex lg:hidden bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3.5 py-2 rounded-xl text-xs transition items-center shadow-sm">
           <i class="fa-brands fa-whatsapp mr-1.5 text-base"></i> WhatsApp
         </a>
-        <button 
-          id="mobileMenuBtn" 
-          onclick="toggleMobileMenu()" 
-          type="button" 
-          aria-label="Toggle Navigation Menu"
-          class="lg:hidden text-slate-800 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition focus:outline-none focus:ring-2 focus:ring-amber-500">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" aria-label="Toggle Menu" class="lg:hidden text-slate-800 p-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 transition focus:outline-none focus:ring-2 focus:ring-amber-500">
           <i id="menuIcon" class="fa-solid fa-bars text-lg"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 text-white border-b border-slate-800 px-5 py-4 space-y-3 shadow-xl transition-all duration-300">
-      <a href="#fleet" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-car-side text-amber-500 mr-2.5 w-4"></i><span data-i18n="navFleet">Our Fleet</span></a>
-      <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-calculator text-amber-500 mr-2.5 w-4"></i><span data-i18n="navFare">Fare Estimator</span></a>
-      <a href="#routes" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-map-location-dot text-amber-500 mr-2.5 w-4"></i><span data-i18n="navRoutes">Popular Routes</span></a>
-      <a href="#standards" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-shield-check text-amber-500 mr-2.5 w-4"></i><span data-i18n="navStandards">Fleet Standards</span></a>
-      <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-star text-amber-500 mr-2.5 w-4"></i><span data-i18n="navReviews">Reviews</span></a>
-      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-circle-question text-amber-500 mr-2.5 w-4"></i><span data-i18n="navFaq">FAQs</span></a>
-      <a href="#offices" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800"><i class="fa-solid fa-building text-amber-500 mr-2.5 w-4"></i><span data-i18n="navOffices">Our Offices</span></a>
-      <a href="#booking" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-amber-400"><i class="fa-solid fa-calendar-check text-amber-400 mr-2.5 w-4"></i><span data-i18n="navBook">Book Your Trip</span></a>
-      <div class="pt-2 flex gap-2">
-        <a href="tel:+919008681881" class="flex-1 bg-amber-500 text-slate-950 font-bold py-2.5 rounded-lg text-xs text-center flex items-center justify-center gap-1.5">
-          <i class="fa-solid fa-phone"></i> Call Direct
-        </a>
-        <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 text-white font-bold py-2.5 rounded-lg text-xs text-center flex items-center justify-center gap-1.5">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-      </div>
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 text-white border-b border-slate-800 px-6 py-5 space-y-4 shadow-2xl">
+      <a href="#fleet" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-car-side text-amber-400 mr-3 w-4"></i><span data-i18n="navFleet">Our Fleet</span></a>
+      <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-calculator text-amber-400 mr-3 w-4"></i><span data-i18n="navFare">Fare Estimator</span></a>
+      <a href="#routes" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-map-location-dot text-amber-400 mr-3 w-4"></i><span data-i18n="navRoutes">Popular Routes</span></a>
+      <a href="#standards" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-shield-check text-amber-400 mr-3 w-4"></i><span data-i18n="navStandards">Fleet Standards</span></a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-star text-amber-400 mr-3 w-4"></i><span data-i18n="navReviews">Reviews</span></a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-circle-question text-amber-400 mr-3 w-4"></i><span data-i18n="navFaq">FAQs</span></a>
+      <a href="#offices" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-slate-800/80"><i class="fa-solid fa-building text-amber-400 mr-3 w-4"></i><span data-i18n="navOffices">Our Offices</span></a>
+      <a href="#booking" onclick="toggleMobileMenu()" class="block py-2 text-sm font-bold text-amber-400"><i class="fa-solid fa-calendar-check text-amber-400 mr-3 w-4"></i><span data-i18n="navBook">Book Your Trip</span></a>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 md:py-24 px-4 border-b border-slate-800">
+  <!-- HERO SECTION: Improved Typography, High-Contrast Copy & Buttons -->
+  <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 px-4 border-b border-slate-800">
     <div class="max-w-4xl mx-auto text-center">
-      <span class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-4">
-        <i class="fa-solid fa-shield-check text-[11px]"></i> <span data-i18n="heroBadge">100% Insured &bull; GPS Tracked &bull; Multi-Point Inspected</span>
+      <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+        <i class="fa-solid fa-circle-check text-amber-400"></i> <span data-i18n="heroBadge">100% Insured &bull; GPS Monitored &bull; Sanity Checked</span>
       </span>
-      <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5" data-i18n="heroHeadline">
+      <h1 class="font-heading text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight mb-6" data-i18n="heroHeadline">
         Trusted Passenger Tours &amp; Luxury Cab Rentals
       </h1>
-      <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="heroSubhead">
-        Serving Outstation Trips, Airport Transfers, Temple Pilgrimages &amp; Corporate Fleets across Karnataka with dedicated Bangalore &amp; Mangalore hubs.
+      <p class="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal" data-i18n="heroSubhead">
+        Outstation round trips, airport drops, family temple pilgrimages, and corporate luxury transport across Karnataka with Bangalore &amp; Mangalore hubs.
       </p>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-3.5">
-        <a href="#calculator" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg transition flex items-center justify-center text-sm">
-          <i class="fa-solid fa-calculator mr-2"></i> <span data-i18n="heroBtnFare">Calculate Trip Fare</span>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="#calculator" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-7 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center text-sm gap-2">
+          <i class="fa-solid fa-calculator"></i> <span data-i18n="heroBtnFare">Calculate Trip Fare</span>
         </a>
-        <a href="https://wa.me/919008681881?text=Hi%20Shree%20Rajarajeshwari%20Tours%20%26%20Travels%2C%20please%20share%20vehicle%20rates%20for%20a%20trip." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-lg shadow-lg transition flex items-center justify-center text-sm">
-          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Enquiry
+        <a href="https://wa.me/919008681881?text=Hi%20Shree%20Rajarajeshwari%20Tours%2C%20please%20share%20vehicle%20rates." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-7 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center text-sm gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Enquiry
         </a>
-        <a href="tel:+919008681881" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white font-bold px-6 py-3 rounded-lg shadow-lg transition flex items-center justify-center text-sm border border-slate-700">
-          <i class="fa-solid fa-phone mr-2 text-amber-400"></i> +91 90086 81881
+        <a href="tel:+919008681881" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold px-7 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center text-sm border border-slate-700 gap-2">
+          <i class="fa-solid fa-phone text-amber-400"></i> +91 90086 81881
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FLEET SECTION (WITH VISUAL MICRO-BADGES & 1-CLICK WHATSAPP PREFILLS) -->
-  <section id="fleet" class="py-16 px-4 bg-slate-100">
+  <!-- FLEET SECTION: Consistent White Cards, High-Contrast Badges & Text -->
+  <section id="fleet" class="py-16 sm:py-20 px-4 bg-slate-100">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="fleetSub">Our Fleet Lineup</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="fleetHeading">Available Commercial Vehicles</h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="fleetDesc">Well-maintained tourist cabs with yellow-board commercial permits, live GPS, and experienced chauffeurs.</p>
+      <div class="text-center mb-14">
+        <span class="font-heading text-amber-700 font-extrabold text-xs uppercase tracking-widest" data-i18n="fleetSub">Our Fleet Lineup</span>
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-slate-950 mt-1" data-i18n="fleetHeading">Available Commercial Vehicles</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="fleetDesc">Yellow-board tourist cabs with all-India permits, certified drivers, and live GPS tracking.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
 
         <!-- 1. Force Urbania -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="h-52 bg-slate-200 relative overflow-hidden">
-              <img 
-                src="urbania.jpg" 
-                alt="Force Urbania Luxury Van" 
-                class="w-full h-full object-cover object-center"
-                onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Force_Traveller_Luxury.jpg/640px-Force_Traveller_Luxury.jpg';"
-              />
-              <span class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md">
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="urbania.jpg" alt="Force Urbania" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Force_Traveller_Luxury.jpg/640px-Force_Traveller_Luxury.jpg';"/>
+              <span class="absolute top-3.5 right-3.5 bg-slate-950/90 text-amber-300 text-xs font-black px-3 py-1.5 rounded-lg border border-slate-800 shadow">
                 ₹26 / km
               </span>
             </div>
-            <div class="p-5">
-              <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Force Urbania</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="urbaniaRole">VIP Group &amp; Delegation Transport</p>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-slate-950 mb-1">Force Urbania</h3>
+              <p class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-4" data-i18n="urbaniaRole">Ultra Luxury VIP Group Travel</p>
 
-              <div class="grid grid-cols-2 gap-2 mb-4">
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+              <div class="grid grid-cols-2 gap-2.5 mb-5">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 10-17 Seats
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-suitcase-rolling text-amber-600"></i> 15+ Bags
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-snowflake text-amber-600"></i> Dual-Zone AC
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-satellite text-amber-600"></i> Live GPS
                 </span>
               </div>
 
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Reclining bucket seats &amp; panoramic windows</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Individual USB charging points for every seat</li>
+              <ul class="text-xs text-slate-700 space-y-2 mb-2 leading-relaxed">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Push-back luxury bucket seats &amp; individual AC</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Ideal for weddings &amp; corporate delegations</li>
               </ul>
             </div>
           </div>
-          <div class="p-5 pt-0 space-y-2">
-            <button onclick="preselectVehicle('Force Urbania (10-17 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+          <div class="p-6 pt-0 space-y-2.5">
+            <button onclick="preselectVehicle('Force Urbania (10-17 Seater)')" class="w-full bg-slate-950 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
               <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookUrbania">Book Force Urbania</span>
             </button>
-            <button onclick="quickWaVehicle('Force Urbania (10-17 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold py-2 rounded-xl transition flex items-center justify-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Quick Enquiry
+            <button onclick="quickWaVehicle('Force Urbania (10-17 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp Quick Enquiry
             </button>
           </div>
         </div>
 
         <!-- 2. Toyota Innova Crysta -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="h-52 bg-slate-200 relative overflow-hidden">
-              <img 
-                src="crysta.jpg" 
-                alt="Toyota Innova Crysta Cab" 
-                class="w-full h-full object-cover object-center"
-                onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Toyota_Innova_Crysta_2.4_Z_front_right.jpg/640px-Toyota_Innova_Crysta_2.4_Z_front_right.jpg';"
-              />
-              <span class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md">
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="crysta.jpg" alt="Toyota Innova Crysta" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Toyota_Innova_Crysta_2.4_Z_front_right.jpg/640px-Toyota_Innova_Crysta_2.4_Z_front_right.jpg';"/>
+              <span class="absolute top-3.5 right-3.5 bg-slate-950/90 text-amber-300 text-xs font-black px-3 py-1.5 rounded-lg border border-slate-800 shadow">
                 ₹18 / km
               </span>
             </div>
-            <div class="p-5">
-              <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Toyota Innova Crysta</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="crystaRole">Premium Executive SUV / MPV</p>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-slate-950 mb-1">Toyota Innova Crysta</h3>
+              <p class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-4" data-i18n="crystaRole">Premium Executive SUV / MPV</p>
 
-              <div class="grid grid-cols-2 gap-2 mb-4">
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
-                  <i class="fa-solid fa-users text-amber-600"></i> 6+1 / 7+1 Seats
+              <div class="grid grid-cols-2 gap-2.5 mb-5">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
+                  <i class="fa-solid fa-users text-amber-600"></i> 6+1 &bull; 7+1 Seats
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-suitcase-rolling text-amber-600"></i> 4 Large Bags
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-snowflake text-amber-600"></i> Triple-Row AC
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-mountain text-amber-600"></i> Ghat Master
                 </span>
               </div>
 
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Plush captain chairs &amp; whisper quiet suspension</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Unmatched highway ride quality across South India</li>
+              <ul class="text-xs text-slate-700 space-y-2 mb-2 leading-relaxed">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Captain seats with highway comfort &amp; quiet ride</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Ideal for family outstation &amp; temple tours</li>
               </ul>
             </div>
           </div>
-          <div class="p-5 pt-0 space-y-2">
-            <button onclick="preselectVehicle('Toyota Innova Crysta (7+1 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+          <div class="p-6 pt-0 space-y-2.5">
+            <button onclick="preselectVehicle('Toyota Innova Crysta (7+1 Seater)')" class="w-full bg-slate-950 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
               <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookCrysta">Book Innova Crysta</span>
             </button>
-            <button onclick="quickWaVehicle('Toyota Innova Crysta (7+1 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold py-2 rounded-xl transition flex items-center justify-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Quick Enquiry
+            <button onclick="quickWaVehicle('Toyota Innova Crysta (7+1 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp Quick Enquiry
             </button>
           </div>
         </div>
 
         <!-- 3. Toyota Rumion -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="h-52 bg-slate-200 relative overflow-hidden">
-              <img 
-                src="rumion.jpg" 
-                alt="Toyota Rumion MPV" 
-                class="w-full h-full object-cover object-center"
-                onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Toyota_Rumion_engine_shot.jpg/640px-Toyota_Rumion_engine_shot.jpg';"
-              />
-              <span class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md">
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="rumion.jpg" alt="Toyota Rumion" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Toyota_Rumion_engine_shot.jpg/640px-Toyota_Rumion_engine_shot.jpg';"/>
+              <span class="absolute top-3.5 right-3.5 bg-slate-950/90 text-amber-300 text-xs font-black px-3 py-1.5 rounded-lg border border-slate-800 shadow">
                 ₹15 / km
               </span>
             </div>
-            <div class="p-5">
-              <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Toyota Rumion</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="rumionRole">Modern Budget-Friendly 6-Seater</p>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-slate-950 mb-1">Toyota Rumion</h3>
+              <p class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-4" data-i18n="rumionRole">Modern Economical 6-Seater</p>
 
-              <div class="grid grid-cols-2 gap-2 mb-4">
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+              <div class="grid grid-cols-2 gap-2.5 mb-5">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 6+1 Seats
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-suitcase-rolling text-amber-600"></i> 3 Medium Bags
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-snowflake text-amber-600"></i> Roof Aircon
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
-                  <i class="fa-solid fa-gas-pump text-amber-600"></i> Highly Economical
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
+                  <i class="fa-solid fa-gas-pump text-amber-600"></i> Best Mileage
                 </span>
               </div>
 
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Ideal for small family temple tours &amp; airport runs</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Highly flexible seating with fold-flat 3rd row</li>
+              <ul class="text-xs text-slate-700 space-y-2 mb-2 leading-relaxed">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Compact footprint with spacious 3-row comfort</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Low per-km rates for airport runs &amp; small families</li>
               </ul>
             </div>
           </div>
-          <div class="p-5 pt-0 space-y-2">
-            <button onclick="preselectVehicle('Toyota Rumion (6+1 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+          <div class="p-6 pt-0 space-y-2.5">
+            <button onclick="preselectVehicle('Toyota Rumion (6+1 Seater)')" class="w-full bg-slate-950 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
               <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookRumion">Book Toyota Rumion</span>
             </button>
-            <button onclick="quickWaVehicle('Toyota Rumion (6+1 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold py-2 rounded-xl transition flex items-center justify-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Quick Enquiry
+            <button onclick="quickWaVehicle('Toyota Rumion (6+1 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp Quick Enquiry
             </button>
           </div>
         </div>
 
         <!-- 4. Force Tempo Traveller -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="h-52 bg-slate-200 relative overflow-hidden">
-              <img 
-                src="traveller.jpg" 
-                alt="Force Tempo Traveller Mini Bus" 
-                class="w-full h-full object-cover object-center"
-                onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Force_Traveller_Luxury.jpg/640px-Force_Traveller_Luxury.jpg';"
-              />
-              <span class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md">
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="traveller.jpg" alt="Force Tempo Traveller" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Force_Traveller_Luxury.jpg/640px-Force_Traveller_Luxury.jpg';"/>
+              <span class="absolute top-3.5 right-3.5 bg-slate-950/90 text-amber-300 text-xs font-black px-3 py-1.5 rounded-lg border border-slate-800 shadow">
                 ₹22 / km
               </span>
             </div>
-            <div class="p-5">
-              <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Force Tempo Traveller</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="travellerRole">Group Pilgrimages &amp; Team Outings</p>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-slate-950 mb-1">Force Tempo Traveller</h3>
+              <p class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-4" data-i18n="travellerRole">Group Pilgrimages &amp; Team Trips</p>
 
-              <div class="grid grid-cols-2 gap-2 mb-4">
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+              <div class="grid grid-cols-2 gap-2.5 mb-5">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 12 to 20 Seats
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-suitcase-rolling text-amber-600"></i> Roof Top Carrier
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
-                  <i class="fa-solid fa-snowflake text-amber-600"></i> Powerful Roof AC
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
+                  <i class="fa-solid fa-snowflake text-amber-600"></i> High-Cooling AC
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
-                  <i class="fa-solid fa-tv text-amber-600"></i> Music &amp; PA System
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
+                  <i class="fa-solid fa-tv text-amber-600"></i> Media System
                 </span>
               </div>
 
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Massive rear luggage bay + secure rooftop rack</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Custom configurations for extended multi-state trips</li>
+              <ul class="text-xs text-slate-700 space-y-2 mb-2 leading-relaxed">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Deep boot capacity + full top luggage carrier</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Designed for South India multi-day temple circuits</li>
               </ul>
             </div>
           </div>
-          <div class="p-5 pt-0 space-y-2">
-            <button onclick="preselectVehicle('Force Tempo Traveller (12-20 Seater)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+          <div class="p-6 pt-0 space-y-2.5">
+            <button onclick="preselectVehicle('Force Tempo Traveller (12-20 Seater)')" class="w-full bg-slate-950 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
               <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookTraveller">Book Tempo Traveller</span>
             </button>
-            <button onclick="quickWaVehicle('Force Tempo Traveller (12-20 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold py-2 rounded-xl transition flex items-center justify-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Quick Enquiry
+            <button onclick="quickWaVehicle('Force Tempo Traveller (12-20 Seater)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp Quick Enquiry
             </button>
           </div>
         </div>
 
         <!-- 5. Toyota Etios -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="h-52 bg-slate-200 relative overflow-hidden">
-              <img 
-                src="etios.jpg" 
-                alt="Toyota Etios Sedan" 
-                class="w-full h-full object-cover object-center"
-                onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/2022_Suzuki_Ertiga_GL.jpg/640px-2022_Suzuki_Ertiga_GL.jpg';"
-              />
-              <span class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-amber-400 text-xs font-bold px-2.5 py-1 rounded-md">
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="etios.jpg" alt="Toyota Etios" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/2022_Suzuki_Ertiga_GL.jpg/640px-2022_Suzuki_Ertiga_GL.jpg';"/>
+              <span class="absolute top-3.5 right-3.5 bg-slate-950/90 text-amber-300 text-xs font-black px-3 py-1.5 rounded-lg border border-slate-800 shadow">
                 ₹13 / km
               </span>
             </div>
-            <div class="p-5">
-              <h3 class="font-heading font-extrabold text-lg text-slate-900 mb-1">Toyota Etios</h3>
-              <p class="text-xs font-semibold text-amber-600 mb-3" data-i18n="etiosRole">Reliable Economical Highway Sedan</p>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-slate-950 mb-1">Toyota Etios</h3>
+              <p class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-4" data-i18n="etiosRole">Economical Highway Sedan</p>
 
-              <div class="grid grid-cols-2 gap-2 mb-4">
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+              <div class="grid grid-cols-2 gap-2.5 mb-5">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-users text-amber-600"></i> 4+1 Seats
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
                   <i class="fa-solid fa-suitcase-rolling text-amber-600"></i> 592L Boot
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
-                  <i class="fa-solid fa-snowflake text-amber-600"></i> Fast Chilling AC
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
+                  <i class="fa-solid fa-snowflake text-amber-600"></i> Rapid Cool AC
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200">
-                  <i class="fa-solid fa-wallet text-amber-600"></i> Best Per-Km Rate
+                <span class="inline-flex items-center gap-2 bg-slate-50 text-slate-800 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200">
+                  <i class="fa-solid fa-wallet text-amber-600"></i> Best Per-Km
                 </span>
               </div>
 
-              <ul class="text-xs text-slate-600 space-y-1.5 mb-2">
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Segment-leading legroom for rear-seat passengers</li>
-                <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Best pick for airport drops and swift intercity travel</li>
+              <ul class="text-xs text-slate-700 space-y-2 mb-2 leading-relaxed">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Class-leading legroom and massive 592L luggage trunk</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i> Most reliable budget choice for airport transfers</li>
               </ul>
             </div>
           </div>
-          <div class="p-5 pt-0 space-y-2">
-            <button onclick="preselectVehicle('Toyota Etios (4+1 Sedan)')" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+          <div class="p-6 pt-0 space-y-2.5">
+            <button onclick="preselectVehicle('Toyota Etios (4+1 Sedan)')" class="w-full bg-slate-950 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
               <i class="fa-solid fa-calendar-check"></i> <span data-i18n="bookEtios">Book Toyota Etios</span>
             </button>
-            <button onclick="quickWaVehicle('Toyota Etios (4+1 Sedan)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold py-2 rounded-xl transition flex items-center justify-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Quick Enquiry
+            <button onclick="quickWaVehicle('Toyota Etios (4+1 Sedan)')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp Quick Enquiry
             </button>
           </div>
         </div>
@@ -466,29 +402,28 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE FARE ESTIMATOR CALCULATOR -->
-  <section id="calculator" class="py-16 px-4 bg-slate-900 text-white border-y border-slate-800">
+  <!-- FARE CALCULATOR: High Contrast, Sharp Sliders & Prominent Fastag Banner -->
+  <section id="calculator" class="py-16 sm:py-20 px-4 bg-slate-950 text-white border-y border-slate-800">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-10">
-        <span class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3">
-          <i class="fa-solid fa-calculator text-[11px]"></i> Live Price Estimator
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">
+          <i class="fa-solid fa-calculator text-amber-400"></i> Interactive Price Estimator
         </span>
-        <h2 class="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight" data-i18n="calcHeading">
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="calcHeading">
           Estimate Your Journey Budget
         </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-xl mx-auto leading-relaxed" data-i18n="calcDesc">
-          Adjust distance, trip days, and vehicle type to calculate an indicative upfront fare.
+        <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="calcDesc">
+          Adjust distance, trip days, and vehicle type to calculate an indicative upfront fare and download a branded estimate slip.
         </p>
       </div>
 
-      <div class="bg-slate-950/90 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-9 shadow-2xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         
         <!-- Controls Column -->
-        <div class="md:col-span-7 space-y-5">
-          <!-- Vehicle Selector -->
+        <div class="md:col-span-7 space-y-6">
           <div>
-            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Select Vehicle</label>
-            <select id="calcVehicle" onchange="calculateFare()" class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-sm font-semibold text-white focus:ring-2 focus:ring-amber-500 outline-none">
+            <label class="block text-xs font-bold text-slate-200 uppercase mb-2 tracking-wide">1. Select Vehicle Class</label>
+            <select id="calcVehicle" onchange="calculateFare()" class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-sm font-semibold text-white focus:ring-2 focus:ring-amber-400 outline-none">
               <option value="etios">Toyota Etios (₹13/km &bull; Batta ₹400/day)</option>
               <option value="rumion">Toyota Rumion (₹15/km &bull; Batta ₹450/day)</option>
               <option value="crysta" selected>Toyota Innova Crysta (₹18/km &bull; Batta ₹500/day)</option>
@@ -497,59 +432,77 @@
             </select>
           </div>
 
-          <!-- Number of Days -->
           <div>
-            <div class="flex justify-between items-center text-xs font-bold text-slate-300 mb-2">
-              <span class="uppercase">Trip Duration (Days)</span>
-              <span id="calcDaysDisplay" class="text-amber-400 font-extrabold text-sm">2 Days</span>
+            <div class="flex justify-between items-center text-xs font-bold text-slate-200 mb-2">
+              <span class="uppercase tracking-wide">2. Trip Duration (Days)</span>
+              <span id="calcDaysDisplay" class="text-amber-400 font-extrabold text-sm bg-slate-950 px-2.5 py-0.5 rounded-lg border border-slate-800">2 Days</span>
             </div>
-            <input type="range" id="calcDays" min="1" max="10" value="2" oninput="calculateFare()" class="w-full accent-amber-500 h-2 bg-slate-800 rounded-lg cursor-pointer" />
-            <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+            <input type="range" id="calcDays" min="1" max="10" value="2" oninput="calculateFare()" class="w-full accent-amber-400 h-2.5 bg-slate-950 rounded-lg cursor-pointer border border-slate-800" />
+            <div class="flex justify-between text-[11px] text-slate-400 mt-1.5 font-medium">
               <span>1 Day</span>
-              <span>300 km/day Min Applied</span>
+              <span>300 km/day minimum standard</span>
               <span>10 Days</span>
             </div>
           </div>
 
-          <!-- Total Distance Slider -->
           <div>
-            <div class="flex justify-between items-center text-xs font-bold text-slate-300 mb-2">
-              <span class="uppercase">Estimated Total Distance</span>
-              <span id="calcDistanceDisplay" class="text-amber-400 font-extrabold text-sm">600 km</span>
+            <div class="flex justify-between items-center text-xs font-bold text-slate-200 mb-2">
+              <span class="uppercase tracking-wide">3. Total Estimated Distance</span>
+              <span id="calcDistanceDisplay" class="text-amber-400 font-extrabold text-sm bg-slate-950 px-2.5 py-0.5 rounded-lg border border-slate-800">600 km</span>
             </div>
-            <input type="range" id="calcDistance" min="300" max="3000" step="50" value="600" oninput="calculateFare()" class="w-full accent-amber-500 h-2 bg-slate-800 rounded-lg cursor-pointer" />
-            <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+            <input type="range" id="calcDistance" min="300" max="3000" step="50" value="600" oninput="calculateFare()" class="w-full accent-amber-400 h-2.5 bg-slate-950 rounded-lg cursor-pointer border border-slate-800" />
+            <div class="flex justify-between text-[11px] text-slate-400 mt-1.5 font-medium">
               <span>300 km</span>
-              <span>Bangalore &harr; Mangalore ~750 km</span>
+              <span>BLR &harr; IXE ~750 km</span>
               <span>3000 km</span>
+            </div>
+          </div>
+
+          <!-- Highlighted High-Visibility Notice -->
+          <div class="bg-amber-400/10 border-2 border-amber-400/40 rounded-2xl p-4 text-xs">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-triangle-exclamation text-amber-400 text-lg mt-0.5 shrink-0"></i>
+              <div>
+                <p class="font-extrabold text-amber-300 uppercase tracking-wider text-[11px]">Notice Regarding Tolls &amp; Parking:</p>
+                <p class="text-slate-200 mt-1 leading-relaxed">
+                  <strong>National Highway Fastag Tolls, State Border Permits, and Destination Parking</strong> are charged <em>at actuals</em> via electronic slips.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Breakdown Card Column -->
-        <div class="md:col-span-5 bg-slate-900 border border-amber-500/20 rounded-2xl p-6 flex flex-col justify-between text-center relative overflow-hidden shadow-inner">
+        <div class="md:col-span-5 bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-7 flex flex-col justify-between text-center relative shadow-2xl">
           <div>
-            <span class="text-[11px] font-black uppercase tracking-wider text-slate-400">Estimated Total Fare</span>
-            <div class="text-3xl sm:text-4xl font-heading font-black text-amber-400 my-2" id="calcTotalFare">₹11,800</div>
-            <div class="space-y-1.5 text-xs text-slate-300 border-t border-slate-800 pt-3 text-left">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Estimated Total Fare</span>
+            <div class="text-4xl sm:text-5xl font-heading font-black text-amber-400 my-3" id="calcTotalFare">₹11,800</div>
+            
+            <div class="space-y-2.5 text-xs text-slate-200 border-t border-slate-800 pt-4 text-left font-medium">
               <div class="flex justify-between">
-                <span class="text-slate-400">Base Distance Charge:</span>
-                <span id="calcBaseFare" class="font-bold">₹10,800</span>
+                <span class="text-slate-400">Running Distance Charge:</span>
+                <span id="calcBaseFare" class="font-bold text-white">₹10,800</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Driver Allowance (Batta):</span>
-                <span id="calcBattaFare" class="font-bold">₹1,000</span>
+                <span id="calcBattaFare" class="font-bold text-white">₹1,000</span>
               </div>
-              <div class="flex justify-between text-[11px] text-slate-400 pt-1">
-                <span>Effective Rate:</span>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Base Unit Rate:</span>
                 <span id="calcRatePerKm" class="text-emerald-400 font-bold">₹18/km</span>
+              </div>
+              <div class="flex justify-between text-amber-300 font-bold pt-1.5 border-t border-slate-800/80">
+                <span>Fastag / Tolls / Permits:</span>
+                <span class="uppercase tracking-wider">Extra at Actuals</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-5 pt-3 border-t border-slate-800">
-            <p class="text-[10px] text-slate-500 mb-3">* Fastag Tolls, state permits &amp; parking charged at actuals.</p>
-            <button onclick="applyEstimateToBooking()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
+          <div class="mt-7 pt-4 border-t border-slate-800 space-y-3">
+            <button onclick="openPrintModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 border border-slate-700 shadow-md">
+              <i class="fa-solid fa-file-pdf text-amber-400"></i> Download / Print Estimate Slip
+            </button>
+            <button onclick="applyEstimateToBooking()" class="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
               <i class="fa-solid fa-arrow-down"></i> Apply to Booking Form
             </button>
           </div>
@@ -560,384 +513,331 @@
   </section>
 
   <!-- POPULAR ROUTES SECTION -->
-  <section id="routes" class="py-16 px-4 bg-white border-y border-slate-200">
+  <section id="routes" class="py-16 sm:py-20 px-4 bg-white border-y border-slate-200">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="routesSub">Fixed Fare &amp; Outstation Corridors</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="routesHeading">High-Frequency Routes Across Karnataka</h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="routesDesc">Daily departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.</p>
+      <div class="text-center mb-14">
+        <span class="font-heading text-amber-700 font-extrabold text-xs uppercase tracking-widest" data-i18n="routesSub">Fixed Fare &amp; Outstation Corridors</span>
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-slate-950 mt-1" data-i18n="routesHeading">High-Frequency Routes Across Karnataka</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="routesDesc">Departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
         <!-- Bangalore Hub Routes -->
-        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-7 shadow-sm">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-lg">
+        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center gap-3.5 mb-6">
+            <div class="w-11 h-11 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-lg shadow-sm">
               <i class="fa-solid fa-city"></i>
             </div>
             <div>
-              <h3 class="font-heading text-lg font-black text-slate-900">From Bengaluru Hub (Nagarabhavi)</h3>
-              <p class="text-xs text-slate-500">Fast highway dispatch via Mysore Expressway &amp; Tumakuru Highway</p>
+              <h3 class="font-heading text-lg font-black text-slate-950">From Bengaluru Hub (Nagarabhavi)</h3>
+              <p class="text-xs text-slate-500 font-medium">Fast dispatch via Mysore Expressway &amp; Tumakuru Highway</p>
             </div>
           </div>
 
-          <div class="space-y-3">
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-amber-500 transition">
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Kempegowda Airport (BLR)</p>
-                <p class="text-xs text-slate-500">Doorstep pickup &bull; Flight track guarantee</p>
+                <p class="text-xs text-slate-500">Doorstep pickup &bull; Flight tracking included</p>
               </div>
-              <button onclick="setRoute('Bengaluru City', 'Kempegowda Airport (BLR)', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Bengaluru City', 'Kempegowda Airport (BLR)', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
 
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-amber-500 transition">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Coorg / Madikeri</p>
-                <p class="text-xs text-slate-500">250 km &bull; Coffee estates &amp; Talakaveri</p>
+                <p class="text-xs text-slate-500">250 km &bull; Coffee plantations &amp; Talakaveri</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Coorg / Madikeri', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Bengaluru', 'Coorg / Madikeri', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
 
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-amber-500 transition">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Chikmagalur</p>
-                <p class="text-xs text-slate-500">245 km &bull; Mullayanagiri peak &amp; Baba Budangiri</p>
+                <p class="text-xs text-slate-500">245 km &bull; Mullayanagiri &amp; Baba Budangiri</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Chikmagalur', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Bengaluru', 'Chikmagalur', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
 
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-amber-500 transition">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-amber-500 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Bangalore &rarr; Tirupati Balaji Darshan</p>
                 <p class="text-xs text-slate-500">Same-day darshan &bull; Round trip package</p>
               </div>
-              <button onclick="setRoute('Bengaluru', 'Tirupati Balaji Darshan', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Bengaluru', 'Tirupati Balaji Darshan', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
           </div>
         </div>
 
         <!-- Mangalore Hub Routes -->
-        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-7 shadow-sm">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500 text-slate-950 flex items-center justify-center font-bold text-lg">
+        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center gap-3.5 mb-6">
+            <div class="w-11 h-11 rounded-2xl bg-cyan-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
               <i class="fa-solid fa-water"></i>
             </div>
             <div>
-              <h3 class="font-heading text-lg font-black text-slate-900">From Mangaluru Hub (Airport Rd)</h3>
-              <p class="text-xs text-slate-500">Coastal highway &amp; Western Ghats pilgrimage specialist</p>
+              <h3 class="font-heading text-lg font-black text-slate-950">From Mangaluru Hub (Airport Rd)</h3>
+              <p class="text-xs text-slate-500 font-medium">Coastal highway &amp; Western Ghats pilgrimage specialist</p>
             </div>
           </div>
 
-          <div class="space-y-3">
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-cyan-500 transition">
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Mangalore Airport (IXE) &rarr; Udupi / Manipal</p>
-                <p class="text-xs text-slate-500">Direct flight pickup &bull; University &amp; Sri Krishna Temple</p>
+                <p class="text-xs text-slate-500">Flight pickup &bull; Sri Krishna Temple</p>
               </div>
-              <button onclick="setRoute('Mangaluru Airport (IXE)', 'Udupi / Manipal', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Mangaluru Airport (IXE)', 'Udupi / Manipal', 'Toyota Etios (4+1 Sedan)', 'Airport Transfer')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
 
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-cyan-500 transition">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Coastal Temple Circuit (Kukke - Dharmasthala)</p>
                 <p class="text-xs text-slate-500">Kukke Subrahmanya &bull; Dharmasthala Manjunatha</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Dharmasthala & Kukke Temple', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Mangaluru', 'Dharmasthala & Kukke Temple', 'Toyota Innova Crysta (7+1 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
 
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-cyan-500 transition">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Mangalore &rarr; Kollur Mookambika &amp; Murudeshwar</p>
-                <p class="text-xs text-slate-500">Scenic coastal drive &bull; Famous Shiva temple &amp; beach</p>
+                <p class="text-xs text-slate-500">Scenic coast drive &bull; Famous Shiva temple</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Kollur & Murudeshwar', 'Force Urbania (10-17 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Mangaluru', 'Kollur & Murudeshwar', 'Force Urbania (10-17 Seater)', 'Round Trip')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
 
-            <div class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-cyan-500 transition">
+            <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-2xl hover:border-cyan-600 transition shadow-xs">
               <div>
                 <p class="font-bold text-sm text-slate-900">Mangalore &harr; Bangalore Ghat Intercity</p>
-                <p class="text-xs text-slate-500">Charmadi / Shiradi ghat certified expert drivers</p>
+                <p class="text-xs text-slate-500">Charmadi / Shiradi ghat certified drivers</p>
               </div>
-              <button onclick="setRoute('Mangaluru', 'Bengaluru City', 'Toyota Innova Crysta (7+1 Seater)', 'One Way Drop')" class="text-xs font-bold bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-3 py-1.5 rounded-lg transition">
-                Select
-              </button>
+              <button onclick="setRoute('Mangaluru', 'Bengaluru City', 'Toyota Innova Crysta (7+1 Seater)', 'One Way Drop')" class="text-xs font-bold bg-cyan-600 hover:bg-cyan-700 text-white px-3.5 py-2 rounded-xl transition">Select</button>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- CUSTOMER REVIEWS & RATINGS STRIP -->
-  <section id="reviews" class="py-16 px-4 bg-slate-50 border-b border-slate-200">
+  <section id="reviews" class="py-16 sm:py-20 px-4 bg-slate-50 border-b border-slate-200">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-600 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3">
+      <div class="text-center mb-14">
+        <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-800 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">
           <i class="fa-solid fa-star text-amber-500"></i> Google Verified Reviews
         </span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-slate-950 mt-1">
           Trusted by 15,000+ Happy Travelers
         </h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto">
-          Read what families, pilgrims, and corporate clients say about our sanitized vehicles and experienced chauffeurs.
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+          Read verified feedback from families, pilgrims, and corporate clients regarding driver punctuality and fleet safety.
         </p>
       </div>
 
-      <!-- 3-Column Reviews Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
         <!-- Review 1 -->
-        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span class="text-slate-400 font-bold ml-1.5 text-[11px]">5.0 &bull; Google Review</span>
+            <div class="flex items-center gap-1.5 text-amber-500 text-xs mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="text-slate-600 font-bold ml-1 text-xs">5.0 &bull; Google Review</span>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            <p class="text-sm text-slate-700 leading-relaxed mb-6 font-normal">
               "We booked the Force Urbania for an extended family temple pilgrimage covering Dharmasthala, Kukke, and Kateel. The van had tremendous legroom, spotless AC vents, and our driver handled the Charmadi Ghat curves with extreme calm and care."
             </p>
           </div>
-          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-700 font-extrabold flex items-center justify-center text-xs">
+          <div class="flex items-center gap-3.5 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center text-xs">
               AK
             </div>
             <div>
-              <h4 class="font-bold text-xs text-slate-900">Ananthakrishna Bhat</h4>
-              <p class="text-[10px] text-slate-400">Bengaluru &bull; Family Tour (Urbania)</p>
+              <h4 class="font-bold text-xs text-slate-950">Ananthakrishna Bhat</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Bengaluru &bull; Family Tour (Urbania)</p>
             </div>
           </div>
         </div>
 
         <!-- Review 2 -->
-        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span class="text-slate-400 font-bold ml-1.5 text-[11px]">5.0 &bull; Google Review</span>
+            <div class="flex items-center gap-1.5 text-amber-500 text-xs mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="text-slate-600 font-bold ml-1 text-xs">5.0 &bull; Google Review</span>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              "Regularly book Innova Crysta for our US corporate visitors transiting between Kempegowda Airport and Mysore. Punctual, English &amp; Kannada fluent drivers, pristine yellow-board vehicles with timely GST invoicing."
+            <p class="text-sm text-slate-700 leading-relaxed mb-6 font-normal">
+              "Regularly book Innova Crysta for our corporate visitors transiting between Kempegowda Airport and Mysore. Punctual, English &amp; Kannada fluent drivers, pristine yellow-board vehicles with timely GST invoicing."
             </p>
           </div>
-          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-cyan-500/20 text-cyan-700 font-extrabold flex items-center justify-center text-xs">
+          <div class="flex items-center gap-3.5 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-800 font-extrabold flex items-center justify-center text-xs">
               VS
             </div>
             <div>
-              <h4 class="font-bold text-xs text-slate-900">Vikramaditya Shenoy</h4>
-              <p class="text-[10px] text-slate-400">Mangaluru &bull; Corporate Delegate</p>
+              <h4 class="font-bold text-xs text-slate-950">Vikramaditya Shenoy</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Mangaluru &bull; Corporate Delegate</p>
             </div>
           </div>
         </div>
 
         <!-- Review 3 -->
-        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span class="text-slate-400 font-bold ml-1.5 text-[11px]">5.0 &bull; Google Review</span>
+            <div class="flex items-center gap-1.5 text-amber-500 text-xs mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="text-slate-600 font-bold ml-1 text-xs">5.0 &bull; Google Review</span>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            <p class="text-sm text-slate-700 leading-relaxed mb-6 font-normal">
               "Needed an airport pickup at 3:00 AM from Mangalore Airport to Udupi Sri Krishna Temple. The Toyota Etios arrived 15 minutes in advance, sanitized and smelling fresh. Zero surge pricing, completely honest service."
             </p>
           </div>
-          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-700 font-extrabold flex items-center justify-center text-xs">
+          <div class="flex items-center gap-3.5 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center text-xs">
               PR
             </div>
             <div>
-              <h4 class="font-bold text-xs text-slate-900">Pooja Rao</h4>
-              <p class="text-[10px] text-slate-400">Manipal &bull; Airport Transfer</p>
+              <h4 class="font-bold text-xs text-slate-950">Pooja Rao</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Manipal &bull; Airport Transfer</p>
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- Trust Badges Strip -->
-      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-        <div class="bg-white border border-slate-200 p-4 rounded-2xl">
-          <p class="font-heading font-black text-2xl text-slate-900">4.9 / 5</p>
-          <p class="text-[11px] font-semibold text-slate-500">Google Rating Score</p>
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5 text-center">
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs">
+          <p class="font-heading font-black text-2xl sm:text-3xl text-slate-950">4.9 / 5</p>
+          <p class="text-xs font-semibold text-slate-600 mt-1">Google Rating Score</p>
         </div>
-        <div class="bg-white border border-slate-200 p-4 rounded-2xl">
-          <p class="font-heading font-black text-2xl text-slate-900">15,000+</p>
-          <p class="text-[11px] font-semibold text-slate-500">Completed Tours</p>
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs">
+          <p class="font-heading font-black text-2xl sm:text-3xl text-slate-950">15,000+</p>
+          <p class="text-xs font-semibold text-slate-600 mt-1">Completed Tours</p>
         </div>
-        <div class="bg-white border border-slate-200 p-4 rounded-2xl">
-          <p class="font-heading font-black text-2xl text-slate-900">100%</p>
-          <p class="text-[11px] font-semibold text-slate-500">Commercial Permits</p>
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs">
+          <p class="font-heading font-black text-2xl sm:text-3xl text-slate-950">100%</p>
+          <p class="text-xs font-semibold text-slate-600 mt-1">Commercial Permits</p>
         </div>
-        <div class="bg-white border border-slate-200 p-4 rounded-2xl">
-          <p class="font-heading font-black text-2xl text-slate-900">24/7</p>
-          <p class="text-[11px] font-semibold text-slate-500">Highway SOS Support</p>
+        <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs">
+          <p class="font-heading font-black text-2xl sm:text-3xl text-slate-950">24/7</p>
+          <p class="text-xs font-semibold text-slate-600 mt-1">Highway SOS Support</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FLEET QUALITY & SAFETY STANDARDS SECTION -->
-  <section id="standards" class="py-16 px-4 bg-slate-900 text-white border-b border-slate-800">
+  <section id="standards" class="py-16 sm:py-20 px-4 bg-slate-950 text-white border-b border-slate-800">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3">
-          <i class="fa-solid fa-award text-[11px]"></i> <span data-i18n="stdTag">The Rajarajeshwari Standard</span>
+      <div class="text-center mb-14">
+        <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">
+          <i class="fa-solid fa-award text-amber-400"></i> <span data-i18n="stdTag">The Rajarajeshwari Standard</span>
         </span>
-        <h2 class="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight" data-i18n="stdHeading">
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="stdHeading">
           Uncompromised Safety &amp; Vehicle Hygiene
         </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-2xl mx-auto leading-relaxed" data-i18n="stdDesc">
-          Every vehicle in our fleet is company-owned or rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.
+        <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto" data-i18n="stdDesc">
+          Every vehicle is rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- 1. Preventive Maintenance -->
-        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-amber-400/50 transition shadow-lg">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-wrench"></i>
           </div>
           <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard1Title">Rigorous Maintenance</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard1Desc">
+          <p class="text-xs text-slate-300 leading-relaxed font-normal" data-i18n="stdCard1Desc">
             Strict 50-point checklist inspection before every trip: suspension check, tire tread depth, dual-zone AC gas performance, and braking systems tuned for ghat descents.
           </p>
         </div>
 
-        <!-- 2. Sanitized & Odor-Free -->
-        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/40 transition">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-emerald-400/50 transition shadow-lg">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-400/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-spray-can-sparkles"></i>
           </div>
           <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard2Title">Deep Sanitization</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard2Desc">
+          <p class="text-xs text-slate-300 leading-relaxed font-normal" data-i18n="stdCard2Desc">
             High-pressure vacuuming, steam disinfection of fabric upholstery, sanitized touch points, and clean air filtration before departure for fresh, germ-free cabins.
           </p>
         </div>
 
-        <!-- 3. Fully Insured & Permitted -->
-        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-cyan-400/50 transition shadow-lg">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-file-shield"></i>
           </div>
           <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard3Title">Comprehensive Insurance</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard3Desc">
+          <p class="text-xs text-slate-300 leading-relaxed font-normal" data-i18n="stdCard3Desc">
             100% yellow-board commercial registration with all-India tourist permits, comprehensive passenger liability cover, fitness certificates, and valid emission clearances.
           </p>
         </div>
 
-        <!-- 4. Real-Time GPS Tracking -->
-        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-amber-400/50 transition shadow-lg">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-satellite-dish"></i>
           </div>
           <h3 class="font-heading text-base font-bold text-white mb-2" data-i18n="stdCard4Title">Real-Time GPS Tracking</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="stdCard4Desc">
+          <p class="text-xs text-slate-300 leading-relaxed font-normal" data-i18n="stdCard4Desc">
             24/7 telematics, live route monitoring, SOS panic triggers, and automated speed alerts. Share live trip tracking links with family for complete peace of mind.
           </p>
         </div>
-
-      </div>
-
-      <!-- Quick Highlights Strip -->
-      <div class="mt-8 pt-8 border-t border-slate-800/80 flex flex-wrap justify-center items-center gap-6 sm:gap-10 text-xs text-slate-400 font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> First Aid Kits on All Vehicles</span>
-        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Dual Driver Option on Long Runs</span>
-        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Fire Extinguishers Certified</span>
-        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Chauffeur Backgrounds</span>
       </div>
     </div>
   </section>
 
-  <!-- FAQ SECTION (ACCORDION) -->
-  <section id="faq" class="py-16 px-4 bg-slate-100 border-t border-slate-200">
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-16 sm:py-20 px-4 bg-slate-100 border-t border-slate-200">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="faqSub">Got Questions?</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="faqHeading">Frequently Asked Questions</h2>
-        <p class="text-slate-500 text-sm mt-2 max-w-xl mx-auto" data-i18n="faqDesc">Clear answers on fares, outstation minimums, toll charges, and driver allowances.</p>
+      <div class="text-center mb-14">
+        <span class="font-heading text-amber-700 font-extrabold text-xs uppercase tracking-widest" data-i18n="faqSub">Got Questions?</span>
+        <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-slate-950 mt-1" data-i18n="faqHeading">Frequently Asked Questions</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto" data-i18n="faqDesc">Clear answers on fares, outstation minimums, toll charges, and driver allowances.</p>
       </div>
 
-      <div class="space-y-3.5">
-        <!-- Item 1 -->
-        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
-          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+      <div class="space-y-4">
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4.5 text-left font-heading font-extrabold text-sm sm:text-base text-slate-950 hover:text-amber-600 transition">
             <span data-i18n="faq1Q">Are toll charges, parking fees, and interstate permits included in the quote?</span>
             <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq1A">
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5" data-i18n="faq1A">
             Our standard quotes include vehicle rental, fuel, and chauffeur charges. Fastag toll charges, parking tickets at tourist destinations, and interstate border entry taxes (if crossing into Kerala, Tamil Nadu, or Andhra Pradesh) are paid as per actuals by the guest during the trip or billed on final invoice.
           </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
-          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4.5 text-left font-heading font-extrabold text-sm sm:text-base text-slate-950 hover:text-amber-600 transition">
             <span data-i18n="faq2Q">What is the minimum kilometer rule for outstation cab bookings?</span>
             <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq2A">
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5" data-i18n="faq2A">
             For all outstation round trips originating from Bangalore or Mangalore, a standard minimum of 250 km to 300 km per calendar day applies (depending on the vehicle class). If the total kilometers driven exceed this cumulative average, extra kilometers are charged at the vehicle's standard per-km rate.
           </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
-          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4.5 text-left font-heading font-extrabold text-sm sm:text-base text-slate-950 hover:text-amber-600 transition">
             <span data-i18n="faq3Q">How is the driver batta (daily food/stay allowance) calculated?</span>
             <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq3A">
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5" data-i18n="faq3A">
             Driver allowance (Batta) is charged on a per-day basis (typically ₹350–₹700/day depending on vehicle class). If the trip involves night driving between 10:00 PM and 6:00 AM, a standard nominal night allowance is applicable to ensure driver safety and refreshment.
           </div>
         </div>
 
-        <!-- Item 4 -->
-        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
-          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4.5 text-left font-heading font-extrabold text-sm sm:text-base text-slate-950 hover:text-amber-600 transition">
             <span data-i18n="faq4Q">Are your chauffeurs trained for Western Ghats (Charmadi &amp; Shiradi) roads?</span>
             <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq4A">
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5" data-i18n="faq4A">
             Yes, 100%. Driving the Western Ghat hairpins (Charmadi, Shiradi, Sampaje, or Bisle Ghat) requires seasoned commercial drivers. All our drivers operating between Mangalore, Udupi, and Bangalore have over 7+ years of ghat handling experience, strictly observing hill-station safety norms.
           </div>
         </div>
 
-        <!-- Item 5 -->
-        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
-          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading font-bold text-sm sm:text-base text-slate-900 hover:text-amber-600 transition">
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition">
+          <button type="button" onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-4.5 text-left font-heading font-extrabold text-sm sm:text-base text-slate-950 hover:text-amber-600 transition">
             <span data-i18n="faq5Q">Do you provide GST invoices for corporate company bookings?</span>
             <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
           </button>
-          <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" data-i18n="faq5A">
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5" data-i18n="faq5A">
             Yes. We issue formal GST tax invoices for all corporate transfers, conference delegations, and business guest travel across Bangalore and Mangalore. Simply share your organization's GSTIN and billing address during booking.
           </div>
         </div>
@@ -945,116 +845,84 @@
     </div>
   </section>
 
-  <!-- REDESIGNED BENTO OFFICE LOCATIONS SECTION -->
-  <section id="offices" class="py-20 px-4 bg-slate-950 text-white relative overflow-hidden" itemscope itemtype="https://schema.org/TravelAgency">
-    <div class="absolute -top-32 -left-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
+  <!-- OFFICES SECTION: Clean Tab Contrast & Clear Google Maps Embeds -->
+  <section id="offices" class="py-16 sm:py-20 px-4 bg-slate-950 text-white relative overflow-hidden" itemscope itemtype="https://schema.org/TravelAgency">
     <div class="max-w-6xl mx-auto relative z-10">
-      
-      <!-- Section Header & Branch Switcher -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-slate-800">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b border-slate-800">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-3">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/15 text-amber-300 border border-amber-400/30 mb-3">
             <i class="fa-solid fa-location-crosshairs text-[10px]"></i> <span data-i18n="officeTag">Physical Hubs</span>
           </div>
           <h2 class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-white" data-i18n="officeHeading">
             Our Regional Offices
           </h2>
-          <p class="text-slate-400 text-sm mt-1.5 max-w-lg" data-i18n="officeDesc">
+          <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-lg" data-i18n="officeDesc">
             Visit our branch hubs for vehicle inspection, driver verification, and customized tour consultations.
           </p>
         </div>
 
-        <!-- Segmented City Switcher -->
+        <!-- Segmented Tab Switcher -->
         <div class="inline-flex p-1.5 bg-slate-900 border border-slate-800 rounded-2xl self-start md:self-auto shadow-inner">
-          <button 
-            id="btn-tab-blr" 
-            onclick="switchOffice('blr')" 
-            type="button"
-            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-amber-500 text-slate-950 shadow-md">
-            <i class="fa-solid fa-crown text-[11px]"></i> Bengaluru Hub
+          <button id="btn-tab-blr" onclick="switchOffice('blr')" type="button" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-amber-400 text-slate-950 shadow-md">
+            <i class="fa-solid fa-crown text-xs"></i> Bengaluru Hub
           </button>
-          <button 
-            id="btn-tab-mxe" 
-            onclick="switchOffice('mxe')" 
-            type="button"
-            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white">
-            <i class="fa-solid fa-plane text-[11px]"></i> Mangaluru Branch
+          <button id="btn-tab-mxe" onclick="switchOffice('mxe')" type="button" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white">
+            <i class="fa-solid fa-plane text-xs"></i> Mangaluru Branch
           </button>
         </div>
       </div>
 
       <!-- 1. BENGALURU HUB PANE -->
-      <div id="pane-blr" class="grid grid-cols-1 lg:grid-cols-12 gap-6 transition-all duration-300" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
+      <div id="pane-blr" class="grid grid-cols-1 lg:grid-cols-12 gap-8 transition-all duration-300" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
         <meta itemprop="name" content="Shree Rajarajeshwari Tours & Travels - Bangalore Head Office" />
 
-        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900/90 border border-amber-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
-          <i class="fa-solid fa-landmark text-amber-500/[0.03] text-[200px] absolute -bottom-10 -right-10 pointer-events-none"></i>
-
+        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-5">
-              <span class="inline-flex items-center gap-1.5 bg-amber-500 text-slate-950 font-black text-[11px] uppercase tracking-wider px-3 py-1 rounded-full">
+            <div class="flex items-center justify-between gap-2 mb-6">
+              <span class="inline-flex items-center bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider px-3.5 py-1 rounded-full">
                 Headquarters
               </span>
-              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open 24/7 &bull; Fleet On-Site
               </span>
             </div>
 
             <h3 class="font-heading text-2xl font-black text-white mb-1">Nagarabhavi 2nd Stage</h3>
-            <p class="text-xs text-amber-400/90 font-medium mb-5">West Bengaluru Central Dispatch Hub</p>
+            <p class="text-xs text-amber-300 font-semibold mb-6">West Bengaluru Central Dispatch Hub</p>
 
-            <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 mb-5 relative group/addr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <button 
-                type="button" 
-                onclick="copyOfficeAddr('#215, A & B, 1st Floor, 1st Main, 3rd Block, Nagarabhavi 2nd Stage, Bangalore - 560072', this)"
-                class="absolute top-3.5 right-3.5 text-slate-400 hover:text-amber-400 text-xs px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700/80 transition flex items-center gap-1.5 font-bold" title="Copy Address">
-                <i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4.5 mb-6 relative group" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <button type="button" onclick="copyOfficeAddr('#215, A & B, 1st Floor, 1st Main, 3rd Block, Nagarabhavi 2nd Stage, Bangalore - 560072', this)" class="absolute top-4 right-4 text-slate-300 hover:text-amber-400 text-xs px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 transition flex items-center gap-1.5 font-bold" title="Copy Address">
+                <i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>
               </button>
-              <p class="text-sm font-bold text-slate-200 leading-snug pr-16" itemprop="streetAddress">
+              <p class="text-sm font-bold text-slate-100 leading-snug pr-16" itemprop="streetAddress">
                 #215, A &amp; B, 1st Floor, 1st Main
               </p>
-              <p class="text-xs text-slate-400 mt-0.5">3rd Block, Nagarabhavi 2nd Stage</p>
-              <p class="text-xs text-slate-400">
+              <p class="text-xs text-slate-400 mt-1">3rd Block, Nagarabhavi 2nd Stage</p>
+              <p class="text-xs text-slate-300 mt-0.5">
                 <span itemprop="addressLocality">Bengaluru</span>, <span itemprop="addressRegion">KA</span> &mdash; <span class="font-bold text-amber-300" itemprop="postalCode">560072</span>
               </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-2.5 mb-6 text-[11px]">
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-train-subway text-amber-400 text-sm shrink-0"></i>
+            <div class="grid grid-cols-2 gap-3 mb-6 text-xs">
+              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-3">
+                <i class="fa-solid fa-train-subway text-amber-400 text-base shrink-0"></i>
                 <div>
-                  <p class="font-bold text-slate-200">10 Mins</p>
-                  <p class="text-slate-400 text-[10px]">Mysore Rd / Nayandahalli</p>
+                  <p class="font-bold text-slate-100">10 Mins</p>
+                  <p class="text-slate-400 text-[11px]">Nayandahalli Metro</p>
                 </div>
               </div>
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-road text-amber-400 text-sm shrink-0"></i>
+              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-3">
+                <i class="fa-solid fa-road text-amber-400 text-base shrink-0"></i>
                 <div>
-                  <p class="font-bold text-slate-200">500 Meters</p>
-                  <p class="text-slate-400 text-[10px]">From Outer Ring Road</p>
-                </div>
-              </div>
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-square-parking text-emerald-400 text-sm shrink-0"></i>
-                <div>
-                  <p class="font-bold text-slate-200">Free Parking</p>
-                  <p class="text-slate-400 text-[10px]">Visitor &amp; Boarding Bay</p>
-                </div>
-              </div>
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-van-shuttle text-cyan-400 text-sm shrink-0"></i>
-                <div>
-                  <p class="font-bold text-slate-200">Live Yard</p>
-                  <p class="text-slate-400 text-[10px]">Urbania &amp; Crysta Demos</p>
+                  <p class="font-bold text-slate-100">500 M</p>
+                  <p class="text-slate-400 text-[11px]">Outer Ring Road</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <a href="tel:+919008681881" itemprop="telephone" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3">
+            <a href="tel:+919008681881" itemprop="telephone" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
               <i class="fa-solid fa-phone"></i> Call Bangalore Hub
             </a>
             <a href="https://www.google.com/maps/dir/?api=1&destination=Nagarabhavi+2nd+Stage+Bangalore+560072" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
@@ -1064,90 +932,61 @@
         </div>
 
         <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 min-h-[380px] lg:min-h-full relative shadow-2xl">
-          <iframe 
-            title="Bangalore Office Location"
-            class="w-full h-full min-h-[380px] grayscale-[20%] contrast-[1.1] opacity-95 hover:opacity-100 hover:grayscale-0 transition duration-300 border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?q=Nagarabhavi%202nd%20Stage%20Bangalore%20560072&t=&z=15&ie=UTF8&iwloc=&output=embed">
-          </iframe>
-          <div class="absolute bottom-4 left-4 bg-slate-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700/60 text-[11px] text-slate-300 flex items-center gap-2 pointer-events-none">
-            <i class="fa-solid fa-circle text-emerald-400 text-[8px] animate-ping"></i>
-            <span>Live Highway Dispatch: Mysuru Rd, Tumakuru Rd &amp; Airport Corridor</span>
-          </div>
+          <iframe title="Bangalore Office Location" class="w-full h-full min-h-[380px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Nagarabhavi%202nd%20Stage%20Bangalore%20560072&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
       </div>
 
       <!-- 2. MANGALURU BRANCH PANE -->
-      <div id="pane-mxe" class="grid grid-cols-1 lg:grid-cols-12 gap-6 transition-all duration-300 hidden" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
+      <div id="pane-mxe" class="grid grid-cols-1 lg:grid-cols-12 gap-8 transition-all duration-300 hidden" itemprop="department" itemscope itemtype="https://schema.org/LocalBusiness">
         <meta itemprop="name" content="Shree Rajarajeshwari Tours & Travels - Mangalore Coastal Hub" />
 
-        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900/90 border border-cyan-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
-          <i class="fa-solid fa-plane-departure text-cyan-500/[0.03] text-[200px] absolute -bottom-10 -right-10 pointer-events-none"></i>
-
+        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-5">
-              <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-black text-[11px] uppercase tracking-wider px-3 py-1 rounded-full">
+            <div class="flex items-center justify-between gap-2 mb-6">
+              <span class="inline-flex items-center bg-cyan-500 text-slate-950 font-black text-xs uppercase tracking-wider px-3.5 py-1 rounded-full">
                 Coastal Hub
               </span>
-              <span class="text-xs font-semibold text-cyan-300 flex items-center gap-1.5 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-full">
-                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> 24/7 Airport Fleet Support
+              <span class="text-xs font-semibold text-cyan-300 flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> 24/7 Airport Support
               </span>
             </div>
 
             <h3 class="font-heading text-2xl font-black text-white mb-1">Airport Road, Yeyyadi</h3>
-            <p class="text-xs text-cyan-400 font-medium mb-5">Mangaluru Coastal &amp; Temple Circuit Hub</p>
+            <p class="text-xs text-cyan-300 font-semibold mb-6">Mangaluru Coastal &amp; Temple Circuit Hub</p>
 
-            <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 mb-5 relative group/addr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <button 
-                type="button" 
-                onclick="copyOfficeAddr('Abish Square, Yeyyadi, Airport Road, Mangaluru - 575008', this)"
-                class="absolute top-3.5 right-3.5 text-slate-400 hover:text-cyan-400 text-xs px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700/80 transition flex items-center gap-1.5 font-bold" title="Copy Address">
-                <i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4.5 mb-6 relative group" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <button type="button" onclick="copyOfficeAddr('Abish Square, Yeyyadi, Airport Road, Mangaluru - 575008', this)" class="absolute top-4 right-4 text-slate-300 hover:text-cyan-400 text-xs px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 transition flex items-center gap-1.5 font-bold" title="Copy Address">
+                <i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>
               </button>
-              <p class="text-sm font-bold text-slate-200 leading-snug pr-16" itemprop="streetAddress">
+              <p class="text-sm font-bold text-slate-100 leading-snug pr-16" itemprop="streetAddress">
                 Abish Square, Yeyyadi
               </p>
-              <p class="text-xs text-slate-400 mt-0.5">Direct on Airport Road</p>
-              <p class="text-xs text-slate-400">
+              <p class="text-xs text-slate-400 mt-1">Direct on Airport Road</p>
+              <p class="text-xs text-slate-300 mt-0.5">
                 <span itemprop="addressLocality">Mangaluru</span>, <span itemprop="addressRegion">KA</span> &mdash; <span class="font-bold text-cyan-300" itemprop="postalCode">575008</span>
               </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-2.5 mb-6 text-[11px]">
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-plane text-cyan-400 text-sm shrink-0"></i>
+            <div class="grid grid-cols-2 gap-3 mb-6 text-xs">
+              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-3">
+                <i class="fa-solid fa-plane text-cyan-400 text-base shrink-0"></i>
                 <div>
-                  <p class="font-bold text-slate-200">15 Mins</p>
-                  <p class="text-slate-400 text-[10px]">Mangaluru Airport (IXE)</p>
+                  <p class="font-bold text-slate-100">15 Mins</p>
+                  <p class="text-slate-400 text-[11px]">Mangaluru Airport (IXE)</p>
                 </div>
               </div>
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-train text-cyan-400 text-sm shrink-0"></i>
+              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-3">
+                <i class="fa-solid fa-train text-cyan-400 text-base shrink-0"></i>
                 <div>
-                  <p class="font-bold text-slate-200">12 Mins</p>
-                  <p class="text-slate-400 text-[10px]">Mangaluru Central (MAQ)</p>
-                </div>
-              </div>
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-gopuram text-amber-400 text-sm shrink-0"></i>
-                <div>
-                  <p class="font-bold text-slate-200">Pilgrim Hub</p>
-                  <p class="text-slate-400 text-[10px]">Kudroli, Kateel &amp; Dharmasthala</p>
-                </div>
-              </div>
-              <div class="p-3 bg-slate-950/50 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
-                <i class="fa-solid fa-shield-halved text-emerald-400 text-sm shrink-0"></i>
-                <div>
-                  <p class="font-bold text-slate-200">Ghat Drivers</p>
-                  <p class="text-slate-400 text-[10px]">Charmadi &amp; Shiradi Experts</p>
+                  <p class="font-bold text-slate-100">12 Mins</p>
+                  <p class="text-slate-400 text-[11px]">Mangaluru Central (MAQ)</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <a href="tel:+919008681881" itemprop="telephone" class="bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3">
+            <a href="tel:+919008681881" itemprop="telephone" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg">
               <i class="fa-solid fa-phone"></i> Call Mangalore Hub
             </a>
             <a href="https://www.google.com/maps/dir/?api=1&destination=Abish+Square+Yeyyadi+Airport+Road+Mangaluru+575008" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold py-3 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
@@ -1157,49 +996,37 @@
         </div>
 
         <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 min-h-[380px] lg:min-h-full relative shadow-2xl">
-          <iframe 
-            title="Mangalore Office Location"
-            class="w-full h-full min-h-[380px] grayscale-[20%] contrast-[1.1] opacity-95 hover:opacity-100 hover:grayscale-0 transition duration-300 border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?q=Abish%20Square%20Yeyyadi%20Airport%20Road%20Mangalore%20575008&t=&z=15&ie=UTF8&iwloc=&output=embed">
-          </iframe>
-          <div class="absolute bottom-4 left-4 bg-slate-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700/60 text-[11px] text-slate-300 flex items-center gap-2 pointer-events-none">
-            <i class="fa-solid fa-circle text-cyan-400 text-[8px] animate-ping"></i>
-            <span>Direct Runway Corridor &bull; Udupi, Manipal &amp; Kasaragod Connectivity</span>
-          </div>
+          <iframe title="Mangalore Office Location" class="w-full h-full min-h-[380px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Abish%20Square%20Yeyyadi%20Airport%20Road%20Mangalore%20575008&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- BOOKING FORM SECTION WITH CONDITIONAL RETURN DATE -->
-  <section id="booking" class="py-16 px-4 bg-white border-t border-slate-200">
+  <!-- BOOKING FORM SECTION: High Contrast Form Fields & Clear Labels -->
+  <section id="booking" class="py-16 sm:py-20 px-4 bg-white border-t border-slate-200">
     <div class="max-w-3xl mx-auto bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-md">
       <div class="text-center mb-8">
-        <span class="font-heading text-amber-600 font-bold text-xs uppercase tracking-widest" data-i18n="bookSub">Instant Booking Request</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 mt-1" data-i18n="bookHeading">Get an Instant Trip Quote</h2>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1.5" data-i18n="bookDesc">No advance payment needed to enquire. Share details to receive confirmed vehicle rates on WhatsApp or Telegram.</p>
+        <span class="font-heading text-amber-700 font-extrabold text-xs uppercase tracking-widest" data-i18n="bookSub">Instant Booking Request</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-950 mt-1" data-i18n="bookHeading">Get an Instant Trip Quote</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1.5" data-i18n="bookDesc">No advance payment needed to enquire. Share details to receive confirmed vehicle rates on WhatsApp or Telegram.</p>
       </div>
 
-      <form id="tripBookingForm" class="space-y-4">
-        
+      <form id="tripBookingForm" class="space-y-5">
         <!-- Journey Type Radios -->
         <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase mb-2" data-i18n="lblTripType">Select Journey Type</label>
-          <div class="grid grid-cols-3 gap-2.5">
-            <label class="cursor-pointer border border-slate-300 bg-white p-2.5 rounded-xl flex items-center justify-center text-xs font-bold text-slate-700 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:text-amber-900 transition">
+          <label class="block text-xs font-bold text-slate-800 uppercase mb-2" data-i18n="lblTripType">Select Journey Type</label>
+          <div class="grid grid-cols-3 gap-3">
+            <label class="cursor-pointer border-2 border-slate-300 bg-white p-3 rounded-xl flex items-center justify-center text-xs font-bold text-slate-800 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 has-[:checked]:text-amber-950 transition shadow-xs">
               <input type="radio" name="tripType" value="Round Trip" class="sr-only" checked onchange="toggleReturnDateField()" />
-              <i class="fa-solid fa-arrows-rotate mr-1.5 text-amber-600"></i> <span data-i18n="typeRound">Round Trip</span>
+              <i class="fa-solid fa-arrows-rotate mr-2 text-amber-600"></i> <span data-i18n="typeRound">Round Trip</span>
             </label>
-            <label class="cursor-pointer border border-slate-300 bg-white p-2.5 rounded-xl flex items-center justify-center text-xs font-bold text-slate-700 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:text-amber-900 transition">
+            <label class="cursor-pointer border-2 border-slate-300 bg-white p-3 rounded-xl flex items-center justify-center text-xs font-bold text-slate-800 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 has-[:checked]:text-amber-950 transition shadow-xs">
               <input type="radio" name="tripType" value="One Way Drop" class="sr-only" onchange="toggleReturnDateField()" />
-              <i class="fa-solid fa-arrow-right mr-1.5 text-amber-600"></i> <span data-i18n="typeOneWay">One Way</span>
+              <i class="fa-solid fa-arrow-right mr-2 text-amber-600"></i> <span data-i18n="typeOneWay">One Way</span>
             </label>
-            <label class="cursor-pointer border border-slate-300 bg-white p-2.5 rounded-xl flex items-center justify-center text-xs font-bold text-slate-700 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:text-amber-900 transition">
+            <label class="cursor-pointer border-2 border-slate-300 bg-white p-3 rounded-xl flex items-center justify-center text-xs font-bold text-slate-800 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50/60 has-[:checked]:text-amber-950 transition shadow-xs">
               <input type="radio" name="tripType" value="Airport Transfer" class="sr-only" onchange="toggleReturnDateField()" />
-              <i class="fa-solid fa-plane-departure mr-1.5 text-amber-600"></i> <span data-i18n="typeAirport">Airport</span>
+              <i class="fa-solid fa-plane-departure mr-2 text-amber-600"></i> <span data-i18n="typeAirport">Airport</span>
             </label>
           </div>
         </div>
@@ -1207,52 +1034,52 @@
         <!-- Name & Phone -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblName">Your Full Name</label>
-            <input type="text" id="custName" required placeholder="e.g. Shriram Jois" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblName">Your Full Name</label>
+            <input type="text" id="custName" required placeholder="e.g. Ramesh Kumar" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblPhone">Mobile / WhatsApp Number</label>
-            <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPhone">Mobile / WhatsApp Number</label>
+            <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
           </div>
         </div>
 
         <!-- Pickup & Destination -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblPickup">Pickup Location</label>
-            <input type="text" id="custPickup" required placeholder="e.g. Bangalore Airport / Nagarabhavi / Mangalore" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPickup">Pickup Location</label>
+            <input type="text" id="custPickup" required placeholder="e.g. Bangalore Airport / Nagarabhavi" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblDrop">Destination / Route</label>
-            <input type="text" id="custDrop" required placeholder="e.g. Coorg, Mysore, Dharmasthala, Tirupati" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblDrop">Destination / Route</label>
+            <input type="text" id="custDrop" required placeholder="e.g. Coorg, Mysore, Dharmasthala" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
           </div>
         </div>
 
         <!-- Dates & Timing Section (Conditional Return Date) -->
         <div id="datesContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblDepDate">Departure Date</label>
-            <input type="date" id="custDate" required onchange="syncReturnMinDate()" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblDepDate">Departure Date</label>
+            <input type="date" id="custDate" required onchange="syncReturnMinDate()" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
           </div>
 
           <div id="returnDateCol" class="transition-all duration-300">
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-              <span data-i18n="lblRetDate">Return Date</span> <span class="text-amber-600 font-bold">*</span>
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+              <span data-i18n="lblRetDate">Return Date</span> <span class="text-amber-600 font-black">*</span>
             </label>
-            <input type="date" id="custReturnDate" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <input type="date" id="custReturnDate" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
           </div>
 
           <div id="timeCol">
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblTime">Pickup Time</label>
-            <input type="time" id="custTime" required value="06:00" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium" />
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblTime">Pickup Time</label>
+            <input type="time" id="custTime" required value="06:00" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
           </div>
         </div>
 
         <!-- Vehicle, Passengers & Luggage -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblVehicle">Vehicle Type</label>
-            <select id="custVehicle" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium">
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblVehicle">Vehicle Type</label>
+            <select id="custVehicle" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm font-semibold text-slate-900 bg-white focus:ring-2 focus:ring-amber-500 outline-none">
               <option value="Force Urbania (10-17 Seater)">Force Urbania (10-17 Seater)</option>
               <option value="Toyota Innova Crysta (7+1 Seater)">Toyota Innova Crysta (7+1 Seater)</option>
               <option value="Toyota Rumion (6+1 Seater)">Toyota Rumion (6+1 Seater)</option>
@@ -1261,8 +1088,8 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblPax">Passengers</label>
-            <select id="custPax" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium">
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPax">Passengers</label>
+            <select id="custPax" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm font-semibold text-slate-900 bg-white focus:ring-2 focus:ring-amber-500 outline-none">
               <option value="1-4 Persons">1 - 4 Persons</option>
               <option value="5-7 Persons">5 - 7 Persons</option>
               <option value="8-12 Persons">8 - 12 Persons</option>
@@ -1271,8 +1098,8 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="lblBags">Luggage Bags</label>
-            <select id="custLuggage" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-white font-medium">
+            <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblBags">Luggage Bags</label>
+            <select id="custLuggage" class="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm font-semibold text-slate-900 bg-white focus:ring-2 focus:ring-amber-500 outline-none">
               <option value="1-2 Small Bags">1 - 2 Bags</option>
               <option value="3-5 Medium Bags">3 - 5 Bags</option>
               <option value="6-10 Heavy Luggage">6 - 10 Bags</option>
@@ -1282,11 +1109,11 @@
         </div>
 
         <!-- Submit CTAs -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
-          <button type="button" onclick="handleTripBooking('whatsapp')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-md transition flex items-center justify-center text-sm gap-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3">
+          <button type="button" onclick="handleTripBooking('whatsapp')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-xl shadow transition flex items-center justify-center text-sm gap-2">
             <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="btnSendWa">Send via WhatsApp</span>
           </button>
-          <button type="button" onclick="handleTripBooking('telegram')" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3.5 rounded-xl shadow-md transition flex items-center justify-center text-sm gap-2">
+          <button type="button" onclick="handleTripBooking('telegram')" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-extrabold py-3.5 rounded-xl shadow transition flex items-center justify-center text-sm gap-2">
             <i class="fa-brands fa-telegram text-lg"></i> <span data-i18n="btnSendTg">Send via Telegram</span>
           </button>
         </div>
@@ -1294,35 +1121,129 @@
     </div>
   </section>
 
+  <!-- PRINTABLE / PDF MODAL DIALOG -->
+  <div id="printable-estimate-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white text-slate-950 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+      <!-- Top Action Bar -->
+      <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-200 no-print">
+        <span class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-300 px-3 py-1 rounded-full">
+          <i class="fa-solid fa-file-invoice"></i> Trip Quotation Preview
+        </span>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </button>
+          <button onclick="closePrintModal()" class="text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Document Header -->
+      <div class="border-b-2 border-slate-950 pb-4 mb-5">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="font-heading font-black text-2xl text-slate-950 tracking-tight">SHREE RAJARAJESHWARI</h2>
+            <p class="font-heading font-extrabold text-xs text-amber-700 tracking-widest uppercase">TOURS &amp; TRAVELS</p>
+            <p class="text-xs text-slate-600 mt-1">Bangalore &bull; Mangalore Commercial Fleet Network</p>
+          </div>
+          <div class="text-right text-xs">
+            <p class="font-mono font-bold text-slate-900">Date: <span id="slip-current-date">--</span></p>
+            <p class="text-xs text-slate-600">Ref: SRR-EST-<span id="slip-ref-no">9821</span></p>
+            <p class="text-xs font-bold text-slate-900 mt-1">Ph: +91 90086 81881</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quotation Specs Table -->
+      <div class="space-y-4 text-xs">
+        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Vehicle Selected</p>
+            <p id="slip-vehicle-name" class="font-bold text-slate-950 text-sm mt-0.5">Toyota Innova Crysta</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Estimated Distance</p>
+            <p id="slip-distance" class="font-bold text-slate-950 text-sm mt-0.5">600 km</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Duration</p>
+            <p id="slip-duration" class="font-bold text-slate-950 text-sm mt-0.5">2 Days</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-bold">Base Rate</p>
+            <p id="slip-base-rate" class="font-bold text-emerald-700 text-sm mt-0.5">₹18 / km</p>
+          </div>
+        </div>
+
+        <table class="w-full text-left border border-slate-200 rounded-2xl overflow-hidden text-xs">
+          <thead class="bg-slate-100 font-bold text-slate-800">
+            <tr>
+              <th class="p-3.5">Component Description</th>
+              <th class="p-3.5">Calculation Basis</th>
+              <th class="p-3.5 text-right">Amount (₹)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="p-3.5 font-bold text-slate-900">Kilometer Running Charge</td>
+              <td id="slip-km-basis" class="p-3.5 text-slate-700">600 km × ₹18/km</td>
+              <td id="slip-km-amount" class="p-3.5 text-right font-black text-slate-950 text-sm">₹10,800</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-slate-900">Driver Daily Allowance (Batta)</td>
+              <td id="slip-batta-basis" class="p-3.5 text-slate-700">2 Days × ₹500/day</td>
+              <td id="slip-batta-amount" class="p-3.5 text-right font-black text-slate-950 text-sm">₹1,000</td>
+            </tr>
+            <tr class="bg-amber-50">
+              <td class="p-3.5 font-bold text-amber-950">Fastag Tolls, State Border Permits &amp; Parking</td>
+              <td class="p-3.5 text-amber-900 font-medium">Charged as per receipts during trip</td>
+              <td class="p-3.5 text-right font-black text-amber-950 uppercase tracking-wide">Extra at Actuals</td>
+            </tr>
+            <tr class="bg-slate-950 text-white font-bold text-sm">
+              <td class="p-4" colspan="2">ESTIMATED BASE TOTAL</td>
+              <td id="slip-total-amount" class="p-4 text-right font-black text-amber-400 text-lg">₹11,800</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-300 text-xs text-amber-950 leading-relaxed font-medium">
+          <p class="font-extrabold flex items-center gap-2 mb-1 text-amber-900">
+            <i class="fa-solid fa-triangle-exclamation"></i> Mandatory Policy on Tolls, Parking &amp; State Taxes:
+          </p>
+          <p>
+            The above figure constitutes the base vehicle rental and driver allowance. <strong>Fastag toll plaza deductions, tourist parking permits, and inter-state commercial entry taxes</strong> are strictly paid as per actual electronic slips.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-slate-400 py-12 px-4 border-t border-slate-800 text-sm">
+  <footer class="bg-slate-950 text-slate-300 py-12 px-4 border-t border-slate-800 text-sm">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-      
-      <!-- Brand Info -->
       <div>
         <h4 class="font-heading text-white font-black text-lg mb-2">Shree Rajarajeshwari Tours &amp; Travels</h4>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="footerAbout">
-          Premier passenger vehicle rental and outstation tour specialists serving Karnataka with reliable chauffeurs, clean cabs, and verified safety protocols.
+        <p class="text-xs text-slate-300 leading-relaxed mb-4" data-i18n="footerAbout">
+          Passenger vehicle rentals and outstation tour specialists serving Karnataka with reliable chauffeurs, sanitized cabs, and verified safety protocols.
         </p>
         <p class="text-xs font-bold text-amber-400">
           Booking Hotline: <a href="tel:+919008681881" class="hover:underline">+91 90086 81881</a>
         </p>
       </div>
 
-      <!-- Bangalore Address -->
       <div>
         <h5 class="font-heading text-white font-bold text-xs uppercase tracking-wider mb-2">Bangalore Head Office</h5>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <p class="text-xs text-slate-300 leading-relaxed">
           #215, A &amp; B, 1st Floor, 1st Main,<br />
           3rd Block, Nagarabhavi 2nd Stage,<br />
           Bangalore - 560072
         </p>
       </div>
 
-      <!-- Mangalore Address -->
       <div>
         <h5 class="font-heading text-white font-bold text-xs uppercase tracking-wider mb-2">Mangalore Branch Office</h5>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <p class="text-xs text-slate-300 leading-relaxed">
           Abish Square, Yeyyadi,<br />
           Airport Road,<br />
           Mangalore - 575008
@@ -1330,46 +1251,62 @@
       </div>
     </div>
 
-    <!-- DEVELOPER CREDIT & COPYRIGHT -->
-    <div class="max-w-6xl mx-auto pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
-      <p class="text-slate-500 text-center sm:text-left">
+    <!-- DEVELOPER CREDIT -->
+    <div class="max-w-6xl mx-auto pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <p class="text-slate-400 text-center sm:text-left">
         &copy; 2026 Shree Rajarajeshwari Tours &amp; Travels. All Rights Reserved.
       </p>
 
-      <div class="inline-flex items-center gap-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-amber-500/30 px-4 py-2 rounded-full shadow-lg">
+      <div class="inline-flex items-center gap-3 bg-slate-900 border border-slate-800 px-4 py-2 rounded-full shadow-lg">
         <span class="text-slate-300">
           Crafted by <strong class="text-amber-400 font-extrabold tracking-wide font-heading">Shriram Jois</strong>
         </span>
         <span class="text-slate-600">|</span>
-        <a href="tel:+917406379888" class="text-amber-400 hover:text-amber-300 font-bold transition flex items-center gap-1.5" title="Call Developer">
+        <a href="tel:+917406379888" class="text-amber-400 hover:text-amber-300 font-bold transition flex items-center gap-1.5">
           <i class="fa-solid fa-phone text-[11px]"></i> +91 740 637 9888
         </a>
-        <a href="https://wa.me/917406379888?text=Hello%20Shriram%2C%20regarding%20website%20development" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition" title="WhatsApp Developer">
+        <a href="https://wa.me/917406379888?text=Hello%20Shriram%2C%20regarding%20website%20development" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition">
           <i class="fa-brands fa-whatsapp text-sm"></i>
         </a>
-        <a href="https://t.me/+917406379888" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 transition" title="Telegram Developer">
+        <a href="https://t.me/+917406379888" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 transition">
           <i class="fa-brands fa-telegram text-sm"></i>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- MOBILE STICKY BOTTOM QUICK ACTION BAR -->
+  <!-- MOBILE STICKY BOTTOM ACTION BAR -->
   <div class="fixed bottom-0 inset-x-0 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-2.5 z-40 flex items-center justify-around gap-2 md:hidden">
-    <a href="tel:+919008681881" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md">
+    <a href="tel:+919008681881" class="flex-1 bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md">
       <i class="fa-solid fa-phone"></i> Call Now
     </a>
-    <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%2C%20I%20want%20to%20enquire%20about%20a%20cab%20booking." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md">
+    <a href="https://wa.me/919008681881?text=Hello%20Shree%20Rajarajeshwari%20Tours%2C%20I%20want%20to%20enquire%20about%20a%20cab%20booking." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md">
       <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
     </a>
-    <a href="#calculator" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5">
+    <a href="#calculator" class="flex-1 bg-slate-800 text-slate-100 border border-slate-700 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5">
       <i class="fa-solid fa-calculator text-amber-400"></i> Fare
     </a>
   </div>
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // FARE SPECIFICATIONS MATRIX
+    // VISITOR COUNTER
+    function initVisitorCounter() {
+      const counterEl = document.getElementById('visitor-counter-val');
+      const baseVisits = 14845;
+      let currentVisits = localStorage.getItem('srr_visitor_count');
+      if (!currentVisits) {
+        currentVisits = baseVisits + Math.floor(Math.random() * 20);
+      } else {
+        currentVisits = parseInt(currentVisits, 10) + 1;
+      }
+      localStorage.setItem('srr_visitor_count', currentVisits);
+      if (counterEl) {
+        counterEl.innerText = Number(currentVisits).toLocaleString('en-IN');
+      }
+    }
+
+    // FARE MATRIX
     const fareMatrix = {
       etios: { name: 'Toyota Etios (4+1 Sedan)', rate: 13, batta: 400, minKmPerDay: 300 },
       rumion: { name: 'Toyota Rumion (6+1 Seater)', rate: 15, batta: 450, minKmPerDay: 300 },
@@ -1378,16 +1315,13 @@
       urbania: { name: 'Force Urbania (10-17 Seater)', rate: 26, batta: 700, minKmPerDay: 300 }
     };
 
-    // Calculate Dynamic Fare
     function calculateFare() {
       const vehicleKey = document.getElementById('calcVehicle').value;
       const days = parseInt(document.getElementById('calcDays').value, 10);
       const vehicle = fareMatrix[vehicleKey];
 
-      // Update days label
       document.getElementById('calcDaysDisplay').innerText = `${days} Day${days > 1 ? 's' : ''}`;
 
-      // Min Distance constraint
       const minDistance = days * vehicle.minKmPerDay;
       const distSlider = document.getElementById('calcDistance');
       distSlider.min = minDistance;
@@ -1409,7 +1343,44 @@
       document.getElementById('calcTotalFare').innerText = `₹${totalFare.toLocaleString('en-IN')}`;
     }
 
-    // Apply calculated estimate into the main booking form
+    function openPrintModal() {
+      const vehicleKey = document.getElementById('calcVehicle').value;
+      const vehicle = fareMatrix[vehicleKey];
+      const days = parseInt(document.getElementById('calcDays').value, 10);
+      const currentDistance = parseInt(document.getElementById('calcDistance').value, 10);
+      
+      const baseDistanceFare = currentDistance * vehicle.rate;
+      const totalBatta = days * vehicle.batta;
+      const totalFare = baseDistanceFare + totalBatta;
+
+      document.getElementById('slip-current-date').innerText = new Date().toLocaleDateString('en-IN', {
+        day: '2-digit', month: 'short', year: 'numeric'
+      });
+      document.getElementById('slip-ref-no').innerText = Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('slip-vehicle-name').innerText = vehicle.name;
+      document.getElementById('slip-distance').innerText = `${currentDistance} km`;
+      document.getElementById('slip-duration').innerText = `${days} Day${days > 1 ? 's' : ''}`;
+      document.getElementById('slip-base-rate').innerText = `₹${vehicle.rate} / km`;
+
+      document.getElementById('slip-km-basis').innerText = `${currentDistance} km × ₹${vehicle.rate}/km`;
+      document.getElementById('slip-km-amount').innerText = `₹${baseDistanceFare.toLocaleString('en-IN')}`;
+
+      document.getElementById('slip-batta-basis').innerText = `${days} Day(s) × ₹${vehicle.batta}/day`;
+      document.getElementById('slip-batta-amount').innerText = `₹${totalBatta.toLocaleString('en-IN')}`;
+
+      document.getElementById('slip-total-amount').innerText = `₹${totalFare.toLocaleString('en-IN')}`;
+
+      const modal = document.getElementById('printable-estimate-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePrintModal() {
+      const modal = document.getElementById('printable-estimate-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
     function applyEstimateToBooking() {
       const vehicleKey = document.getElementById('calcVehicle').value;
       const vehicle = fareMatrix[vehicleKey];
@@ -1417,20 +1388,15 @@
       const distance = document.getElementById('calcDistance').value;
       const totalFare = document.getElementById('calcTotalFare').innerText;
 
-      // Select vehicle in form
       const formVehicle = document.getElementById('custVehicle');
-      if (formVehicle) {
-        formVehicle.value = vehicle.name;
-      }
+      if (formVehicle) formVehicle.value = vehicle.name;
 
-      // Check Round Trip
       const roundTripRadio = document.querySelector('input[name="tripType"][value="Round Trip"]');
       if (roundTripRadio) {
         roundTripRadio.checked = true;
         toggleReturnDateField();
       }
 
-      // Set Departure Date & Return Date according to duration
       const depInput = document.getElementById('custDate');
       const retInput = document.getElementById('custReturnDate');
       const today = new Date();
@@ -1440,31 +1406,26 @@
       returnDate.setDate(today.getDate() + (days - 1));
       retInput.value = returnDate.toISOString().split('T')[0];
 
-      // Prefill Drop info
-      document.getElementById('custDrop').value = `Outstation Round Trip (~${distance} km &bull; Est. ${totalFare})`;
-
-      // Scroll to booking
+      document.getElementById('custDrop').value = `Outstation Round Trip (~${distance} km • Est. ${totalFare})`;
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // 1-Click WhatsApp Quick Prefill directly from vehicle card
     function quickWaVehicle(vehicleName) {
-      const text = `*Quick Vehicle Availability Enquiry*%0A` +
+      const text = `*Vehicle Availability Enquiry*%0A` +
                    `--------------------------------%0A` +
                    `Hello Shree Rajarajeshwari Tours,%0A` +
-                   `I am checking availability for *${encodeURIComponent(vehicleName)}* for an upcoming trip.%0A` +
-                   `Please share per-km rates, driver batta, and weekend slot status.%0A` +
+                   `Checking availability for *${encodeURIComponent(vehicleName)}* for an upcoming trip.%0A` +
+                   `Please share per-km rates and available dates.%0A` +
                    `--------------------------------%0A` +
                    `_Enquiry via Shree Rajarajeshwari Website_`;
-
       window.open(`https://wa.me/919008681881?text=${text}`, '_blank');
     }
 
-    // BILINGUAL TRANSLATION DICTIONARY (EN & KN)
+    // TRANSLATIONS
     const translations = {
       en: {
         topHubs: "Bangalore & Mangalore",
-        topGps: "GPS Monitored & Sanitized Commercial Fleet",
+        topGps: "GPS Monitored Commercial Fleet",
         brandTitle: "SHREE RAJARAJESHWARI",
         brandSubtitle: "TOURS & TRAVELS",
         navFleet: "Our Fleet",
@@ -1472,35 +1433,34 @@
         navRoutes: "Popular Routes",
         navStandards: "Fleet Standards",
         navReviews: "Reviews",
-        navServices: "Services",
         navFaq: "FAQs",
         navOffices: "Our Offices",
         navBook: "Book Trip",
-        heroBadge: "100% Insured • GPS Tracked • Multi-Point Inspected",
+        heroBadge: "100% Insured • GPS Monitored • Sanity Checked",
         heroHeadline: "Trusted Passenger Tours & Luxury Cab Rentals",
-        heroSubhead: "Serving Outstation Trips, Airport Transfers, Temple Pilgrimages & Corporate Fleets across Karnataka with dedicated Bangalore & Mangalore hubs.",
+        heroSubhead: "Outstation round trips, airport drops, family temple pilgrimages, and corporate luxury transport across Karnataka with Bangalore & Mangalore hubs.",
         heroBtnFare: "Calculate Trip Fare",
         fleetSub: "Our Fleet Lineup",
         fleetHeading: "Available Commercial Vehicles",
-        fleetDesc: "Well-maintained tourist cabs with yellow-board commercial permits, live GPS, and experienced chauffeurs.",
-        urbaniaRole: "VIP Group & Delegation Transport",
+        fleetDesc: "Yellow-board tourist cabs with all-India permits, certified drivers, and live GPS tracking.",
+        urbaniaRole: "Ultra Luxury VIP Group Travel",
         crystaRole: "Premium Executive SUV / MPV",
-        rumionRole: "Modern Budget-Friendly 6-Seater",
-        travellerRole: "Group Pilgrimages & Team Outings",
-        etiosRole: "Reliable Economical Highway Sedan",
+        rumionRole: "Modern Economical 6-Seater",
+        travellerRole: "Group Pilgrimages & Team Trips",
+        etiosRole: "Economical Highway Sedan",
         bookUrbania: "Book Force Urbania",
         bookCrysta: "Book Innova Crysta",
         bookRumion: "Book Toyota Rumion",
         bookTraveller: "Book Tempo Traveller",
         bookEtios: "Book Toyota Etios",
         calcHeading: "Estimate Your Journey Budget",
-        calcDesc: "Adjust distance, trip days, and vehicle type to calculate an indicative upfront fare.",
+        calcDesc: "Adjust distance, trip days, and vehicle type to calculate an indicative upfront fare and download a branded estimate slip.",
         routesSub: "Fixed Fare & Outstation Corridors",
         routesHeading: "High-Frequency Routes Across Karnataka",
-        routesDesc: "Daily departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.",
+        routesDesc: "Departures from Bangalore and Mangalore with transparent tolls, driver allowances, and zero hidden charges.",
         stdTag: "The Rajarajeshwari Standard",
         stdHeading: "Uncompromised Safety & Vehicle Hygiene",
-        stdDesc: "Every vehicle in our fleet is company-owned or rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.",
+        stdDesc: "Every vehicle is rigorously inspected to exceed tourist transport standards across Western Ghats, highways, and city routes.",
         stdCard1Title: "Rigorous Maintenance",
         stdCard1Desc: "Strict 50-point checklist inspection before every trip: suspension check, tire tread depth, dual-zone AC gas performance, and braking systems tuned for ghat descents.",
         stdCard2Title: "Deep Sanitization",
@@ -1544,11 +1504,11 @@
         lblBags: "Luggage Bags",
         btnSendWa: "Send via WhatsApp",
         btnSendTg: "Send via Telegram",
-        footerAbout: "Premier passenger vehicle rental and outstation tour specialists serving Karnataka with reliable chauffeurs, clean cabs, and verified safety protocols."
+        footerAbout: "Passenger vehicle rentals and outstation tour specialists serving Karnataka with reliable chauffeurs, sanitized cabs, and verified safety protocols."
       },
       kn: {
         topHubs: "ಬೆಂಗಳೂರು ಮತ್ತು ಮಂಗಳೂರು",
-        topGps: "ಜಿಪಿಎಸ್ ಮಾನಿಟರ್ ಮಾಡಿದ ಸ್ವಚ್ಛ ವಾಣಿಜ್ಯ ವಾಹನಗಳು",
+        topGps: "ಜಿಪಿಎಸ್ ಮಾನಿಟರ್ ಮಾಡಿದ ವಾಣಿಜ್ಯ ವಾಹನಗಳು",
         brandTitle: "ಶ್ರೀ ರಾಜರಾಜೇಶ್ವರಿ",
         brandSubtitle: "ಟೂರ್ಸ್ & ಟ್ರಾವೆಲ್ಸ್",
         navFleet: "ನಮ್ಮ ವಾಹನಗಳು",
@@ -1556,7 +1516,6 @@
         navRoutes: "ಪ್ರಮುಖ ಮಾರ್ಗಗಳು",
         navStandards: "ಸುರಕ್ಷತಾ ಗುಣಮಟ್ಟ",
         navReviews: "ಅಭಿಪ್ರಾಯಗಳು",
-        navServices: "ಸೇವೆಗಳು",
         navFaq: "ಪ್ರಶ್ನೋತ್ತರಗಳು",
         navOffices: "ನಮ್ಮ ಕಚೇರಿಗಳು",
         navBook: "ಬುಕಿಂಗ್ ಮಾಡಿ",
@@ -1578,7 +1537,7 @@
         bookTraveller: "ಟೆಂಪೋ ಟ್ರಾವೆಲರ್ ಬುಕ್ ಮಾಡಿ",
         bookEtios: "ಟೊಯೋಟಾ ಎಟಿಯೋಸ್ ಬುಕ್ ಮಾಡಿ",
         calcHeading: "ನಿಮ್ಮ ಪ್ರವಾಸದ ದರವನ್ನು ಅಂದಾಜಿಸಿ",
-        calcDesc: "ದೂರ, ದಿನಗಳು ಮತ್ತು ವಾಹನವನ್ನು ಆಯ್ಕೆ ಮಾಡುವ ಮೂಲಕ ಅಂದಾಜು ಬಜೆಟ್ ಲೆಕ್ಕಹಾಕಿ.",
+        calcDesc: "ದೂರ, ದಿನಗಳು ಮತ್ತು ವಾಹನವನ್ನು ಆಯ್ಕೆ ಮಾಡುವ ಮೂಲಕ ಅಂದಾಜು ಬಜೆಟ್ ಲೆಕ್ಕಹಾಕಿ ರಸೀದಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.",
         routesSub: "ಪ್ರಸಿದ್ಧ ಯಾತ್ರಾ ಮಾರ್ಗಗಳು",
         routesHeading: "ಕರ್ನಾಟಕದ ಜನಪ್ರಿಯ ಪ್ರವಾಸ ಮಾರ್ಗಗಳು",
         routesDesc: "ಬೆಂಗಳೂರು ಮತ್ತು ಮಂಗಳೂರಿನಿಂದ ಪ್ರತಿದಿನ ಹೊರಡುವ ಪಾರದರ್ಶಕ ದರಗಳ ಟೂರ್ ಪ್ಯಾಕೇಜ್‌ಗಳು.",
@@ -1596,7 +1555,7 @@
         faqSub: "ಸಂದೇಹಗಳಿವೆಯೇ?",
         faqHeading: "ಸಾಮಾನ್ಯವಾಗಿ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು",
         faqDesc: "ಟೋಲ್, ಕನಿಷ್ಠ ಕಿ.ಮೀ ಹಾಗೂ ಚಾಲಕರ ಭತ್ಯೆಯ ಕುರಿತ ಸ್ಪಷ್ಟ ಮಾಹಿತಿ.",
-        faq1Q: "ಟೋಲ್, ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಇಂಟರ್‌ಸ್ಟೇಟ್ ಶುಲ್ಕಗಳು ದರದಲ್ಲಿ ಸೇರಿವೆಯೇ?",
+        faq1Q: "ಟೋಲ್, ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಇಂಟರ್‌‌ಸ್ಟೇಟ್ ಶುಲ್ಕಗಳು ದರದಲ್ಲಿ ಸೇರಿವೆಯೇ?",
         faq1A: "ನಮ್ಮ ಮೂಲ ದರವು ವಾಹನ ಬಾಡಿಗೆ, ಇಂಧನ ಮತ್ತು ಚಾಲಕರನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ಫಾಸ್ಟ್ಯಾಗ್ ಟೋಲ್, ಪ್ರವಾಸಿ ತಾಣಗಳ ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಗಡಿ ಪ್ರವೇಶ ತೆರಿಗೆಗಳನ್ನು ಅತಿಥಿಗಳು ಪ್ರವಾಸದ ವೇಳೆ ನೇರವಾಗಿ ಪಾವತಿಸಬೇಕಾಗುತ್ತದೆ.",
         faq2Q: "ಔಟ್‌ಸ್ಟೇಷನ್ ಟ್ರಿಪ್‌ಗಳಿಗೆ ಕನಿಷ್ಠ ಕಿಲೋಮೀಟರ್ ನಿಯಮವೇನು?",
         faq2A: "ಬೆಂಗಳೂರು ಅಥವಾ ಮಂಗಳೂರಿನಿಂದ ಹೊರಡುವ ರೌಂಡ್ ಟ್ರಿಪ್‌ಗಳಿಗೆ ದಿನಕ್ಕೆ ಕನಿಷ್ಠ 250 ರಿಂದ 300 ಕಿ.ಮೀ ಲೆಕ್ಕಹಾಕಲಾಗುತ್ತದೆ. ಒಟ್ಟು ಕ್ರಮಿಸಿದ ದೂರ ಇದಕ್ಕಿಂತ ಹೆಚ್ಚಾದರೆ ಹೆಚ್ಚುವರಿ ಕಿ.ಮೀ ದರ ಅನ್ವಯಿಸುತ್ತದೆ.",
@@ -1604,7 +1563,7 @@
         faq3A: "ಚಾಲಕರ ದಿನಭತ್ಯೆ ದಿನಕ್ಕೆ ₹350 ರಿಂದ ₹700 ಇರುತ್ತದೆ (ವಾಹನದ ಆಧಾರದ ಮೇಲೆ). ರಾತ್ರಿ 10:00 ಗಂಟೆಯ ನಂತರ ಚಾಲನೆ ಮುಂದುವರಿದರೆ ಸಾಮಾನ್ಯ ನೈಟ್ ಭತ್ಯೆ ಅನ್ವಯಿಸುತ್ತದೆ.",
         faq4Q: "ನಿಮ್ಮ ಚಾಲಕರು ಚಾರ್ಮಾಡಿ ಹಾಗೂ ಶಿರಾಡಿ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆಯೇ?",
         faq4A: "ಹೌದು, ಖಂಡಿತ. ಪಶ್ಚಿಮ ಘಟ್ಟಗಳ ಘಾಟಿ ರಸ್ತೆಗಳಲ್ಲಿ ಚಾಲನೆ ಮಾಡಲು ನಮ್ಮ ಎಲ್ಲಾ ಚಾಲಕರು ಕನಿಷ್ಠ 7+ ವರ್ಷಗಳ ಚಾಲನಾ ಅನುಭವ ಹೊಂದಿದ್ದು, ಸುರಕ್ಷತೆಗೆ ಮೊದಲ ಆದ್ಯತೆ ನೀಡುತ್ತಾರೆ.",
-        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್‌‌ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
+        faq5Q: "ಕಂಪನಿ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ಜಿಎಸ್‌ಟಿ (GST) ಬಿಲ್ ಲಭ್ಯವಿದೆಯೇ?",
         faq5A: "ಹೌದು, ಎಲ್ಲಾ ಕಾರ್ಪೊರೇಟ್ ಮತ್ತು ವಾಣಿಜ್ಯ ಬುಕಿಂಗ್‌ಗಳಿಗೆ ನಾವು ಅಧಿಕೃತ ಜಿಎಸ್‌ಟಿ ತೆರಿಗೆ ಇನ್‌ವಾಯ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ.",
         officeTag: "ಕಚೇರಿಗಳು",
         officeHeading: "ನಮ್ಮ ಪ್ರಾದೇಶಿಕ ಕೇಂದ್ರಗಳು",
@@ -1632,21 +1591,16 @@
       }
     };
 
-    let currentLang = 'en';
-
     function setLanguage(lang) {
-      currentLang = lang;
       const btnEn = document.getElementById('lang-en');
       const btnKn = document.getElementById('lang-kn');
-
       if (lang === 'kn') {
-        btnKn.className = "px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 transition font-bold";
-        btnEn.className = "px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition font-bold";
+        btnKn.className = "px-3 py-0.5 rounded-full bg-amber-400 text-slate-950 transition font-bold shadow-sm";
+        btnEn.className = "px-3 py-0.5 rounded-full text-slate-300 hover:text-white transition font-bold";
       } else {
-        btnEn.className = "px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 transition font-bold";
-        btnKn.className = "px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition font-bold";
+        btnEn.className = "px-3 py-0.5 rounded-full bg-amber-400 text-slate-950 transition font-bold shadow-sm";
+        btnKn.className = "px-3 py-0.5 rounded-full text-slate-300 hover:text-white transition font-bold";
       }
-
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -1655,7 +1609,6 @@
       });
     }
 
-    // Toggle FAQ Accordion
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('i');
@@ -1670,7 +1623,6 @@
       }
     }
 
-    // CONDITIONAL RETURN DATE LOGIC
     function toggleReturnDateField() {
       const tripType = document.querySelector('input[name="tripType"]:checked').value;
       const returnCol = document.getElementById('returnDateCol');
@@ -1701,8 +1653,8 @@
       }
     }
 
-    // Initialize Default Dates & Calculator on DOM Ready
     document.addEventListener('DOMContentLoaded', () => {
+      initVisitorCounter();
       const datePicker = document.getElementById('custDate');
       const returnPicker = document.getElementById('custReturnDate');
       if (datePicker) {
@@ -1718,7 +1670,6 @@
       calculateFare();
     });
 
-    // Mobile Menu Toggle
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
       const icon = document.getElementById('menuIcon');
@@ -1733,25 +1684,16 @@
       }
     }
 
-    // Preselect Vehicle and scroll to form
     function preselectVehicle(vehicleName) {
       const select = document.getElementById('custVehicle');
-      if (select) {
-        select.value = vehicleName;
-      }
-      const bookingSection = document.getElementById('booking');
-      if (bookingSection) {
-        bookingSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (select) select.value = vehicleName;
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Set Popular Route directly into form
     function setRoute(pickup, destination, vehicle, tripType) {
       document.getElementById('custPickup').value = pickup;
       document.getElementById('custDrop').value = destination;
-      if (vehicle) {
-        document.getElementById('custVehicle').value = vehicle;
-      }
+      if (vehicle) document.getElementById('custVehicle').value = vehicle;
       if (tripType) {
         const radio = document.querySelector(`input[name="tripType"][value="${tripType}"]`);
         if (radio) {
@@ -1762,7 +1704,6 @@
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Booking submission generator
     function handleTripBooking(platform) {
       const form = document.getElementById('tripBookingForm');
       const name = document.getElementById('custName').value.trim();
@@ -1775,9 +1716,7 @@
       const vehicle = document.getElementById('custVehicle').value;
       const pax = document.getElementById('custPax').value;
       const luggage = document.getElementById('custLuggage').value;
-
-      const tripTypeElement = document.querySelector('input[name="tripType"]:checked');
-      const tripType = tripTypeElement ? tripTypeElement.value : 'Round Trip';
+      const tripType = document.querySelector('input[name="tripType"]:checked').value;
 
       if (!name || !phone || !pickup || !drop || !date) {
         form.reportValidity();
@@ -1805,6 +1744,7 @@
                    `${dateDetails}%0A` +
                    `*Passengers:* ${encodeURIComponent(pax)}%0A` +
                    `*Luggage:* ${encodeURIComponent(luggage)}%0A` +
+                   `*Note:* Fastag Tolls, State Permits & Parking at actuals.%0A` +
                    `--------------------------------%0A` +
                    `_Enquiry via Shree Rajarajeshwari Website_`;
 
@@ -1815,7 +1755,6 @@
       }
     }
 
-    // Branch switcher
     function switchOffice(branch) {
       const blrPane = document.getElementById('pane-blr');
       const mxePane = document.getElementById('pane-mxe');
@@ -1825,35 +1764,24 @@
       if (branch === 'blr') {
         blrPane.classList.remove('hidden');
         mxePane.classList.add('hidden');
-        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-amber-500 text-slate-950 shadow-md";
-        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white";
+        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-amber-400 text-slate-950 shadow-md";
+        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white";
       } else {
         mxePane.classList.remove('hidden');
         blrPane.classList.add('hidden');
-        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 shadow-md";
-        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white";
+        mxeBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-extrabold transition bg-cyan-500 text-slate-950 shadow-md";
+        blrBtn.className = "flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white";
       }
     }
 
-    // Copy office address helper
     function copyOfficeAddr(text, btnElement) {
       navigator.clipboard.writeText(text).then(() => {
         const originalHTML = btnElement.innerHTML;
-        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-[11px]"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
-        setTimeout(() => {
-          btnElement.innerHTML = originalHTML;
-        }, 2000);
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
+        setTimeout(() => { btnElement.innerHTML = originalHTML; }, 2000);
       }).catch(() => {
-        const tempInput = document.createElement('input');
-        tempInput.value = text;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-[11px]"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
-        setTimeout(() => {
-          btnElement.innerHTML = '<i class="fa-regular fa-copy text-[11px]"></i> <span>Copy</span>';
-        }, 2000);
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span class="text-emerald-400 font-bold">Copied!</span>';
+        setTimeout(() => { btnElement.innerHTML = '<i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>'; }, 2000);
       });
     }
   </script>
