@@ -1178,11 +1178,11 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblPickup">Pickup Location</label>
-            <input type="text" id="custPickup" required placeholder="e.g. Bangalore Airport / Nagarabhavi" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
+            <input type="text" id="custPickup" required placeholder="e.g. Bangalore Airport / Nagarabhavi" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-800 uppercase mb-1.5" data-i18n="lblDrop">Destination / Route</label>
-            <input type="text" id="custDrop" required placeholder="e.g. Coorg, Mysore, Dharmasthala" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none" />
+            <input type="text" id="custDrop" required placeholder="e.g. Coorg, Mysore, Dharmasthala" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-900 bg-white font-medium focus:ring-2 focus:ring-amber-500 outline-none" />
           </div>
         </div>
 
@@ -1253,7 +1253,7 @@
   </section>
 
   <!-- PRINTABLE / PDF MODAL DIALOG -->
-  <div id="printable-estimate-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+  <div id="printable-estimate-modal" onclick="handleModalBackdropClick(event)" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
     <div class="bg-white text-slate-950 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
       <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-200 no-print">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-300 px-3 py-1 rounded-full">
@@ -1263,7 +1263,7 @@
           <button onclick="window.print()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition">
             <i class="fa-solid fa-print"></i> Print / Save as PDF
           </button>
-          <button onclick="closePrintModal()" class="text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg">
+          <button onclick="closePrintModal()" aria-label="Close Preview" class="text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -1403,7 +1403,7 @@
         <a href="https://wa.me/917406379888?text=Hello%20Shriram%2C%20regarding%20website%20development" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition">
           <i class="fa-brands fa-whatsapp text-sm"></i>
         </a>
-        <a href="https://t.me/+917406379888" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 transition">
+        <a href="https://t.me/917406379888" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 transition">
           <i class="fa-brands fa-telegram text-sm"></i>
         </a>
       </div>
@@ -1453,7 +1453,7 @@
       counterEl.innerText = Number(localFallback).toLocaleString('en-IN');
     }
 
-    // VEHICLE SPECIFICATIONS MATRIX[span_1](start_span)[span_1](end_span)
+    // VEHICLE SPECIFICATIONS MATRIX[span_0](start_span)[span_0](end_span)
     const fareMatrix = {
       etios: { name: 'Toyota Etios (4+1 Sedan)', rate: 15, batta: 400, roundMinKmPerDay: 300, onewayMinKm: 200 },
       rumion: { name: 'Toyota Rumion (6+1 Seater)', rate: 17, batta: 500, roundMinKmPerDay: 300, onewayMinKm: 250 },
@@ -1663,6 +1663,26 @@
       modal.classList.remove('flex');
     }
 
+    function handleModalBackdropClick(event) {
+      if (event.target.id === 'printable-estimate-modal') {
+        closePrintModal();
+      }
+    }
+
+    // Helper to format local Date without UTC offset shifts
+    function formatDateToInput(d) {
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    function parseInputDate(str) {
+      if (!str) return new Date();
+      const parts = str.split('-');
+      return new Date(parts[0], parts[1] - 1, parts[2]);
+    }
+
     function applyEstimateToBooking() {
       const vehicleKey = document.getElementById('calcVehicle').value;
       const vehicle = fareMatrix[vehicleKey];
@@ -1687,16 +1707,15 @@
       const retInput = document.getElementById('custReturnDate');
       
       let baseDate = new Date();
-      if (depInput.value) {
-        baseDate = new Date(depInput.value);
+      if (!depInput.value) {
+        depInput.value = formatDateToInput(baseDate);
       } else {
-        depInput.value = baseDate.toISOString().split('T')[0];
+        baseDate = parseInputDate(depInput.value);
       }
 
       if (matchedRadioValue === 'Round Trip') {
-        const returnDate = new Date(baseDate);
-        returnDate.setDate(baseDate.getDate() + (days - 1));
-        retInput.value = returnDate.toISOString().split('T')[0];
+        const returnDate = new Date(baseDate.getFullYear(), baseDate.getMonth(), baseDate.getDate() + (days - 1));
+        retInput.value = formatDateToInput(returnDate);
         syncReturnMinDate();
       }
 
@@ -1753,21 +1772,26 @@
       initVisitorCounter();
       const datePicker = document.getElementById('custDate');
       const returnPicker = document.getElementById('custReturnDate');
-      const today = new Date().toISOString().split('T')[0];
+      const today = new Date();
+      const todayFormatted = formatDateToInput(today);
       
       if (datePicker) {
-        datePicker.min = today;
-        datePicker.value = today;
+        datePicker.min = todayFormatted;
+        datePicker.value = todayFormatted;
       }
       if (returnPicker) {
-        returnPicker.min = today;
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        returnPicker.value = tomorrow.toISOString().split('T')[0];
+        const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+        returnPicker.min = todayFormatted;
+        returnPicker.value = formatDateToInput(tomorrow);
       }
 
       handleFormTripTypeChange();
       setCalcTripType('round');
+      calculateFare(true);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePrintModal();
+      });
     });
 
     function toggleMobileMenu() {
@@ -1804,10 +1828,10 @@
 
       const depInput = document.getElementById('custDate');
       const retInput = document.getElementById('custReturnDate');
-      if (tripType === 'Round Trip' && depInput.value) {
-        const retDate = new Date(depInput.value);
-        retDate.setDate(retDate.getDate() + (estimatedDays - 1));
-        retInput.value = retDate.toISOString().split('T')[0];
+      if (tripType === 'Round Trip') {
+        const depD = depInput.value ? parseInputDate(depInput.value) : new Date();
+        const retD = new Date(depD.getFullYear(), depD.getMonth(), depD.getDate() + (estimatedDays - 1));
+        retInput.value = formatDateToInput(retD);
         syncReturnMinDate();
       }
 
@@ -1861,7 +1885,7 @@
       if (platform === 'whatsapp') {
         window.open(`https://wa.me/919008681881?text=${text}`, '_blank');
       } else if (platform === 'telegram') {
-        window.open(`https://t.me/+919008681881?text=${text}`, '_blank');
+        window.open(`https://t.me/919008681881?text=${text}`, '_blank');
       }
     }
 
@@ -2043,7 +2067,7 @@
         faqSub: "ಸಂದೇಹಗಳಿವೆಯೇ?",
         faqHeading: "ಸಾಮಾನ್ಯವಾಗಿ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು",
         faqDesc: "ಟೋಲ್, ಕನಿಷ್ಠ ಕಿ.ಮೀ ಹಾಗೂ ಚಾಲಕರ ಭತ್ಯೆಯ ಕುರಿತ ಸ್ಪಷ್ಟ ಮಾಹಿತಿ.",
-        faq1Q: "ಟೋಲ್, ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಇಂಟರ್‌‌‌‌ಸ್ಟೇಟ್ ಶುಲ್ಕಗಳು ದರದಲ್ಲಿ ಸೇರಿವೆಯೇ?",
+        faq1Q: "ಟೋಲ್, ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಇಂಟರ್ಸ್ಟೇಟ್ ಶುಲ್ಕಗಳು ದರದಲ್ಲಿ ಸೇರಿವೆಯೇ?",
         faq1A: "ನಮ್ಮ ಮೂಲ ದರವು ವಾಹನ ಬಾಡಿಗೆ, ಇಂಧನ ಮತ್ತು ಚಾಲಕರನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ಫಾಸ್ಟ್ಯಾಗ್ ಟೋಲ್, ಪ್ರವಾಸಿ ತಾಣಗಳ ಪಾರ್ಕಿಂಗ್ ಮತ್ತು ಗಡಿ ಪ್ರವೇಶ ತೆರಿಗೆಗಳನ್ನು ಅತಿಥಿಗಳು ಪ್ರವಾಸದ ವೇಳೆ ನೇರವಾಗಿ ಪಾವತಿಸಬೇಕಾಗುತ್ತದೆ.",
         faq2Q: "ಔಟ್‌ಸ್ಟೇಷನ್ ಟ್ರಿಪ್‌ಗಳಿಗೆ ಕನಿಷ್ಠ ಕಿಲೋಮೀಟರ್ ನಿಯಮವೇನು?",
         faq2A: "ಬೆಂಗಳೂರು ಅಥವಾ ಮಂಗಳೂರಿನಿಂದ ಹೊರಡುವ ರೌಂಡ್ ಟ್ರಿಪ್‌ಗಳಿಗೆ ದಿನಕ್ಕೆ ಕನಿಷ್ಠ 250 ರಿಂದ 300 ಕಿ.ಮೀ ಲೆಕ್ಕಹಾಕಲಾಗುತ್ತದೆ. ಒಟ್ಟು ಕ್ರಮಿಸಿದ ದೂರ ಇದಕ್ಕಿಂತ ಹೆಚ್ಚಾದರೆ ಹೆಚ್ಚುವರಿ ಕಿ.ಮೀ ದರ ಅನ್ವಯಿಸುತ್ತದೆ.",
